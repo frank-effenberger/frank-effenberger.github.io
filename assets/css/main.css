@@ -8645,7 +8645,7 @@ input, select, textarea {
   .bottom-bar__content {
 	max-width: 500px;
 	margin: 0 auto;
-	display: flex;
+	display: table;
 	justify-content: space-between;
   }
   
@@ -8653,7 +8653,7 @@ input, select, textarea {
 	display: flex;
 	align-items: center;
   }
-  
+ 
   .bottom-bar__text {
 	padding-right: 10px;
   }
@@ -8664,5 +8664,9 @@ input, select, textarea {
 	color: #ffffff;
 	cursor: pointer;
 	font-size: 2em;
+  }
+
+  #stories a {
+	text-decoration: none; 
   }
   

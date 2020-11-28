@@ -338,4 +338,9 @@
 
 						});
 
+						$(".mail").on('click', function(e) {
+							e.preventDefault();
+							linkTo_UnCryptMailto('nbjmup;gsbol`fggfocfshfsAxfc/ef');
+						});
+
 })(jQuery);

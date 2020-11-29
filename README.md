@@ -1,2 +1,2 @@
 # cosmic-horror
-Github Pages project for the domain https://www.kosmischer-horror.de
+Github Pages project for the domain https://kosmischer-horror.de

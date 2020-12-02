@@ -8670,6 +8670,6 @@ input, select, textarea {
 	text-decoration: none; 
   }
   
-  #a_imp, #a_dp {
-	  font-size: 0.5em;
+  #a_imp, #a_dp, #a_home {
+	  font-size: 0.4em;
   }

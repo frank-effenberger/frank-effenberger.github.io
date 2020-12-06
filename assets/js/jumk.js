@@ -18,3 +18,8 @@ function linkTo_UnCryptMailto( s )
 {
 	location.href=UnCryptMailto( s );
 }
+
+function linkTo_UnCryptTelephoneto( s )
+{
+	location.href="tel:"+UnCryptMailto( s );
+}

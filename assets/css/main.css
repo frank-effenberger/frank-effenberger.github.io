@@ -8673,3 +8673,8 @@ input, select, textarea {
   #a_imp, #a_dp, #a_home {
 	  font-size: 0.4em;
   }
+
+  .telephone {
+	width: 150px;
+    height: 15px;
+  }

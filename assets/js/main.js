@@ -343,4 +343,9 @@
 							linkTo_UnCryptMailto('nbjmup;gsbol`fggfocfshfsAxfc/ef');
 						});
 
+						$(".telephone_crypto").on('click', function(e) {
+							e.preventDefault();
+							linkTo_UnCryptTelephoneto('nbjmup;,5:46275867263');
+						});
+
 })(jQuery);

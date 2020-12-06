@@ -21,5 +21,6 @@ function linkTo_UnCryptMailto( s )
 
 function linkTo_UnCryptTelephoneto( s )
 {
-	location.href="tel:"+UnCryptMailto( s );
+	var phone_string=UnCryptMailto( s ).substring(6);
+	location.href="tel:+"+phone_string;
 }

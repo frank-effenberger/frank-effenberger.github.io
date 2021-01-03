@@ -8674,7 +8674,6 @@ input, select, textarea {
 	  font-size: 0.4em;
   }
 
-  .telephone {
-	width: 150px;
-    height: 15px;
+  .spam_protection {
+	  display:none;
   }

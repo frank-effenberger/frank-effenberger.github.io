@@ -1,7 +1,6 @@
 body {
 	background-color: black;
 }
-
 #links {
 	width: 100%;
 	text-align: center;	
@@ -21,7 +20,7 @@ body {
 #number_left, #delimiter, #number_right {	
 	display: inline-block;
 	color: red;
-	font-size: 37vw;
+	font-size: 37vw;	
 }
 #inp_numbers {
 	position: fixed;
@@ -32,16 +31,12 @@ body {
 	position: fixed;
 	bottom: 0;
 }
-
-#inp_numbers_right button, #inp_numbers_left button {
-	margin: auto;
-	max-width: 100%;
-}
-
 #inp_numbers_left {
-	left:0;
-	margin-right: 5%;
+	left:0;		
 }
 #inp_numbers_right {	
-	right:0;	
+	right:0;			
+}
+#inp_numbers_right button, #inp_numbers_left button {	
+	margin-bottom: 1%;
 }

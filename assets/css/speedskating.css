@@ -1,0 +1,29 @@
+#links {
+	width: 100%;
+	text-align: center;	
+}
+#imp, #dp {
+	margin-right: 5%;
+	display: inline-block;
+}
+#numbers {	
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+#number_left, #delimiter, #number_right {	
+	display: inline-block;
+	color: red;
+	font-size: 40vw;
+}
+#inp_numbers {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#inp_numbers_right {
+	position: fixed;
+	bottom: 0;
+	right:0;	
+}

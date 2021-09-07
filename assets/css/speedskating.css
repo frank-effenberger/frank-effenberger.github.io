@@ -1,10 +1,16 @@
+body {
+	background-color: black;
+}
+
 #links {
 	width: 100%;
 	text-align: center;	
 }
-#imp, #dp {
-	margin-right: 5%;
+#imp, #dp {	
 	display: inline-block;
+}
+#imp {
+	margin-right: 5%;
 }
 #numbers {	
 	position: fixed;
@@ -15,15 +21,27 @@
 #number_left, #delimiter, #number_right {	
 	display: inline-block;
 	color: red;
-	font-size: 40vw;
+	font-size: 37vw;
 }
 #inp_numbers {
 	position: fixed;
     bottom: 0;
     width: 100%;
 }
-#inp_numbers_right {
+#inp_numbers_right, #inp_numbers_left {
 	position: fixed;
 	bottom: 0;
+}
+
+#inp_numbers_right button, #inp_numbers_left button {
+	margin: auto;
+	max-width: 100%;
+}
+
+#inp_numbers_left {
+	left:0;
+	margin-right: 5%;
+}
+#inp_numbers_right {	
 	right:0;	
 }

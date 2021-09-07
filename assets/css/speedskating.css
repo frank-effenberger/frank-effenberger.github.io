@@ -26,7 +26,7 @@ body {
 #number_left, #delimiter, #number_right {	
 	display: inline-block;
 	color: red;
-	/*font-size: 37vw;*/	
+	font-size: calc(12vw + 12vh + 6vmin);    	
 }
 #inp_numbers {
 	position: fixed;

@@ -8677,3 +8677,7 @@ input, select, textarea {
   .obelisk {
 	  display:none;
   }
+
+  .short_stories_svg {
+	  width: 50%;
+  }

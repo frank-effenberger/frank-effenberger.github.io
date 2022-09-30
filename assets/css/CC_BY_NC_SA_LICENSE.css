@@ -7,3 +7,12 @@
 	margin-right: 5%;
 	display: inline-block;
 }
+.lower-alpha {
+	list-style-type: lower-alpha;
+}
+.upper-alpha {
+	list-style-type:upper-alpha;
+}
+.lower-roman {
+	list-style-type:lower-roman;
+}

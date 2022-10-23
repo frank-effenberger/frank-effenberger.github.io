@@ -14,7 +14,7 @@
 </url>
 <url>
   <loc>https://kosmischer-horror.de/dyrhal</loc>
-  <lastmod>2022-10-05T17:00:00+00:00</lastmod>
+  <lastmod>2022-10-23T17:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -40,6 +40,11 @@
 <url>
   <loc>https://kosmischer-horror.de/dyrhal/Artists.html</loc>
    <lastmod>2022-10-05T17:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/dyrhal/assets/system_reference_documents/001_Dyrhal_Systemreferenz.pdf</loc>
+   <lastmod>2022-10-23T17:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>

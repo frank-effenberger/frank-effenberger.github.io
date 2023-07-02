@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Kosmischer Horror</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Öffentlicher PGP Schlüssel">
+		<meta name="keywords" content="Öffentlicher PGP Schlüssel, Public PGP Key">
+		<meta name="author" content="Dr. Frank Effenberger">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'; font-src 'self'; manifest-src 'self'">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/PGP_KEY.css"/>
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>        
+    </head>
+    <body>
+        <!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#" aria-label="zum Seitenanfang">Dr. Frank Effenberger</a></h1>
+					<p>Ich bin ein Wirtschaftsinformatiker und Rollenspielbegeisterter aus Dresden. <br />
+						Hier finden Sie alle Informationen zu meiner mit P&P-Spielen kompatiblen Fantasywelt Dyrhal.</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#black_library_intro" class="active" aria-label="zum Seitenanfang">zum Seitenanfang</a></li>
+						<li><a href="#search_help" aria-label="zur Suchhilfe">Suchhilfe</a></li>
+						<li><a href="#locations" aria-label="zu den Orten">Orte</a></li>
+						<li><a href="#organizations" aria-label="zu den Organisationen">Organisationen</a></li>
+						<li><a href="#npcs" aria-label="zu den Nichtspielercharakteren">NSCs</a></li>
+						<li><a href="#creatures" aria-label="zu den Kreaturen">Kreaturen</a></li>
+						<li><a href="#spells" aria-label="zu den Zaubern">Zauber</a></li>
+						<li><a href="#items" aria-label="zu den Gegenständen">Gegenstände</a></li>
+                        <li><a href="https://kosmischer-horror.de/dyrhal/#dyrhal" aria-label="zurück zu Dyrhal">zurück zu Dyrhal</a></li>						
+						<li><a href="https://kosmischer-horror.de/dyrhal/#imp" aria-label="Deutsch: zum Impressum - English: to the legal notice">Impressum / Legal Notice</a></li>
+						<li><a href="https://kosmischer-horror.de/dyrhal/#dp" aria-label="Deutsch: zum Datenschutz - English: to the data privacy">Datenschutz / Data Privacy</a></li>
+						<li><a href="https://kosmischer-horror.de/dyrhal/#kontakt" aria-label="zum Kontakt">Kontakt</a></li>
+					</ul>
+				</nav>
+			</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Main -->
+        <div id="main">
+            <!-- BLACK LIBRARY INTRO -->
+			<section id="black_library_intro">
+				<p>Willkommen in der schwarzen Bibliothek. Diese Enzyklopädie enthält Wissen, welches durch die Helden dieses Universums gefunden wurde und dient als Online-Nachschlagewerk für alle Homebrew-Dinge.</p>					
+			</section>
+			<!-- SEARCH HELP -->
+			<!-- HOMEBREW LOCATIONS TEMPLATE
+				<ul class="alt" id="location_">
+					<li><b>Ort Name</b>: </li>
+					<li><b>Ort Lage</b>: </li>
+					<li><b>Ort Herrscher</b>: </li>
+					<li><b>Ort Typ</b>: </li>
+					<li><b>Ort Ruf</b>: </li>
+					<li><b>Ort Wohlstand</b>: </li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: </li>
+					<li><b>Ort Einwohnerarten</b>: </li>
+					<li><b>Ort Aussehen</b>: </li>
+					<li><b>Ort Klang</b>: </li>
+					<li><b>Ort Geruch</b>: </li>
+					<li><b>Ort Verteidigung</b>: </li>
+					<li><b>Ort Waren & Dienstleistungen</b>: </li>
+					<li><b>Ort Tavernen</b>: </li>
+					<li><b>Ort Läden</b>: </li>
+					<li><b>Ort Fantastische Elemente</b>: </li>
+					<li><b>Ort Organisationen</b>: </li>
+					<li><b>Ort NSCs</b>: </li>
+					<li><b>Ort Kreaturen</b>: </li>
+					<li><b>Ort Besondere Beziehung zu</b>:</li>
+					<li><b>Ort Kurzbeschreibung</b>: </li>
+				</ul>
+			-->
+			<!-- HOMEBREW LOCATIONS TEMPLATE RULES
+			<ul class="alt" id="location_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Lage</b>: [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</li>
+					<li><b>Ort Herrscher</b>: </li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</li>
+					<li><b>Ort Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
+					<li><b>Ort Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
+					<li><b>Ort Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>				
+					<li><b>Ort Einwohneranzahl</b>: [0-9]*</li>
+					<li><b>Ort Einwohnerarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Aussehen</b>: [Text]</li>
+					<li><b>Ort Klang</b>: [Text]</li>
+					<li><b>Ort Geruch</b>: [Text]</li>
+					<li><b>Ort Verteidigung</b>: [0-9]* Verteidiger</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: [Ware | Dienstleistung]*</li>
+					<li><b>Ort Tavernen</b>: [Tavernenname]*</li>
+					<li><b>Ort Läden</b>: [Ladenname]*</li>
+					<li><b>Ort Fantastische Elemente</b>: [Fantastisches Element]*</li>
+					<li><b>Ort Organisationen</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>Ort NSCs</b>: [(Link zu NSC)*]</li>
+					<li><b>Ort Kreaturen</b>: [(Link zu Kreatur)*]</li>
+					<li><b>Ort Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>Ort Kurzbeschreibung</b>: [Text]</li>
+				</ul>
+			-->
+			<!-- HOMEBREW ORGANIZATIONS TEMPLATE
+				<ul class="alt" id="organization_">
+					<li><b>Organisation Name</b>: </li>
+					<li><b>Organisation Herrscher</b>: </li>
+					<li><b>Organisation Hauptsitz</b>: </li>
+					<li><b>Organisation Typ</b>: </li>
+					<li><b>Organisation Ruf</b>: </li>
+					<li><b>Organisation Wohlstand</b>: </li>
+					<li><b>Organisation Sicherheit</b>: </li>
+					<li><b>Organisation Fähigkeiten</b>: </li>
+					<li><b>Organisation Mitgliederanzahl</b>: </li>
+					<li><b>Organisation Mitgliederarten</b>: </li>
+					<li><b>Organisation NSCs</b>: </li>
+					<li><b>Organisation Kreaturen</b>: </li>
+					<li><b>Organisation Besondere Beziehung zu</b>: </li>
+					<li><b>Organisation Kurzbeschreibung</b>: </li>
+				</ul>
+			-->
+			<!-- HOMEBREW ORGANIZATIONS TEMPLATE RULES
+				<ul class="alt" id="organization_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Herrscher</b>: [Text]</li>
+					<li><b>Organisation Hauptsitz</b>: [Text | Link zu Ort]</li>
+					<li><b>Organisation Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</li>
+					<li><b>Organisation Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
+					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich] </li>
+					<li><b>Organisation Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>
+					<li><b>Organisation Fähigkeiten</b>: [Text]</li> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Mitgliederanzahl</b>: [0-9]*</li>
+					<li><b>Organisation Mitgliederarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation NSCs</b>: [(Link zu NSC)*]</li>
+					<li><b>Organisation Kreaturen</b>: [(Link zu Kreatur)*]</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>Organisation Kurzbeschreibung</b>: [Text]</li>
+				</ul>
+			-->
+			<!-- HOMEBREW NPCS TEMPLATE
+				<ul class="alt" id="nsc_">
+					<li><b>NSC Name</b>: </li>
+					<li><b>NSC Volk</b>: </li>
+					<li><b>NSC Beruf</b>: </li>
+					<li><b>NSC Charaktertyp</b>: </li>
+					<li><b>NSC Alter</b>: </li>
+					<li><b>NSC Größe</b>: </li>
+					<li><b>NSC Gewicht</b>: </li>
+					<li><b>NSC Augenfarbe</b>: </li>
+					<li><b>NSC Hautfarbe</b>: </li>
+					<li><b>NSC Haarfarbe</b>: </li>
+					<li><b>NSC Kleidung</b>: </li>					
+					<li><b>NSC Ort</b>: </li>
+					<li><b>NSC Organisation</b>: </li>
+					<li><b>NSC Besondere Beziehungen zu</b>: </li>
+					<li><b>NSC Besonderheiten</b>: </li>
+					<li><b>NSC Kurzbeschreibung</b>: </li>
+				</ul>
+			-->
+			<!-- HOMEBREW NPCS TEMPLATE RULES
+				<ul class="alt" id="nsc_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Volk</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Beruf</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Charaktertyp</b>: [ Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank]</li>
+					<li><b>NSC Alter</b>: [0-9]*</li>
+					<li><b>NSC Größe</b>: [0.0-9.0]* Meter</li>
+					<li><b>NSC Gewicht</b>: [0.0-9.0]* Kilogramm</li>
+					<li><b>NSC Augenfarbe</b>: [Text]</li>
+					<li><b>NSC Hautfarbe</b>: [Text]</li>
+					<li><b>NSC Haarfarbe</b>: [Text]</li>
+					<li><b>NSC Kleidung</b>: [Text]</li>					
+					<li><b>NSC Ort</b>: [Text | (Link zu Ort)*]</li>
+					<li><b>NSC Organisation</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>NSC Besonderheiten</b>: [Text]</li>
+					<li><b>NSC Kurzbeschreibung</b>: [Text]</li>
+				</ul>
+			-->
+			<!-- HOMEBREW CREATURES TEMPLATE
+				<ul class="alt" id="creature_">
+					<li><b>Kreatur Name</b>: </li>
+					<li><b>Kreatur Größe</b>: </li>
+					<li><b>Kreatur Gewicht</b>: </li>					
+					<li><b>Kreatur Sprachen</b>: </li>
+					<li><b>Kreatur Ort</b>: </li>
+					<li><b>Kreatur Organisation</b>: </li>
+					<li><b>Kreatur Besondere Beziehung zu</b>: </li>
+					<li><b>Kreatur Bekannte Fähigkeiten</b>: </li>
+					<li><b>Kreatur Kurzbeschreibung</b>: </li>
+				</ul>
+			-->
+			<!-- HOMEBREW CREATURES TEMPLATE RULES
+				<ul class="alt" id="creature_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Kreatur Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Kreatur Größe</b>: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</li>
+					<li><b>Kreatur Gewicht</b>: [(Gewicht in Pfund) lb]</li>				
+					<li><b>Kreatur Sprachen</b>: [Sprache]*</li>
+					<li><b>Kreatur Ort</b>: [Text | (Link zu Ort)*]</li>
+					<li><b>Kreatur Organisation</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>Kreatur Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>Kreatur Bekannte Fähigkeiten</b>: [Auflistung bekannter Fähigkeiten als Text]</li> -> ACHTUNG BEKANNTE FÄHIGKEITEN RECHTSKONFORM
+					<li><b>Kreatur Kurzbeschreibung</b>: [Text]</li> -> ACHTUNG KURZBESCHREIBUNG RECHTSKONFORM
+				</ul>
+			-->
+			<!-- HOMEBREW SPELLS TEMPLATE 
+				<ul class="alt" id="spell_">
+					<li><b>Zauber Name</b>: </li>
+					<li><b>Zauber Stufe</b>: </li>
+					<li><b>Zauber Klassenbeschränkung</b>: </li>
+					<li><b>Zauber Ritual</b>: </li>
+					<li><b>Zauber Zauberzeit</b>: </li>
+					<li><b>Zauber Reichweite</b>: </li>
+					<li><b>Zauber Komponenten</b>: </li>
+					<li><b>Zauber Dauer</b>: </li>
+					<li><b>Zauber Konzentration</b>: </li>
+					<li><b>Zauber Beschreibung</b>: </li>
+				</ul>
+			-->
+			<!-- HOMEBREW SPELLS TEMPLATE RULES
+				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Zauber Name</b>: [Text]></li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Zauber Stufe</b>: [Cantrip | Stufe [1-9]]</li>
+					<li><b>Zauber Klassenbeschränkung</b>: [Klasse | Nein ]</li> -> ACHTUNG KLASSENNAMEN RECHTSKONFORM
+					<li><b>Zauber Ritual</b>: [Ja | Nein]</li>
+					<li><b>Zauber Zauberzeit</b>: [1 Aktion | 1 Bonusaktion | 1 Reaktion]</li>
+					<li><b>Zauber Reichweite</b>: [ ([0-9]* Feet) | Selbst]</li>
+					<li><b>Zauber Komponenten</b>: [ V? S? M(Text)?]</li>
+					<li><b>Zauber Dauer</b>: [Text]</li>
+					<li><b>Zauber Konzentration</b>: [Ja | Nein]</li>
+					<li><b>Zauber Beschreibung</b>: [Text]</li>  -> ACHTUNG BESCHREIBUNG RECHTSKONFORM
+				</ul>
+			-->
+			<!-- HOMEBREW ITEMS TEMPLATE:
+				<ul class="alt" id="item_">
+					<li><b>Gegenstand Name</b>: </li>
+					<li><b>Gegenstand Typ</b>: </li>
+					<li><b>Gegenstand Ausprägung</b>: </li>
+					<li><b>Gegenstand Seltenheit</b>: </li>
+					<li><b>Gegenstand Einstimmung</b>: </li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: </li>
+				</ul>				
+			-->
+			<!-- HOMEBREW ITEMS TEMPLATE RULES:
+				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Gegenstand Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Gegenstand Typ</b>: [Gegenstand | Kleidung | Rüstung | Waffe (einfach) | Waffe (Krieg) | Zauber | Trank]</li>
+					<li><b>Gegenstand Ausprägung</b>: [Text - Referenz zu Gegenständen]</li>
+					<li><b>Gegenstand Seltenheit</b>: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</li>
+					<li><b>Gegenstand Einstimmung</b>: [Ja | Nein]</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: [Text]</li>  -> ACHTUNG BESCHREIBUNG RECHTSKONFORM
+				</ul>				
+			-->
+            <section id="search_help">
+				<p>SUCHHILFE TBD.</p>		
+				<ul class="alt">
+					<li><b>Test</b>: »Test«</li>
+				</ul>
+ 			</section>
+			<!-- HOMEBREW LOCATIONS -->			
+			<section id="locations">
+				<ul class="alt" id="location_test">
+					<li><b>Ort Name</b>: Test</li>
+					<li><b>Ort Lage</b>: Test</li>
+					<li><b>Ort Herrscher</b>: Test</li>
+					<li><b>Ort Typ</b>: Test</li>
+					<li><b>Ort Ruf</b>: Test</li>
+					<li><b>Ort Wohlstand</b>: Test</li>
+					<li><b>Ort Sicherheit</b>: Test</li>			
+					<li><b>Ort Einwohneranzahl</b>: Test</li>
+					<li><b>Ort Einwohnerarten</b>: Test</li>
+					<li><b>Ort Aussehen</b>: Test</li>
+					<li><b>Ort Klang</b>: Test</li>
+					<li><b>Ort Geruch</b>: Test</li>
+					<li><b>Ort Verteidigung</b>: Test</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Test</li>
+					<li><b>Ort Tavernen</b>: Test</li>
+					<li><b>Ort Läden</b>: Test</li>
+					<li><b>Ort Fantastische Elemente</b>: Test</li>
+					<li><b>Ort Organisationen</b>: Test</li>
+					<li><b>Ort NSCs</b>: Test</li>
+					<li><b>Ort Kreaturen</b>: Test</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Test</li>
+					<li><b>Ort Kurzbeschreibung</b>: Test</li>
+				</ul>
+		  	</section>
+			<!-- HOMEBREW ORGANIZATIONS -->			
+		  	<section id="organizations">
+				<ul class="alt" id="organization_test">
+					<li><b>Organisation Name</b>: Test</li>
+					<li><b>Organisation Herrscher</b>: Test</li>
+					<li><b>Organisation Hauptsitz</b>: Test</li>
+					<li><b>Organisation Typ</b>: Test</li>
+					<li><b>Organisation Ruf</b>: Test</li>
+					<li><b>Organisation Wohlstand</b>: Test</li>
+					<li><b>Organisation Sicherheit</b>: Test</li>
+					<li><b>Organisation Fähigkeiten</b>: Test</li>
+					<li><b>Organisation Mitgliederanzahl</b>: Test</li>
+					<li><b>Organisation Mitgliederarten</b>: Test</li>
+					<li><b>Organisation NSCs</b>: Test</li>
+					<li><b>Organisation Kreaturen</b>: Test</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: Test</li>
+					<li><b>Organisation Kurzbeschreibung</b>: Test</li>
+				</ul>
+	  		</section>
+			<!-- HOMEBREW NPCS -->			
+			<section id="npcs">
+				<ul class="alt" id="nsc_test">
+					<li><b>NSC Name</b>: Test</li>
+					<li><b>NSC Volk</b>: Test</li>
+					<li><b>NSC Beruf</b>: Test</li>
+					<li><b>NSC Charaktertyp</b>: Test</li>
+					<li><b>NSC Alter</b>: Test</li>
+					<li><b>NSC Größe</b>: Test</li>
+					<li><b>NSC Gewicht</b>: Test</li>
+					<li><b>NSC Augenfarbe</b>: Test</li>
+					<li><b>NSC Hautfarbe</b>: Test</li>
+					<li><b>NSC Haarfarbe</b>: Test</li>
+					<li><b>NSC Kleidung</b>: Test</li>					
+					<li><b>NSC Ort</b>: Test</li>
+					<li><b>NSC Organisation</b>: Test</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Test</li>
+					<li><b>NSC Besonderheiten</b>: Test</li>
+					<li><b>NSC Kurzbeschreibung</b>: Test</li>
+				</ul>
+		  	</section>
+		  	<!-- HOMEBREW CREATURES -->			
+		  	<section id="creatures">
+				<ul class="alt" id="creature_test">
+					<li><b>Kreatur Name</b>: Test</li>
+					<li><b>Kreatur Größe</b>: Test</li>
+					<li><b>Kreatur Gewicht</b>: Test</li>					
+					<li><b>Kreatur Sprachen</b>: Test</li>
+					<li><b>Kreatur Ort</b>: Test</li>
+					<li><b>Kreatur Organisation</b>: Test</li>
+					<li><b>Kreatur Besondere Beziehung zu</b>: Test</li>
+					<li><b>Kreatur Bekannte Fähigkeiten</b>: Test</li>
+					<li><b>Kreatur Kurzbeschreibung</b>: Test</li>
+				</ul>
+	  		</section>
+	  		<!-- HOMEBREW SPELLS -->			
+	  		<section id="spells">
+				<ul class="alt" id="spell_test">
+					<li><b>Zauber Name</b>: Test</li>					
+					<li><b>Zauber Stufe</b>: Test</li>
+					<li><b>Zauber Klassenbeschränkung</b>: Test</li>
+					<li><b>Zauber Ritual</b>: Test</li>
+					<li><b>Zauber Zauberzeit</b>: Test</li>
+					<li><b>Zauber Reichweite</b>: Test</li>
+					<li><b>Zauber Komponenten</b>: Test</li>
+					<li><b>Zauber Dauer</b>: Test</li>
+					<li><b>Zauber Konzentration</b>: Test</li>
+					<li><b>Zauber Beschreibung</b>: Test</li>
+				</ul>
+  			</section>
+  			<!-- HOMEBREW ITEMS -->			
+  			<section id="items">				
+				<ul class="alt" id="item_test">
+					<li><b>Gegenstand Name</b>: Test</li>
+					<li><b>Gegenstand Typ</b>: Test</li>
+					<li><b>Gegenstand Ausprägung</b>: Test</li>
+					<li><b>Gegenstand Seltenheit</b>: Test</li>
+					<li><b>Gegenstand Einstimmung</b>: Test</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Test</li>					
+				</ul>
+			</section>
+		</div>
+       <!-- Footer -->
+	   <section id="footer">
+		<div class="container">
+			<ul class="copyright">
+				<li>Dyrhal and all Dyrhal-related content &copy; 2022 Dr. Frank Effenberger is licensed under <a href="CC_BY_NC_SA_LICENSE.html" target="_blank" rel="noopener" aria-label="zur CC BY-NC-SA-Lizenz">CC BY-NC-SA-License</a>.</li><li>Design: <a href="https://html5up.net" target="_blank" rel="noopener" aria-label="Deutsch: Link zur Seite von HTML5 UP - English: Link to the website of HTML5 UP">HTML5 UP</a> - <a href="https://html5up.net/license" target="_blank" rel="noopener" aria-label="Deutsch: Link zur CCA-3.0 Lizenz - English: Link to the CCA-3.0 License">CCA-3.0</a></li>
+			</ul>
+		</div>
+	</section>                   
+    
+</div>
+    <!-- Scripts -->			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    </body>
+</html>
+
+

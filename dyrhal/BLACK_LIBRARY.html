@@ -52,6 +52,7 @@
 			</section>
 			<!-- SEARCH HELP -->
 			<!-- HOMEBREW LOCATIONS TEMPLATE
+				---
 				<ul class="alt" id="location_">
 					<li><b>Ort Name</b>: </li>
 					<li><b>Ort Lage</b>: </li>
@@ -104,6 +105,7 @@
 				</ul>
 			-->
 			<!-- HOMEBREW ORGANIZATIONS TEMPLATE
+				---
 				<ul class="alt" id="organization_">
 					<li><b>Organisation Name</b>: </li>
 					<li><b>Organisation Herrscher</b>: </li>
@@ -140,6 +142,7 @@
 				</ul>
 			-->
 			<!-- HOMEBREW NPCS TEMPLATE
+				---
 				<ul class="alt" id="nsc_">
 					<li><b>NSC Name</b>: </li>
 					<li><b>NSC Volk</b>: </li>
@@ -180,6 +183,7 @@
 				</ul>
 			-->
 			<!-- HOMEBREW CREATURES TEMPLATE
+				---
 				<ul class="alt" id="creature_">
 					<li><b>Kreatur Name</b>: </li>
 					<li><b>Kreatur Größe</b>: </li>
@@ -205,7 +209,8 @@
 					<li><b>Kreatur Kurzbeschreibung</b>: [Text]</li> -> ACHTUNG KURZBESCHREIBUNG RECHTSKONFORM
 				</ul>
 			-->
-			<!-- HOMEBREW SPELLS TEMPLATE 
+			<!-- HOMEBREW SPELLS TEMPLATE
+				--- 
 				<ul class="alt" id="spell_">
 					<li><b>Zauber Name</b>: </li>
 					<li><b>Zauber Stufe</b>: </li>
@@ -234,8 +239,10 @@
 				</ul>
 			-->
 			<!-- HOMEBREW ITEMS TEMPLATE:
+				---
 				<ul class="alt" id="item_">
 					<li><b>Gegenstand Name</b>: </li>
+					<li><b>Gegenstand Gewicht</b>: </li>
 					<li><b>Gegenstand Typ</b>: </li>
 					<li><b>Gegenstand Ausprägung</b>: </li>
 					<li><b>Gegenstand Seltenheit</b>: </li>
@@ -246,7 +253,8 @@
 			<!-- HOMEBREW ITEMS TEMPLATE RULES:
 				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Gegenstand Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Gegenstand Typ</b>: [Gegenstand | Kleidung | Rüstung | Waffe (einfach) | Waffe (Krieg) | Zauber | Trank]</li>
+					<li><b>Gegenstand Gewicht</b>: [0-9]* lb</li>
+					<li><b>Gegenstand Typ</b>: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand]</li>
 					<li><b>Gegenstand Ausprägung</b>: [Text - Referenz zu Gegenständen]</li>
 					<li><b>Gegenstand Seltenheit</b>: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</li>
 					<li><b>Gegenstand Einstimmung</b>: [Ja | Nein]</li>
@@ -282,7 +290,7 @@
 							<td>NSC Volk: </td>	
 							<td>Kreatur Größe: </td>	
 							<td>Zauber Stufe: </td>	
-							<td>Gegenstand Typ: </td>												
+							<td>Gegenstand Gewicht: </td>												
 						</tr>
 						<tr>
 							<td>Ort Herrscher: </td>
@@ -290,7 +298,7 @@
 							<td>NSC Beruf: </td>	
 							<td>Kreatur Gewicht: </td>	
 							<td>Zauber Klassenbeschränkung: </td>	
-							<td>Gegenstand Ausprägung: </td>												
+							<td>Gegenstand Typ: </td>												
 						</tr>
 						<tr>
 							<td>Ort Typ: </td>
@@ -298,7 +306,7 @@
 							<td>NSC Charaktertyp: </td>	
 							<td>Kreatur Sprachen: </td>	
 							<td>Zauber Ritual: </td>	
-							<td>Gegenstand Seltenheit: </td>												
+							<td>Gegenstand Ausprägung: </td>												
 						</tr>
 						<tr>
 							<td>Ort Ruf: </td>
@@ -306,7 +314,7 @@
 							<td>NSC Alter: </td>	
 							<td>Kreatur Ort: </td>	
 							<td>Zauber Zauberzeit: </td>	
-							<td>Gegenstand Einstimmung: </td>												
+							<td>Gegenstand Seltenheit: </td>												
 						</tr>
 						<tr>
 							<td>Ort Wohlstand: </td>
@@ -314,7 +322,7 @@
 							<td>NSC Größe: </td>	
 							<td>Kreatur Organisation: </td>	
 							<td>Zauber Reichweite: </td>	
-							<td>Gegenstand Kurzbeschreibung: </td>												
+							<td>Gegenstand Einstimmung: </td>												
 						</tr>
 						<tr>
 							<td>Ort Sicherheit: </td>
@@ -322,7 +330,7 @@
 							<td>NSC Gewicht: </td>	
 							<td>Kreatur Besondere Beziehung zu: </td>	
 							<td>Zauber Komponenten: </td>	
-							<td></td>												
+							<td>Gegenstand Kurzbeschreibung</td>												
 						</tr>
 						<tr>
 							<td>Ort Einwohneranzahl: </td>
@@ -449,6 +457,7 @@
  			</section>
 			<!-- HOMEBREW LOCATIONS -->			
 			<section id="locations">
+				---	
 				<ul class="alt" id="location_test">
 					<li><b>Ort Name</b>: Test</li>
 					<li><b>Ort Lage</b>: Test</li>
@@ -476,6 +485,7 @@
 		  	</section>
 			<!-- HOMEBREW ORGANIZATIONS -->			
 		  	<section id="organizations">
+				---	
 				<ul class="alt" id="organization_test">
 					<li><b>Organisation Name</b>: Test</li>
 					<li><b>Organisation Herrscher</b>: Test</li>
@@ -495,6 +505,7 @@
 	  		</section>
 			<!-- HOMEBREW NPCS -->			
 			<section id="npcs">
+				---	
 				<ul class="alt" id="nsc_test">
 					<li><b>NSC Name</b>: Test</li>
 					<li><b>NSC Volk</b>: Test</li>
@@ -516,43 +527,90 @@
 		  	</section>
 		  	<!-- HOMEBREW CREATURES -->			
 		  	<section id="creatures">
-				<ul class="alt" id="creature_test">
-					<li><b>Kreatur Name</b>: Test</li>
-					<li><b>Kreatur Größe</b>: Test</li>
-					<li><b>Kreatur Gewicht</b>: Test</li>					
-					<li><b>Kreatur Sprachen</b>: Test</li>
-					<li><b>Kreatur Ort</b>: Test</li>
-					<li><b>Kreatur Organisation</b>: Test</li>
-					<li><b>Kreatur Besondere Beziehung zu</b>: Test</li>
-					<li><b>Kreatur Bekannte Fähigkeiten</b>: Test</li>
-					<li><b>Kreatur Kurzbeschreibung</b>: Test</li>
+				---	
+				<ul class="alt" id="creature_seelenverschlinger">
+					<li><b>Kreatur Name</b>: Seelenverschlinger</li>
+					<li><b>Kreatur Größe</b>: Groß</li>
+					<li><b>Kreatur Gewicht</b>: 400 lb</li>					
+					<li><b>Kreatur Sprachen</b>: Gemeinsprache, Dämonisch</li>
+					<li><b>Kreatur Ort</b>: Ilgareg (Splitter)</li>
+					<li><b>Kreatur Organisation</b>: -</li>
+					<li><b>Kreatur Besondere Beziehung zu</b>: -</li>
+					<li><b>Kreatur Bekannte Fähigkeiten</b>: Im Dunkeln sehen, Teleport, Duplikate erstellen (Illusion), Seelen von Getöteten verschlingen.</li>
+					<li><b>Kreatur Kurzbeschreibung</b>: Ein riesiges, wolfsartiges Wesen. Muskulös, mit rot leuchtenden Augen und mit einer dämonischen Intelligenz beseelt. Diese Wesen aus Ilgareg verlassen ihren Splitter nur, wenn sie magisch gerufen werden und haben einen unbändigen Durst, Seelen zu verschlingen.</li>
 				</ul>
 	  		</section>
 	  		<!-- HOMEBREW SPELLS -->			
 	  		<section id="spells">
-				<ul class="alt" id="spell_test">
-					<li><b>Zauber Name</b>: Test</li>					
-					<li><b>Zauber Stufe</b>: Test</li>
-					<li><b>Zauber Klassenbeschränkung</b>: Test</li>
-					<li><b>Zauber Ritual</b>: Test</li>
-					<li><b>Zauber Zauberzeit</b>: Test</li>
-					<li><b>Zauber Reichweite</b>: Test</li>
-					<li><b>Zauber Komponenten</b>: Test</li>
-					<li><b>Zauber Dauer</b>: Test</li>
-					<li><b>Zauber Konzentration</b>: Test</li>
-					<li><b>Zauber Beschreibung</b>: Test</li>
-				</ul>
+				---	
+				
   			</section>
   			<!-- HOMEBREW ITEMS -->			
-  			<section id="items">				
-				<ul class="alt" id="item_test">
-					<li><b>Gegenstand Name</b>: Test</li>
-					<li><b>Gegenstand Typ</b>: Test</li>
-					<li><b>Gegenstand Ausprägung</b>: Test</li>
-					<li><b>Gegenstand Seltenheit</b>: Test</li>
-					<li><b>Gegenstand Einstimmung</b>: Test</li>
-					<li><b>Gegenstand Kurzbeschreibung</b>: Test</li>					
+  			<section id="items">
+				---				
+				<ul class="alt" id="item_pathors_funke">
+					<li><b>Gegenstand Name</b>: Pathors Funke</li>
+					<li><b>Gegenstand Gewicht</b>: 2 lb</li>
+					<li><b>Gegenstand Typ</b>: Ausrüstungsgegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Sturmlaterne</li>
+					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Diese Sturmlaterne sieht aus wie ein Zylinder aus Eisen mit einem Griff: Anstelle vier üblicher Glasfenster für herausdringendes Licht sind vier eiserne Klappen angebracht.
+						Wird eine der Eisenklappen geöffnet, strahlt ein blaues Licht in einen Kegel von 30 Fuß (9 Meter) in diese Richtung. Es können beliebig viele Klappen geöffnet oder geschlossen werden.
+						Die Laterne benötigt keinen Brennstoff.</li>					
 				</ul>
+				---
+				<ul class="alt" id="item_frostblume">
+					<li><b>Gegenstand Name</b>: Frostblume</li>
+					<li><b>Gegenstand Gewicht</b>: 0 lb</li>
+					<li><b>Gegenstand Typ</b>: Verbrauchsgegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Blau</li>
+					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Eine kleine, blaue Blume, die komplett in eine Menschenhand passt. Die Blume schützt den Träger vor in Summe 10 Frostschaden, ehe sie verblüht. Der Frostschaden kann durch mehrere Quellen verursacht und zu unterschiedlichen Zeitpunkten absorbiert werden.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_augen_des_adlers">
+					<li><b>Gegenstand Name</b>: Augen des Adlers</li>
+					<li><b>Gegenstand Gewicht</b>: 1 lb</li>
+					<li><b>Gegenstand Typ</b>: Kopfbedeckung</li>
+					<li><b>Gegenstand Ausprägung</b>: Ausrüstungsgegenstand</li>
+					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
+					<li><b>Gegenstand Einstimmung</b>: Ja, 1 Stunde</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Diese Kristall-Linsen passen über die Augen. Während du sie trägst, hast du einen Vorteil bei Würfen auf Weisheit (Wahrnehmung), die von der Sehkraft abhängen. Insofern du freie Sicht hast, kannst du selbst bei extrem weit entfernten und kleinen Kreaturen und Objekten (60 Zentimeter und größer) Einzelheiten ausmachen.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_das_schwert_der_runen">
+					<li><b>Gegenstand Name</b>: Das Schwert der Runen</li>
+					<li><b>Gegenstand Gewicht</b>: 3 lb</li>
+					<li><b>Gegenstand Typ</b>: Waffe (Krieg)</li>
+					<li><b>Gegenstand Ausprägung</b>: Langschwert +1</li>
+					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Dieses Langschwert ist mit weißen Runen versehen, die bei jedem Schlag aufleuchten und die Angriffe verstärken.
+						Diese Waffe gilt als magische Waffe. Sämtliche Angriffs- und Schadenswürfe mit dieser Waffe erhalten ein +1.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_herzbrecher">
+					<li><b>Gegenstand Name</b>: Herzbrecher</li>
+					<li><b>Gegenstand Gewicht</b>: 2 lb</li>
+					<li><b>Gegenstand Typ</b>: Waffe (Krieg)</li>
+					<li><b>Gegenstand Ausprägung</b>: Kurzschwert +1</li>
+					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Dieses Kurzschwert besteht aus drei separaten Klingen, die ineinander geflochten sind und drei scharfe, nahe nebeneinander liegende Spitzen haben.
+						Diese Waffe gilt als magische Waffe. Sämtliche Angriffs- und Schadenswürfe mit dieser Waffe erhalten ein +1.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_monokel_der_einsicht">
+					<li><b>Gegenstand Name</b>: Monokel der Einsicht</li>
+					<li><b>Gegenstand Gewicht</b>: 0 lb</li>
+					<li><b>Gegenstand Typ</b>: Ausrüstungsgegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Brille</li>
+					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Dieses vergoldete Monokel trägt eine Glasscheibe, die blau-lila schimmert. Wenn der Anwender das Monokel trägt und hindurch sieht, dann erhält er 40ft Dunkelsicht.</li>
+				</ul>	
 			</section>
 		</div>
        <!-- Footer -->

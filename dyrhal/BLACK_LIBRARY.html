@@ -130,7 +130,7 @@
 					<li><b>Organisation Hauptsitz</b>: [Text | Link zu Ort]</li>
 					<li><b>Organisation Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</li>
 					<li><b>Organisation Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
-					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich] </li>
+					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
 					<li><b>Organisation Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>
 					<li><b>Organisation Fähigkeiten</b>: [Text]</li> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Organisation Mitgliederanzahl</b>: [0-9]*</li>
@@ -228,9 +228,9 @@
 				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Zauber Name</b>: [Text]></li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Zauber Stufe</b>: [Cantrip | Stufe [1-9]]</li>
-					<li><b>Zauber Klassenbeschränkung</b>: [Klasse | Nein ]</li> -> ACHTUNG KLASSENNAMEN RECHTSKONFORM
+					<li><b>Zauber Klassenbeschränkung</b>: [(Klasse)* | Nein ]</li> -> ACHTUNG KLASSENNAMEN RECHTSKONFORM
 					<li><b>Zauber Ritual</b>: [Ja | Nein]</li>
-					<li><b>Zauber Zauberzeit</b>: [1 Aktion | 1 Bonusaktion | 1 Reaktion]</li>
+					<li><b>Zauber Zauberzeit</b>: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</li>
 					<li><b>Zauber Reichweite</b>: [ ([0-9]* Feet) | Selbst]</li>
 					<li><b>Zauber Komponenten</b>: [ V? S? M(Text)?]</li>
 					<li><b>Zauber Dauer</b>: [Text]</li>
@@ -262,8 +262,8 @@
 				</ul>				
 			-->
             <section id="search_help">
-				<p>Bedienungsanleitung Desktop: STRG+F drücken. Einen der Suchbegriffe aus der Tabelle kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben.</p>
-				<p>Bedienungsanleitung Mobile: Desktop-Seitenansicht aktivieren und Suchfunktion für Seite im Browser aufrufen. Einen der Suchbegriffe aus der Tabelle kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben.</p>		
+				<p>Bedienungsanleitung Desktop: STRG+F drücken. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
+				<p>Bedienungsanleitung Mobile: Desktop-Seitenansicht aktivieren und Suchfunktion für Seite im Browser aufrufen. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>		
 				<table class="alt">
 					<thead>
 						<tr>
@@ -285,11 +285,11 @@
 							<td>Gegenstand Name: </td>													
 						</tr>
 						<tr>
-							<td>Ort Lage: </td>
+							<td>Ort Lage: [Name des Reiches], [Text]</td>
 							<td>Organisation Herrscher: </td>
 							<td>NSC Volk: </td>	
-							<td>Kreatur Größe: </td>	
-							<td>Zauber Stufe: </td>	
+							<td>Kreatur Größe: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</td>	
+							<td>Zauber Stufe: [Cantrip | Stufe [1-9]]</td>	
 							<td>Gegenstand Gewicht: </td>												
 						</tr>
 						<tr>
@@ -297,36 +297,36 @@
 							<td>Organisation Hauptsitz: </td>
 							<td>NSC Beruf: </td>	
 							<td>Kreatur Gewicht: </td>	
-							<td>Zauber Klassenbeschränkung: </td>	
-							<td>Gegenstand Typ: </td>												
+							<td>Zauber Klassenbeschränkung: [(Klasse)* | Nein ]</td>	
+							<td>Gegenstand Typ: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand]</td>												
 						</tr>
 						<tr>
-							<td>Ort Typ: </td>
-							<td>Organisation Typ: </td>
-							<td>NSC Charaktertyp: </td>	
+							<td>Ort Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
+							<td>Organisation Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
+							<td>NSC Charaktertyp: [ Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank]</td>	
 							<td>Kreatur Sprachen: </td>	
-							<td>Zauber Ritual: </td>	
+							<td>Zauber Ritual: [Ja | Nein]</td>	
 							<td>Gegenstand Ausprägung: </td>												
 						</tr>
 						<tr>
-							<td>Ort Ruf: </td>
-							<td>Organisation Ruf: </td>
+							<td>Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
+							<td>Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
 							<td>NSC Alter: </td>	
 							<td>Kreatur Ort: </td>	
-							<td>Zauber Zauberzeit: </td>	
-							<td>Gegenstand Seltenheit: </td>												
+							<td>Zauber Zauberzeit: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</td>	
+							<td>Gegenstand Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</td>												
 						</tr>
 						<tr>
-							<td>Ort Wohlstand: </td>
-							<td>Organisation Wohlstand: </td>
+							<td>Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
+							<td>Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
 							<td>NSC Größe: </td>	
 							<td>Kreatur Organisation: </td>	
 							<td>Zauber Reichweite: </td>	
-							<td>Gegenstand Einstimmung: </td>												
+							<td>Gegenstand Einstimmung: [Ja | Nein]</td>												
 						</tr>
 						<tr>
-							<td>Ort Sicherheit: </td>
-							<td>Organisation Sicherheit: </td>
+							<td>Ort Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
+							<td>Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
 							<td>NSC Gewicht: </td>	
 							<td>Kreatur Besondere Beziehung zu: </td>	
 							<td>Zauber Komponenten: </td>	
@@ -341,16 +341,16 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Einwohnerarten: </td>
+							<td>Ort Einwohnerarten: [Gemischt | (Volk)*]</td>
 							<td>Organisation Mitgliederanzahl: </td>
 							<td>NSC Hautfarbe: </td>	
 							<td>Kreatur Kurzbeschreibung: </td>	
-							<td>Zauber Konzentration: </td>	
+							<td>Zauber Konzentration: [Ja | Nein]</td>	
 							<td></td>												
 						</tr>
 						<tr>
 							<td>Ort Aussehen: </td>
-							<td>Organisation Mitgliederarten: </td>
+							<td>Organisation Mitgliederarten: [Gemischt | (Volk)*]</td>
 							<td>NSC Haarfarbe: </td>	
 							<td></td>	
 							<td>Zauber Beschreibung:</td>	
@@ -434,7 +434,7 @@
 							<td></td>	
 							<td></td>	
 							<td></td>	
-							<td>: </td>												
+							<td></td>												
 						</tr>	
 						<tr>
 							<td>Ort Besondere Beziehung zu: </td>
@@ -442,7 +442,7 @@
 							<td></td>	
 							<td></td>	
 							<td></td>	
-							<td>: </td>												
+							<td></td>												
 						</tr>
 						<tr>
 							<td>Ort Kurzbeschreibung: </td>
@@ -450,7 +450,7 @@
 							<td></td>	
 							<td></td>	
 							<td></td>	
-							<td>: </td>
+							<td></td>
 						</tr>														
 					</tbody>										
 				</table>

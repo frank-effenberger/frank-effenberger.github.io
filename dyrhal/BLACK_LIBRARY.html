@@ -111,8 +111,11 @@
 				<ul class="alt" id="organization_">
 					<li><b>Organisation Name</b>: </li>
 					<li><b>Organisation Link</b>: <a href="#organization_" aria-label=""></a></li>
+					<li><b>Organisation Leitmotiv</b>: </li>
+					<li><b>Organisation Symbol</b>: </li>
 					<li><b>Organisation Herrscher</b>: </li>
 					<li><b>Organisation Hauptsitz</b>: </li>
+					<li><b>Organisation Relikte</b>: </li>
 					<li><b>Organisation Typ</b>: </li>
 					<li><b>Organisation Ruf</b>: </li>
 					<li><b>Organisation Wohlstand</b>: </li>
@@ -120,6 +123,7 @@
 					<li><b>Organisation Fähigkeiten</b>: </li>
 					<li><b>Organisation Mitgliederanzahl</b>: </li>
 					<li><b>Organisation Mitgliederarten</b>: </li>
+					<li><b>Organisation Ränge</b>: </li>
 					<li><b>Organisation NSCs</b>: </li>
 					<li><b>Organisation Kreaturen</b>: </li>
 					<li><b>Organisation Besondere Beziehung zu</b>: </li>
@@ -130,8 +134,11 @@
 				<ul class="alt" id="organization_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Organisation Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Organisation Link</b>: <a href="#organization_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Organisation Leitmotiv</b>: [Text]</li>
+					<li><b>Organisation Symbol</b>: [Text]</li>
 					<li><b>Organisation Herrscher</b>: [Text]</li>
 					<li><b>Organisation Hauptsitz</b>: [Text | Link zu Ort]</li>
+					<li><b>Organisation Relikte</b>: [TODO Link Gegenstand]</li>
 					<li><b>Organisation Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</li>
 					<li><b>Organisation Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
 					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
@@ -139,6 +146,7 @@
 					<li><b>Organisation Fähigkeiten</b>: [Text]</li> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Organisation Mitgliederanzahl</b>: [0-9]*</li>
 					<li><b>Organisation Mitgliederarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Ränge</b>: [TODO Text Ränge aufsteigend]</li>
 					<li><b>Organisation NSCs</b>: [(Link zu NSC)*]</li>
 					<li><b>Organisation Kreaturen</b>: [(Link zu Kreatur)*]</li>
 					<li><b>Organisation Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
@@ -303,7 +311,7 @@
 						</tr>
 						<tr>
 							<td>Ort Lage: [Name des Reiches], [Text]</td>
-							<td>Organisation Herrscher: </td>
+							<td>Organisation Leitmotiv: </td>
 							<td>NSC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>	
 							<td>Kreatur Größe: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</td>	
 							<td>Zauber Stufe: [Cantrip | Stufe [1-9]]</td>	
@@ -311,7 +319,7 @@
 						</tr>
 						<tr>
 							<td>Ort Herrscher: </td>
-							<td>Organisation Hauptsitz: </td>
+							<td>Organisation Symbol: </td>
 							<td>NSC Stimme: [Tief | Mittel | Hoch]</td>	
 							<td>Kreatur Gewicht: </td>	
 							<td>Zauber Klassenbeschränkung: [(Klasse)* | Nein]</td>	
@@ -319,7 +327,7 @@
 						</tr>
 						<tr>
 							<td>Ort Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
-							<td>Organisation Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
+							<td>Organisation Herrscher: </td>
 							<td>NSC Volk: </td>	
 							<td>Kreatur Sprachen: </td>	
 							<td>Zauber Ritual: [Ja | Nein]</td>	
@@ -327,7 +335,7 @@
 						</tr>
 						<tr>
 							<td>Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
-							<td>Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
+							<td>Organisation Hauptsitz: </td>
 							<td>NSC Beruf: </td>	
 							<td>Kreatur Ort: </td>	
 							<td>Zauber Zauberzeit: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</td>	
@@ -335,7 +343,7 @@
 						</tr>
 						<tr>
 							<td>Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
-							<td>Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
+							<td>Organisation Relikte: </td>
 							<td>NSC Charaktertyp: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert| Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll]</td>	
 							<td>Kreatur Organisation: </td>	
 							<td>Zauber Reichweite: </td>	
@@ -343,7 +351,7 @@
 						</tr>
 						<tr>
 							<td>Ort Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
-							<td>Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
+							<td>Organisation Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
 							<td>NSC Alter: </td>	
 							<td>Kreatur Besondere Beziehung zu: </td>	
 							<td>Zauber Komponenten: </td>	
@@ -351,7 +359,7 @@
 						</tr>
 						<tr>
 							<td>Ort Einwohneranzahl: </td>
-							<td>Organisation Fähigkeiten: </td>
+							<td>Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
 							<td>NSC Größe: </td>	
 							<td>Kreatur Bekannte Fähigkeiten: </td>	
 							<td>Zauber Dauer: </td>	
@@ -359,7 +367,7 @@
 						</tr>
 						<tr>
 							<td>Ort Einwohnerarten: [Gemischt | (Volk)*]</td>
-							<td>Organisation Mitgliederanzahl: </td>
+							<td>Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
 							<td>NSC Gewicht: </td>	
 							<td>Kreatur Kurzbeschreibung: </td>	
 							<td>Zauber Konzentration: [Ja | Nein]</td>	
@@ -367,7 +375,7 @@
 						</tr>
 						<tr>
 							<td>Ort Aussehen: </td>
-							<td>Organisation Mitgliederarten: [Gemischt | (Volk)*]</td>
+							<td>Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
 							<td>NSC Augenfarbe: </td>	
 							<td></td>	
 							<td>Zauber Beschreibung:</td>	
@@ -375,7 +383,7 @@
 						</tr>
 						<tr>
 							<td>Ort Klang: </td>
-							<td>Organisation NSCs: </td>
+							<td>Organisation Fähigkeiten: </td>
 							<td>NSC Hautfarbe: </td>	
 							<td></td>	
 							<td></td>	
@@ -383,7 +391,7 @@
 						</tr>
 						<tr>
 							<td>Ort Geruch: </td>
-							<td>Organisation Haarfarbe: </td>
+							<td>Organisation Mitgliederanzahl: </td>
 							<td>NSC Haarfarbe: </td>	
 							<td></td>	
 							<td></td>	
@@ -391,7 +399,7 @@
 						</tr>
 						<tr>
 							<td>Ort Verteidigung: </td>
-							<td>Organisation Besondere Beziehung zu: </td>
+							<td>Organisation Mitgliederarten: </td>
 							<td>NSC Kleidung: </td>	
 							<td></td>	
 							<td></td>	
@@ -399,7 +407,7 @@
 						</tr>
 						<tr>
 							<td>Ort Waren & Dienstleistungen: </td>
-							<td>Organisation Kurzbeschreibung: </td>
+							<td>Organisation Ränge: </td>
 							<td>NSC Ort: </td>	
 							<td></td>	
 							<td></td>	
@@ -407,7 +415,7 @@
 						</tr>
 						<tr>
 							<td>Ort Tavernen: </td>
-							<td></td>
+							<td>Organisation NSCs: </td>
 							<td>NSC Organisation: </td>	
 							<td></td>	
 							<td></td>	
@@ -415,7 +423,7 @@
 						</tr>
 						<tr>
 							<td>Ort Läden: </td>
-							<td></td>
+							<td>Organisation Kreaturen: </td>
 							<td>NSC Besondere Beziehung zu: </td>	
 							<td></td>	
 							<td></td>	
@@ -423,7 +431,7 @@
 						</tr>
 						<tr>
 							<td>Ort Fantastische Elemente: </td>
-							<td></td>
+							<td>Organisation Besondere Beziehung zu: </td>
 							<td>NSC Besonderheiten: </td>	
 							<td></td>	
 							<td></td>	
@@ -431,7 +439,7 @@
 						</tr>
 						<tr>
 							<td>Ort Organisationen: </td>
-							<td></td>
+							<td>Organisation Kurzbeschreibung: </td>
 							<td>NSC Kurzbeschreibung: </td>	
 							<td></td>	
 							<td></td>	
@@ -504,22 +512,242 @@
 			<!-- HOMEBREW ORGANIZATIONS -->			
 		  	<section id="organizations">
 				---	
-				<ul class="alt" id="organization_">
-					<li><b>Organisation Name</b>: </li>
-					<li><b>Organisation Link</b>: <a href="#organization_" aria-label=""></a></li>
-					<li><b>Organisation Herrscher</b>: </li>
-					<li><b>Organisation Hauptsitz</b>: </li>
-					<li><b>Organisation Typ</b>: </li>
-					<li><b>Organisation Ruf</b>: </li>
-					<li><b>Organisation Wohlstand</b>: </li>
-					<li><b>Organisation Sicherheit</b>: </li>
-					<li><b>Organisation Fähigkeiten</b>: </li>
-					<li><b>Organisation Mitgliederanzahl</b>: </li>
-					<li><b>Organisation Mitgliederarten</b>: </li>
-					<li><b>Organisation NSCs</b>: </li>
-					<li><b>Organisation Kreaturen</b>: </li>
-					<li><b>Organisation Besondere Beziehung zu</b>: </li>
-					<li><b>Organisation Kurzbeschreibung</b>: </li>
+				<ul class="alt" id="organization_schwarze_bibliothek">
+					<li><b>Organisation Name</b>: Schwarze Bibliothek</li>
+					<li><b>Organisation Link</b>: <a href="#organization_schwarze_bibliothek" aria-label="Schwarze Bibliothek">Schwarze Bibliothek</a></li>
+					<li><b>Organisation Leitmotiv</b>: Wissen ist die mächtigste Handelsware</li>
+					<li><b>Organisation Symbol</b>: Drei Raben im Kreis, ein schwarzes Auge in der Mitte</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_visarius" aria-label="Visarius">Visarius</a></li>					
+					<li><b>Organisation Hauptsitz</b>: TODO Link Schwarze Bibliothek (Adrijh-Inseln)</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_ghantons_wandelndes_buch" aria-label="Ghantons wandelndes Buch">Ghantons wandelndes Buch</a></li>
+					<li><b>Organisation Typ</b>: Spezial</li>
+					<li><b>Organisation Ruf</b>: Neutral</li>
+					<li><b>Organisation Wohlstand</b>: Normal</li>
+					<li><b>Organisation Sicherheit</b>: Ordnung</li>
+					<li><b>Organisation Fähigkeiten</b>: Wissen</li>
+					<li><b>Organisation Mitgliederanzahl</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Sucher, Schwarzfeder, Rabe, Das Auge, Hohepriester</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_visarius" aria-label="Visarius">Visarius</a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_tausend_raben" aria-label="Tausend Raben">Tausend Raben</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel der schwarzen Bibliothek ist es, sämtliches Wissen von Dyrhal zu sammeln und zu katalogisieren.
+
+						Typische Aufträge beinhalten das Sammeln von Artefakten & Zauberbüchern, Einbruch, Beschattung, die Erforschung der Welt sowie den Tausch von Dienstleistungen oder neues Wissen gegen anderes Wissen.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_kirche_der_blauen_sonne">
+					<li><b>Organisation Name</b>: Kirche der blauen Sonne</li>
+					<li><b>Organisation Link</b>: <a href="#organization_kirche_der_blauen_sonne" aria-label="Kirche der blauen Sonne">Kirche der blauen Sonne</a></li>
+					<li><b>Organisation Leitmotiv</b>: Verbannt die Dunkelheit! Lasst Licht in euer Herz!</li>
+					<li><b>Organisation Symbol</b>: Eine blaue Sonne</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a></li>
+					<li><b>Organisation Hauptsitz</b>: TODO Link Dunmar (Eriond)</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_brennende_kugel_pathors" aria-label="Brennende Kugel Pathors">Brennende Kugel Pathors</a></li>
+					<li><b>Organisation Typ</b>: Geistig</li>
+					<li><b>Organisation Ruf</b>: Freundlich</li>
+					<li><b>Organisation Wohlstand</b>: Wachstum</li>
+					<li><b>Organisation Sicherheit</b>: Ordnung</li>
+					<li><b>Organisation Fähigkeiten</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederanzahl</b>: 400</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Neophyt, Bruder, Pater, Abt, Patriarch</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a></li>
+					<li><b>Organisation Kreaturen</b>:  Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_pathor" aria-label="Pathor">Pathor</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel der Kirche der blauen Sonne ist es, für Ordnung und Seelenfrieden zu sorgen sowie dunkle Machenschaften ans Licht zu bringen und zu bekämpfen.
+
+						Typische Aufträge beinhalten dem Nachgehen von Diebstahl, Mord, Berichten über Monstern sowie das Ermöglichen von Buße und die Bekämpfung bösartiger Organisationen.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_orden_der_heilenden_hand">
+					<li><b>Organisation Name</b>: Orden der heilenden Hand</li>
+					<li><b>Organisation Link</b>: <a href="#organization_orden_der_heilenden_hand" aria-label="Orden der heilenden Hand">Orden der heilenden Hand</a></li>
+					<li><b>Organisation Leitmotiv</b>: Niemand soll eines unnatürlichen Todes sterben</li>
+					<li><b>Organisation Symbol</b>: Ein weißer Baum voll goldener Blätter</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_shina_voxis" aria-label="Shina Voxis">Shina Voxis</a></li>
+					<li><b>Organisation Hauptsitz</b>: TODO Link Arcamont (Tharion)</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_heilende_hand" aria-label="Heilende Hand">Heilende Hand</a></li>
+					<li><b>Organisation Typ</b>: Geistig</li>
+					<li><b>Organisation Ruf</b>: Geliebt</li>
+					<li><b>Organisation Wohlstand</b>: Normal</li>
+					<li><b>Organisation Sicherheit</b>: Stabilisierung</li>
+					<li><b>Organisation Fähigkeiten</b>: Heilung, Fluchbrechen</li>
+					<li><b>Organisation Mitgliederanzahl</b>: 230</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Gehilfe, Heiler, Fluchbrecher, Priester, Alyrias Hand</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_shina_voxis" aria-label="Shina Voxis">Shina Voxis</a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_alyria" aria-label="Alyria">Alyria</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel des Ordens der heilenden Hand ist es, die Kranken egal welchen Standes zu versorgen und Flüche zu brechen.
+
+						Typische Aufträge beinhalten das Sammeln von Heilmitteln, das Ausprobieren neuer Heilverfahren, das Brechen von Flüchen sowie die Unterstützung der Lazarette und Krankenhäuser Dyrhals.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_weiße_garde">
+					<li><b>Organisation Name</b>: Weiße Garde</li>
+					<li><b>Organisation Link</b>: <a href="#organization_weiße_garde" aria-label="Weiße Garde">Weiße Garde</a></li>
+					<li><b>Organisation Leitmotiv</b>: Wir bringen Gerechtigkeit</li>
+					<li><b>Organisation Symbol</b>: Ein Schild, darauf das Symbol eines Kriegshammers</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_garek_suul" aria-label="Garek Suul">Garek Suul</a></li>
+					<li><b>Organisation Hauptsitz</b>: TODO Link Dunmar (Eriond)</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_schwert_der_gerechtigkeit" aria-label="Schwert der Gerechtigkeit">Schwert der Gerechtigkeit</a></li>
+					<li><b>Organisation Typ</b>: Militär</li>
+					<li><b>Organisation Ruf</b>: Freundlich</li>
+					<li><b>Organisation Wohlstand</b>: Normal</li>
+					<li><b>Organisation Sicherheit</b>: Ordnung</li>
+					<li><b>Organisation Fähigkeiten</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederanzahl</b>: 320</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Anwärter, Gardist, Inquisitor, Ritter der Garde, Großinquisitor</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_garek_suul" aria-label="Garek Suul">Garek Suul</a>, <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a>, <a href="#nsc_narsil_klingensturm" aria-label="Narsil Klingensturm">Narsil Klingensturm</a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_israsil" aria-label="Israsil">Israsil</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel der weißen Garde ist es, die Welt zu einem Ort der Gerechtigkeit zu machen.
+
+						Typische Aufträge beinhalten Verbrecher der Gerichtsbarkeit zu überführen, die Sorgen und Nöte der Schwachen zu lindern und Bösartiges zu bestrafen.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_liga_der_handwerker">
+					<li><b>Organisation Name</b>: Liga der Handwerker</li>
+					<li><b>Organisation Link</b>: <a href="#organization_liga_der_handwerker" aria-label="Liga der Handwerker">Liga der Handwerker</a></li>
+					<li><b>Organisation Leitmotiv</b>: Harte Arbeit und Erfahrung zahlen sich aus</li>
+					<li><b>Organisation Symbol</b>: Ein schwarzer Amboss</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_thorus_vandelar" aria-label="Thorus Vandelar">Thorus Vandelar</a></li>
+					<li><b>Organisation Hauptsitz</b>: TODO Link Arcamont</li>
+					<li><b>Organisation Relikte</b>: TODO LINK Der schwarze Amboss (Angor Thom)</li>
+					<li><b>Organisation Typ</b>: Wirtschaft</li>
+					<li><b>Organisation Ruf</b>: Neutral</li>
+					<li><b>Organisation Wohlstand</b>: Reich</li>
+					<li><b>Organisation Sicherheit</b>: Unruhen</li>
+					<li><b>Organisation Fähigkeiten</b>: Handwerkskunst</li>
+					<li><b>Organisation Mitgliederanzahl</b>: 560</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Mitglied, Fürsprecher, Ehemaliger Meister des Handwerks, Meister des Handwerks, Meister der Münze</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_thorus_vandelar" aria-label="Thorus Vandelar">Thorus Vandelar</a>, <a href="#nsc_risash_markett" aria-label="Risash Markett">Risash Markett, <a href="#nsc_tasho_axmadov" aria-label="Tasho Axmadov">Tasho Axmadov</a></a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_schwarzer_amboss" aria-label="Schwarzer Amboss">Schwarzer Amboss</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel der Liga der Handwerker ist es, möglichst viele Handwerker zu vereinigen, um eine solide Verhandlungsbasis gegenüber Händlern zu haben. Die Mitglieder wählen Fürsprecher, die demokratisch mit den Handwerksmeistern den Anführer wählen.
+
+						Typische Aufträge beinhalten die Erschaffung von meisterhaften Gegenständen, die Beschaffung seltener Materialien, den Transport wichtiger Gegenstände, sowie den An- und Verkauf von Handwerkswaren.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_zirkel_der_wildnis">
+					<li><b>Organisation Name</b>: Zirkel der Wildnis</li>
+					<li><b>Organisation Link</b>: <a href="#organization_zirkel_der_wildnis" aria-label="Zirkel der Wildnis">Zirkel der Wildnis</a></li>
+					<li><b>Organisation Leitmotiv</b>: Haltet die Natur im Gleichgewicht!</li>
+					<li><b>Organisation Symbol</b>: Ein Blatt im Wind</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_tymar_eshalanor" aria-label="Tymar Eshalanor">Tymar Eshalanor</a></li>
+					<li><b>Organisation Hauptsitz</b>: In Dyrhal verteilt gibt es Treffpunkte namens Tameras Zirkel</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_herz_der_wälder" aria-label="Herz der Wälder">Herz der Wälder</a></li>
+					<li><b>Organisation Typ</b>: Spezial</li>
+					<li><b>Organisation Ruf</b>: Neutral</li>
+					<li><b>Organisation Wohlstand</b>: Pleite</li>
+					<li><b>Organisation Sicherheit</b>: Unruhen</li>
+					<li><b>Organisation Fähigkeiten</b>: Natur</li>
+					<li><b>Organisation Mitgliederanzahl</b>: 52</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Wächter, Aufseher, Freund des Waldes, Druide, Erzdruide</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_tymar_eshalanor" aria-label="Tymar Eshalanor">Tymar Eshalanor</a>, <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a>, <a href="#nsc_hywel_wellard" aria-label="Hywel Wellard">Hywel Wellard</a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_tamera" aria-label="Tamera">Tamera</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel des Zirkels der Wildnis ist das Behüten der Natur des Gleichgewichts und die Bekämpfung aller Untoter.
+
+						Typische Aufträge beinhalten das Finden und Zerstören von Untoten sowie die Wahrung des Gleichgewichts in der Natur.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_netzwerk">
+					<li><b>Organisation Name</b>: Netzwerk</li>
+					<li><b>Organisation Link</b>: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a></li>
+					<li><b>Organisation Leitmotiv</b>: Die Zunge spricht, das Ohr lauscht, die Hand tauscht. Das Herz prüft, der Kopf leitet</li>
+					<li><b>Organisation Symbol</b>: Sechs unregelmäßige Augen in zwei Dreierreihen</li>
+					<li><b>Organisation Herrscher</b>: Unbekannt</li>
+					<li><b>Organisation Hauptsitz</b>: Am Hofe jedes Herrschers eines Reichs gibt es eine Kammer des Netzwerkes</li>
+					<li><b>Organisation Relikte</b>: Unbekannt</li>
+					<li><b>Organisation Typ</b>: Spezial</li>
+					<li><b>Organisation Ruf</b>: Neutral</li>
+					<li><b>Organisation Wohlstand</b>: Reich</li>
+					<li><b>Organisation Sicherheit</b>: Stabilisierung</li>
+					<li><b>Organisation Fähigkeiten</b>: Spionage</li>
+					<li><b>Organisation Mitgliederanzahl</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Zunge, Ohr, Hand, Herz, Kopf</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a>, <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_gonmir" aria-label="Gonmir">Gonmir</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel des Netzwerkes ist es, als reichsübergreifendes Spionagenetz zu agieren, sodass nichts verborgen bleibt.
+
+						Typische Aufträge beinhalten die Einholung von Informationen durch Befragung, Bestechung, Magie und Betrug.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_ungerechter_zorn">
+					<li><b>Organisation Name</b>: Ungerechter Zorn</li>
+					<li><b>Organisation Link</b>: <a href="#organization_ungerechter_zorn" aria-label="Ungerechter Zorn">Ungerechter Zorn</a></li>
+					<li><b>Organisation Leitmotiv</b>: Das Recht des Stärkeren</li>
+					<li><b>Organisation Symbol</b>: Eine blutbefleckte Axt</li>
+					<li><b>Organisation Herrscher</b>: Unbekannt</li>
+					<li><b>Organisation Hauptsitz</b>: Eine marodierende Bande, die frei durch Dyrhal zieht</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_blutende_axt" aria-label="Blutende Axt">Blutende Axt</a></li>
+					<li><b>Organisation Typ</b>: Militär</li>
+					<li><b>Organisation Ruf</b>: Verhasst</li>
+					<li><b>Organisation Wohlstand</b>: Not</li>
+					<li><b>Organisation Sicherheit</b>: Unruhen</li>
+					<li><b>Organisation Fähigkeiten</b>: Brandschatzen</li>
+					<li><b>Organisation Mitgliederanzahl</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Frischling, Blutgeweihter, Eisenspeer, Wutentbrannter, Kriegshäuptling</li>
+					<li><b>Organisation NSCs</b>: Unbekannt</li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_rhoknir" aria-label="Rhoknir">Rhoknir</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel des ungerechten Zorns ist es, Blut zu vergießen und mehr Schätze und Macht anzuhäufen.
+
+						Typische Aufträge beinhalten das Plündern von Dörfern, das Töten von Adligen und den Diebstahl von Schätzen.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_athasaris_gunst">
+					<li><b>Organisation Name</b>: Athasaris Gunst</li>
+					<li><b>Organisation Link</b>: <a href="#organization_athasaris_gunst" aria-label="Athasaris Gunst">Athasaris Gunst</a></li>
+					<li><b>Organisation Leitmotiv</b>: Wir sind leise und präzise</li>
+					<li><b>Organisation Symbol</b>: Eine Giftphiole</li>
+					<li><b>Organisation Herrscher</b>: Unbekannt</li>
+					<li><b>Organisation Hauptsitz</b>: Der Legende nach soll Athasaris Gunst in den Höhlen unter Alyria die Schule der Schatten haben</li>
+					<li><b>Organisation Relikte</b>: <a href="#item_kugel_der_schatten" aria-label="Kugel der Schatten">Kugel der Schatten</a></li>
+					<li><b>Organisation Typ</b>: Spezial</li>
+					<li><b>Organisation Ruf</b>: Feindlich</li>
+					<li><b>Organisation Wohlstand</b>: Wachstum</li>
+					<li><b>Organisation Sicherheit</b>: Stabilisierung</li>
+					<li><b>Organisation Fähigkeiten</b>: Auftragsmord</li>
+					<li><b>Organisation Mitgliederanzahl</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Informant, Berater, Schatten, Klinge, Athasari</li>
+					<li><b>Organisation NSCs</b>: -</li>
+					<li><b>Organisation Kreaturen</b>: -</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_spinnenmutter" aria-label="Spinnenmutter">Spinnenmutter</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Das Ziel von Athasaris Gunst ist es, Tod gegen Münze einzutauschen.
+
+						Typische Aufträge beinhalten die Erkundung als Vorbereitung für sowie den Auftragsmord selbst.</li>
+				</ul>
+				---
+				<ul class="alt" id="organization_schwertrose">
+					<li><b>Organisation Name</b>: Schwertrose</li>
+					<li><b>Organisation Link</b>: <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
+					<li><b>Organisation Leitmotiv</b>: Unbekannt</li>
+					<li><b>Organisation Symbol</b>: Schwert, dessen Spitze zu einer Rose geformt ist</li>
+					<li><b>Organisation Herrscher</b>: <a href="#nsc_deral_thatov" aria-label="Deral Zhatov">Deral Zhatov</a></li>
+					<li><b>Organisation Hauptsitz</b>: Schwerthall (Eriond)</li>
+					<li><b>Organisation Relikte</b>: Unbekannt</li>
+					<li><b>Organisation Typ</b>: Militär</li>
+					<li><b>Organisation Ruf</b>: Freundlich</li>
+					<li><b>Organisation Wohlstand</b>: Normal</li>
+					<li><b>Organisation Sicherheit</b>: Auflösung</li>
+					<li><b>Organisation Fähigkeiten</b>: Unbekannt</li>
+					<li><b>Organisation Mitgliederanzahl</b>: 60</li>
+					<li><b>Organisation Mitgliederarten</b>: Gemischt</li>
+					<li><b>Organisation Ränge</b>: Rekrut, Wächter, Offizier, Ritter, Lord</li>
+					<li><b>Organisation NSCs</b>: <a href="#nsc_deral_thatov" aria-label="Deral Zhatov">Deral Zhatov</a>, <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a></li>
+					<li><b>Organisation Kreaturen</b>: Unbekannt</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: <a href="#nsc_alyria" aria-label="Alyria">Alyria</a></li>
+					<li><b>Organisation Kurzbeschreibung</b>: Ein kleiner Ritterorden in der Nähe zu Kylar, der die Gegend bewachen soll.</li>
 				</ul>
 	  		</section>
 			<!-- HOMEBREW NPCS -->			
@@ -541,8 +769,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Dort, wo Raben und Krähen sind</li>
-					<li><b>NSC Organisation</b>: TODO LINK  Schwarze Bibliothek</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_visarius" aria-label="Visarius">Visarius</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_schwarze_bibliothek" aria-label="Schwarze Bibliothek">Schwarze Bibliothek</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_visarius" aria-label="Visarius">Visarius</a>, hat <a href="#item_ghantons_wandelndes_buch" aria-label="Ghantons wandelndes Buch">Ghantons wandelndes Buch</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Als der Hochelf Ghanton zu einem Gott wurde, teilte er seine Macht unter allen Raben und Krähen auf Dyrhal auf. Man sagt, dass er alles sehen und hören kann, was die Rabenvögel wahrnehmen.
 						Wer zu den tausend Raben betet, der sucht nach verlorenem Wissen der Welt. Seien es geschichtliche Ereignisse oder Wissen um Magie und mächtige Gegenstände: Die tausend Raben sind bereit, ihr Wissen zu teilen, wenn sie im Gegenzug etwas Gleichwertiges lernen.</li>
@@ -564,8 +792,8 @@
 					<li><b>NSC Haarfarbe</b>:Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: TODO LINK Pathor (blaue Sonne)</li>
-					<li><b>NSC Organisation</b>: TODO LINK  Kirche der blauen Sonne</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_kirche_der_blauen_sonne" aria-label="Kirche der blauen Sonne">Kirche der blauen Sonne</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a>, hat <a href="#item_brennende_kugel_pathors" aria-label="Brennende Kugel Pathors">Brennende Kugel Pathors</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Als der Mensch Pathor zu einem Gott wurde, löste er sich vom Planeten Dyrhal und trat als blaue Sonne neben Sirla. Von dort aus wacht er über Dyrhal. Er spendet Licht, Wärme und Feuer.
 						Wer zu ihm betet, erhofft sich Schutz vor dunklen Mächten. Pathor erscheint Wesen in Form von blauem Licht, um sie vor dunklen Pfaden zu bewahren.</li>
@@ -587,8 +815,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK  Orden der heilenden Hand</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_shina_voxis" aria-label="Shina Voxis">Shina Voxis</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_orden_der_heilenden_hand" aria-label="Orden der heilenden Hand">Orden der heilenden Hand</a>, <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_shina_voxis" aria-label="Shina Voxis">Shina Voxis</a>, hat <a href="#item_heilende_hand" aria-label="Heilende Hand">Heilende Hand</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Alyria war die schönste Elfenfrau, die je auf Dyrhal wanderte. Als sie zu einer Göttin aufstieg, machte sie es sich zur Aufgabe, die Schönheit und das Leben der Welt zu bewahren. Als Dank wurde der Hauptkontinent Dyrhals nach ihr benannt.
 						Heiler, Fluchbrecher und Künstler beten zu Alyria, um Schutz, Kräfte oder Segen zu erhalten.</li>
@@ -610,8 +838,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK  Weiße Garde</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_garek_suul" aria-label="Garek Suul">Garek Suul</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_weiße_garde" aria-label="Weiße Garde">Weiße Garde</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_garek_suul" aria-label="Garek Suul">Garek Suul</a>, hat <a href="#item_schwert_der_gerechtigkeit" aria-label="Schwert der Gerechtigkeit">Schwert der Gerechtigkeit</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Israsil war ein Halbork, dessen Leben durch die Vorurteile Fremder tief geprägt wurde. Er manifestierte sich als Gott der Gerechtigkeit, um über all jene zu richten, die böse Absichten in ihren Herzen tragen.
 						Wer zu Israsil betet, der wünscht sich einen fairen Richterspruch, Gerechtigkeit für erfahrenes Übel oder einen Segen im Kampf für eine wahre, edle Sache. Insbesondere Halborks verdanken Israsil ein besseres Ansehen und weniger Vorurteile in der Gesellschaft.</li>
@@ -633,7 +861,7 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: TODO LINK Angor Thom</li>
-					<li><b>NSC Organisation</b>: TODO LINK Die Liga der Handwerker</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_liga_der_handwerker" aria-label="Liga der Handwerker">Liga der Handwerker</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_thorus_vandelar" aria-label="Thorus Vandelar">Thorus Vandelar</a></li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Der Zwerg Khartan war ein Handwerksmeister ohne Gleichen. Als Gott verwandelte er sich zum schwarzen Amboss, auf dem die mächtigsten Objekte gefertigt werden können.
@@ -657,8 +885,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK Zirkel der Wildnis</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_tymar_eshalanor" aria-label="Tymar Eshalanor">Tymar Eshalanor</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_zirkel_der_wildnis" aria-label="Zirkel der Wildnis">Zirkel der Wildnis</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_tymar_eshalanor" aria-label="Tymar Eshalanor">Tymar Eshalanor</a>, hat <a href="#item_herz_der_wälder" aria-label="Herz der Wälder">Herz der Wälder</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Es ist nicht bekannt, wie Tamera an das Wissen gekommen ist, um zu einem Gott zu werden. Die von Drachen abstammende Frau wacht als Göttin der Natur über alles Leben und hasst jede Pervertierung davon.
 						Tamera wird meist von Bauern und umherziehenden Druiden angebetet, um eine reiche Ernte zu erbitten oder das Gleichgewicht in der Natur zu wahren.</li>
@@ -680,7 +908,7 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK Netzwerk</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt </li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Gonmir ist der Gott der Einbrecher, der Heimlichkeit und Intrige. Darüber hinaus ist nichts über ihn bekannt. Manche stellen sogar in Frage, ob der Halbling Gonmir überhaupt ein Gott geworden ist und sehen seine Anbetung als eine weitere List von ihm.
@@ -703,8 +931,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK Ungerechter Zorn</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt </li>
+					<li><b>NSC Organisation</b>: <a href="#organization_ungerechter_zorn" aria-label="Ungerechter Zorn">Ungerechter Zorn</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Hat <a href="#item_blutende_axt" aria-label="Blutende Axt">Blutende Axt</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Rhoknir war der zwergische Anführer einer Söldnerbande, die vor keinem Verbrechen zurückschreckte. Der Legende nach stieg er zum Gott auf, nachdem er im Streit seine Mitreisenden tötete.
 						Wer Rhoknir anbetet, der möchte plündern, brandschatzen, und Blut um des Blutes Willen vergießen. Nur die wildesten Krieger und Barbaren hoffen, dass er ihre Schläge segnet.</li>
@@ -749,8 +977,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK Athasaris Gunst</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_athasaris_gunst" aria-label="Athasaris Gunst">Athasaris Gunst</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Hat <a href="#item_kugel_der_schatten" aria-label="Kugel der Schatten">Kugel der Schatten</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Die Spinnenmutter ist die Hüterin des Todes, der Gifte und der Schatten. Sie verwandelte sich in die Mutter aller Spinnen und reiste tief in die Höhlen unter der Welt. Hier webt sie ihr magisches Netz in andere Orte, Ebenen und Dimensionen.
 						Wer die Spinnenmutter anbetet, der erbittet ihren Segen bei einer Beerdigung. Die Spinnenmutter wird zudem von all jenen angebetet, die planen, eine andere Person umzubringen.</li>
@@ -797,8 +1025,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: TODO LINK Schwarze Bibliothek</li>
-					<li><b>NSC Organisation</b>: TODO LINK Schwarze Bibliothek</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_tausend_raben" aria-label="Tausend Raben">Tausend Raben</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_schwarze_bibliothek" aria-label="Schwarze Bibliothek">Schwarze Bibliothek</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_tausend_raben" aria-label="Tausend Raben">Tausend Raben</a>, besitzt <a href="#item_ghantons_wandelndes_buch" aria-label="Ghantons wandelndes Buch">Ghantons wandelndes Buch</a></li>
 					<li><b>NSC Besonderheiten</b>: Der Hohepriester ist im Besitz eines mächtigen Buches: Das sich immer wandelnde Buch von Ghanton saugt alle Informationen auf, mit denen es beschrieben wird. Wer auf der Suche nach Wissen ist, kann beim Blättern des Buches alle Informationen finden, die je in das Buch geschrieben worden.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
 				</ul>			
@@ -819,8 +1047,8 @@
 					<li><b>NSC Haarfarbe</b>: Blond</li>
 					<li><b>NSC Kleidung</b>: Weiß-Blaue Roben des Patriarchs</li>					
 					<li><b>NSC Ort</b>: TODO LINK Dunmar</li>
-					<li><b>NSC Organisation</b>: TODO LINK Kirche der blauen Sonne</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_pathor" aria-label="Pathor">Pathor</a>, Bekannter von <a href="#nsc_uther_sonnenglanz" aria-label="Uther Sonnenglanz">Uther Sonnenglanz</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_kirche_der_blauen_sonne" aria-label="Kirche der blauen Sonne">Kirche der blauen Sonne</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_pathor" aria-label="Pathor">Pathor</a>, Bekannter von <a href="#nsc_uther_sonnenglanz" aria-label="Uther Sonnenglanz">Uther Sonnenglanz</a>, besitzt <a href="#item_brennende_kugel_pathors" aria-label="Brennende Kugel Pathors">Brennende Kugel Pathors</a></li>
 					<li><b>NSC Besonderheiten</b>: Der Patriarch ist im Besitz einer mächtigen Kugel: Die brennende Kugel Pathors soll in der Lage sein, die Nacht in einen Tag zu verwandeln und sämtliche Dunkelheit zu bannen.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
 				</ul>
@@ -841,8 +1069,8 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: TODO LINK Arcamont</li>
-					<li><b>NSC Organisation</b>: TODO LINK Orden der heilenden Hand</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_alyria" aria-label="Alyria">Alyria</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_orden_der_heilenden_hand" aria-label="Orden der heilenden Hand">Orden der heilenden Hand</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_alyria" aria-label="Alyria">Alyria</a>, besitzt <a href="#item_heilende_hand" aria-label="Heilende Hand">Heilende Hand</a></li>
 					<li><b>NSC Besonderheiten</b>: Alyrias Hand ist im Besitz einer mächtigen, goldenen Hand: Die heilende Hand kann bei Kontakt sämtliche Flüche und Gebrechen heilen, während Untote bei Berührung zu Staub zerfallen. Die goldene Hand soll Wesen mit guter Seele wiederbeleben können, selbst wenn sämtliche Hoffnung verloren ist.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
 				</ul>
@@ -863,8 +1091,8 @@
 					<li><b>NSC Haarfarbe</b>: Schwarz</li>
 					<li><b>NSC Kleidung</b>: Rüstung des Großinquisitors</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK Weiße Garde</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_israsil" aria-label="Israsil">Israsil</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_weiße_garde" aria-label="Weiße Garde">Weiße Garde</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_israsil" aria-label="Israsil">Israsil</a>, besitzt <a href="#item_schwert_der_gerechtigkeit" aria-label="Schwert der Gerechtigkeit">Schwert der Gerechtigkeit</a></li>
 					<li><b>NSC Besonderheiten</b>: Der Großinquisitor ist im Besitz eines mächtigen Schwertes: Das Schwert der Gerechtigkeit ist eine mächtige Waffe, kann aber nur von jemanden geführt werden, der damit ein edles und gerechtes Ziel verfolgt. Wer das Schwert der Gerechtigkeit trägt, über den können andere nicht richten.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
 				</ul>
@@ -885,7 +1113,7 @@
 					<li><b>NSC Haarfarbe</b>: Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: TODO LINK Arcamont</li>
-					<li><b>NSC Organisation</b>: TODO LINK Liga der Handwerker </li>
+					<li><b>NSC Organisation</b>: <a href="#organization_liga_der_handwerker" aria-label="Liga der Handwerker">Liga der Handwerker</a> </li>
 					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_schwarzer_amboss" aria-label="Schwarzer Amboss">Schwarzer Amboss</a></li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
@@ -907,8 +1135,8 @@
 					<li><b>NSC Haarfarbe</b>: Hellblau</li>
 					<li><b>NSC Kleidung</b>: Eine Mischung aus einer Robe und Fellrüstung</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO LINK Zirkel der Wildnis</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_tamera" aria-label="Tamera">Tamera</a>, Lehrmeister von <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a></li>
+					<li><b>NSC Organisation</b>: <a href="#organization_zirkel_der_wildnis" aria-label="Zirkel der Wildnis">Zirkel der Wildnis</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_tamera" aria-label="Tamera">Tamera</a>, Lehrmeister von <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a>, besitzt <a href="#item_herz_der_wälder" aria-label="Herz der Wälder">Herz der Wälder</a></li>
 					<li><b>NSC Besonderheiten</b>: Der Erzdruide ist im Besitz eines mächtigen Herzens aus Holz: Das Herz der Wälder soll Wälder davor schützen aus dem Gleichgewicht zu geraten und kann mächtige Hüter der Natur rufen.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
 				</ul>
@@ -1017,7 +1245,7 @@
 					<li><b>NSC Haarfarbe</b>: Blond</li>
 					<li><b>NSC Kleidung</b>: Wechselnd</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO Link Netzwerk</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Ex-Auftraggeber von Khaldun Donderial (Spielercharakter)</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Ein Halbelf mittleren Alters, der wie eine unschuldige und unscheinbare Person wirkt. Sein wachsamer Blick behält stets die Umgebung im Auge.</li>
@@ -1105,7 +1333,7 @@
 					<li><b>NSC Haarfarbe</b>: Grün</li>
 					<li><b>NSC Kleidung</b>: Eine Robe aus Blättern und Pflanzen</li>					
 					<li><b>NSC Ort</b>: TODO Link Kupferwacht (in der Umgebung)</li>
-					<li><b>NSC Organisation</b>: TODO Link Zirkel der Wildnis</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_zirkel_der_wildnis" aria-label="Zirkel der Wildnis">Zirkel der Wildnis</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Schülerin von <a href="#nsc_tymar_eshalanor" aria-label="Tymar Eshalanor">Tymar Eshalanor</a>, Bekannte von <a href="#nsc_edward_orinelis" aria-label="Edward Orinelis">Edward Orinelis</a>, Bekannte von <a href="#nsc_tolamir_drunnek" aria-label="Tolamir Drunnek">Tolamir Drunnek</a>, betet <a href="#nsc_tamera" aria-label="Tamera">Tamera</a> an</li>
 					<li><b>NSC Besonderheiten</b>: Hat einen Falken namens Nyx und Baumgeist namens Farendor als Begleiter.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Neia ist eine aufgeweckte und engagierte Druidin. Persönlich vom Erzdruiden Dyrhals ausgebildet hat sie früh ihr Potential entfalten können und setzt ihre Kräfte zum Schutz der Natur in all ihren Facetten ein. Sie hat Bekanntheit in Eriond erlangt, als sie der Armee half, eine Gruppe von Frostriesen zu bezwingen.</li>
@@ -1237,7 +1465,7 @@
 					<li><b>NSC Haarfarbe</b>: Blond</li>
 					<li><b>NSC Kleidung</b>: Gefütterte Stoffrüstung in Weißtönen</li>					
 					<li><b>NSC Ort</b>: TODO Link Itasa</li>
-					<li><b>NSC Organisation</b>: TODO Link Weiße Garde</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_weiße_garde" aria-label="Weiße Garde">Weiße Garde</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Freundin und Vorgesetzte von <a href="#nsc_narsil_klingensturm" aria-label="Narsil Klingensturm">Narsil Klingensturm</a></li>
 					<li><b>NSC Besonderheiten</b>: Zauberin</li>
 					<li><b>NSC Kurzbeschreibung</b>: Lady Isel ist eine aufgeweckte Person, die ihre Verpflichtung, das Volk zu schützen, ernst nimmt. Von der Sturmfeste aus koordiniert sie die Verteidigung von Itasa und dient als Ansprechpartnerin für alle Belange, für die die Herrscher von Itasa keine Zeit haben.</li>
@@ -1259,7 +1487,7 @@
 					<li><b>NSC Haarfarbe</b>: Schwarz</li>
 					<li><b>NSC Kleidung</b>: Schwere, weiße Rüstung</li>					
 					<li><b>NSC Ort</b>: TODO Link Itasa</li>
-					<li><b>NSC Organisation</b>: TODO Link Weiße Garde</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_weiße_garde" aria-label="Weiße Garde">Weiße Garde</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Wächter und Freund von <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a></li>
 					<li><b>NSC Besonderheiten</b>: Besitzt einen großen Reitwolf und ist in der Regel von zwei Gardisten der weißen Garde begleitet.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Narsil hat ein starkes Gerechtigkeitsempfinden, mit dem er die Ehrenduelle in Itasa führt und für Ordnung auf den Straßen sorgt. Er kümmert sich höchstpersönlich um den Schutz von Lady Isel.</li>
@@ -1281,7 +1509,7 @@
 					<li><b>NSC Haarfarbe</b>: Rotbraun</li>
 					<li><b>NSC Kleidung</b>: Edle Stoffgewänder</li>					
 					<li><b>NSC Ort</b>: TODO Link Itasa</li>
-					<li><b>NSC Organisation</b>: TODO Link Liga der Handwerker</li>
+					<li><b>NSC Organisation</b>:  <a href="#organization_liga_der_handwerker" aria-label="Liga der Handwerker">Liga der Handwerker</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Risash Markett leitet die Geschäfte des Handelskontors von Itasa. Er ist ein Meister des Feilschens und kennt sich mit den meisten Handelsgeschäften in Itasa aus.</li>
@@ -1413,7 +1641,7 @@
 					<li><b>NSC Haarfarbe</b>: Glatze</li>
 					<li><b>NSC Kleidung</b>: Braune Lederrüstung</li>					
 					<li><b>NSC Ort</b>: TODO Link Arcamont</li>
-					<li><b>NSC Organisation</b>: TODO Link Netzwerk</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
@@ -1457,7 +1685,7 @@
 					<li><b>NSC Haarfarbe</b>: -</li>
 					<li><b>NSC Kleidung</b>: Stoffroben in Rot, mit goldenen Verzierungen</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
-					<li><b>NSC Organisation</b>: TODO Link Liga der Handwerker</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_liga_der_handwerker" aria-label="Liga der Handwerker">Liga der Handwerker</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
 					<li><b>NSC Besonderheiten</b>: Meisterhafter Geigenbauer.</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
@@ -1479,7 +1707,7 @@
 					<li><b>NSC Haarfarbe</b>: Schwarz</li>
 					<li><b>NSC Kleidung</b>: Braune Robe mit grünen Blättern darin</li>					
 					<li><b>NSC Ort</b>: TODO Link Druidenzirkel nahe Sartos</li>
-					<li><b>NSC Organisation</b>: TODO Link Zirkel der Wildnis</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_zirkel_der_wildnis" aria-label="Zirkel der Wildnis">Zirkel der Wildnis</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Betet <a href="#nsc_tamera" aria-label="Tamera">Tamera</a> an</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
@@ -1523,7 +1751,7 @@
 					<li><b>NSC Haarfarbe</b>: Rot</li>
 					<li><b>NSC Kleidung</b>: Weiße Rüstung mit goldener Schwertrose (Schwert, aus dessen Spitze eine Rose sprießt)</li>					
 					<li><b>NSC Ort</b>: TODO Link Schwerthall</li>
-					<li><b>NSC Organisation</b>: TODO Link Schwertrose</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Sir Isko Huttun ist ein hochrangiges Mitglied des Ordens der Schwertrose.</li>
@@ -1545,7 +1773,7 @@
 					<li><b>NSC Haarfarbe</b>: Blond</li>
 					<li><b>NSC Kleidung</b>: Weiße Rüstung mit goldener Schwertrose darauf (Schwert, aus dessen Spitze eine Rose sprießt)</li>					
 					<li><b>NSC Ort</b>: TODO Link Schwerthall</li>
-					<li><b>NSC Organisation</b>: TODO Link Schwertrose</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Sir Markus Ikonen ist ein Unteroffizier im Orden der Schwertrose.</li>
@@ -1567,7 +1795,7 @@
 					<li><b>NSC Haarfarbe</b>: Rot</li>
 					<li><b>NSC Kleidung</b>: Weiße Robe mit einer goldenen Schwertrose darauf</li>					
 					<li><b>NSC Ort</b>: TODO Link Schwerthall</li>
-					<li><b>NSC Organisation</b>: TODO Link Schwertrose</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Unbekannt</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Arvi Leino ist eine Priesterin Alyrias und setzt ihre Dienste für das Heilen von Verwunden und Brechen von Flüchen im Orden der Schwertrose ein.</li>
@@ -3420,6 +3648,28 @@
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 				</ul>
+				---
+				<ul class="alt" id="nsc_deral_thatov">
+					<li><b>NSC Name</b>: Deral Zhatov</li>
+					<li><b>NSC Link</b>: <a href="#nsc_deral_thatov" aria-label="Deral Zhatov">Deral Zhatov</a></li>
+					<li><b>NSC Geschlecht</b>: Männlich</li>
+					<li><b>NSC Stimme</b>: Tief</li>					
+					<li><b>NSC Volk</b>: Elf</li>
+					<li><b>NSC Beruf</b>: Lord der Schwertrose</li>
+					<li><b>NSC Charaktertyp</b>: Anführer</li>
+					<li><b>NSC Alter</b>: 78 Jahre</li>
+					<li><b>NSC Größe</b>: 1,81 Meter</li>
+					<li><b>NSC Gewicht</b>: 67 Kilogramm</li>
+					<li><b>NSC Augenfarbe</b>: Blau</li>
+					<li><b>NSC Hautfarbe</b>: Weiß</li>
+					<li><b>NSC Haarfarbe</b>: Rot</li>
+					<li><b>NSC Kleidung</b>: Plattenrüstung</li>					
+					<li><b>NSC Ort</b>: TODO LInk Schwerthall</li>
+					<li><b>NSC Organisation</b>: <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: </li>
+					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
+					<li><b>NSC Kurzbeschreibung</b>: Unbekannt</li>
+				</ul>
 		  	</section>
 		  	<!-- HOMEBREW CREATURES -->			
 		  	<section id="creatures">
@@ -3516,6 +3766,83 @@
 					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
 					<li><b>Gegenstand Einstimmung</b>: Nein</li>
 					<li><b>Gegenstand Kurzbeschreibung</b>: Dieses vergoldete Monokel trägt eine Glasscheibe, die blau-lila schimmert. Wenn der Anwender das Monokel trägt und hindurch sieht, dann erhält er 40ft Dunkelsicht.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_ghantons_wandelndes_buch">
+					<li><b>Gegenstand Name</b>: Ghantons wandelndes Buch</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_ghantons_wandelndes_buch" aria-label="Ghantons wandelndes Buch">Ghantons wandelndes Buch</a></li>
+					<li><b>Gegenstand Gewicht</b>: 4 lb</li>
+					<li><b>Gegenstand Typ</b>: Gegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Buch</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Das sich immer wandelnde Buch von Ghanton saugt alle Informationen auf, mit denen es beschrieben wird. Wer auf der Suche nach Wissen ist, kann beim Blättern des Buches alle Informationen finden, die je in das Buch geschrieben worden.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_brennende_kugel_pathors">
+					<li><b>Gegenstand Name</b>: Brennende Kugel Pathors</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_brennende_kugel_pathors" aria-label="Brennende Kugel Pathors">Brennende Kugel Pathors</a></li>
+					<li><b>Gegenstand Gewicht</b>: 4 lb</li>
+					<li><b>Gegenstand Typ</b>: Gegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Kugel</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Ja</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Die brennende Kugel Pathors soll in der Lage sein, die Nacht in einen Tag zu verwandeln und sämtliche Dunkelheit zu bannen.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_heilende_hand">
+					<li><b>Gegenstand Name</b>: Heilende Hand</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_heilende_hand" aria-label="Heilende Hand">Heilende Hand</a></li>
+					<li><b>Gegenstand Gewicht</b>: 2 lb</li>
+					<li><b>Gegenstand Typ</b>: Gegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Goldhand</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Die heilende Hand kann bei Kontakt sämtliche Flüche und Gebrechen heilen, während Untote bei Berührung zu Staub zerfallen. Die goldene Hand soll Wesen mit guter Seele wiederbeleben können, selbst wenn sämtliche Hoffnung verloren ist.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_schwert_der_gerechtigkeit">
+					<li><b>Gegenstand Name</b>: Schwert der Gerechtigkeit</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_schwert_der_gerechtigkeit" aria-label="Schwert der Gerechtigkeit">Schwert der Gerechtigkeit</a></li>
+					<li><b>Gegenstand Gewicht</b>: 6 lb</li>
+					<li><b>Gegenstand Typ</b>: Waffe (Krieg)</li>
+					<li><b>Gegenstand Ausprägung</b>: Zweihandschwert+5</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Ja</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Das Schwert der Gerechtigkeit ist eine mächtige Waffe, kann aber nur von jemanden geführt werden, der damit ein edles und gerechtes Ziel verfolgt. Wer das Schwert der Gerechtigkeit trägt, über den können andere nicht richten.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_herz_der_wälder">
+					<li><b>Gegenstand Name</b>: Herz der Wälder</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_herz_der_wälder" aria-label="Herz der Wälder">Herz der Wälder</a></li>
+					<li><b>Gegenstand Gewicht</b>: 3 lb</li>
+					<li><b>Gegenstand Typ</b>: Gegenstand</li>
+					<li><b>Gegenstand Ausprägung</b>: Samenkorn</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Ja</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Das Herz der Wälder soll Wälder davor schützen aus dem Gleichgewicht zu geraten und kann mächtige Hüter der Natur rufen.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_blutende_axt">
+					<li><b>Gegenstand Name</b>: Blutende Axt</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_blutende_axt" aria-label="Blutende Axt">Blutende Axt</a></li>
+					<li><b>Gegenstand Gewicht</b>: 6 lb</li>
+					<li><b>Gegenstand Typ</b>: Waffe (Krieg)</li>
+					<li><b>Gegenstand Ausprägung</b>: Zweihandaxt+5</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Ja</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Diese nach Blut gierende Waffe wird mit jedem getötetem Gegner stärker.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_kugel_der_schatten">
+					<li><b>Gegenstand Name</b>: Kugel der Schatten</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_kugel_der_schatten" aria-label="Kugel der Schatten">Kugel der Schatten</a></li>
+					<li><b>Gegenstand Gewicht</b>: 2 lb</li>
+					<li><b>Gegenstand Typ</b>: Kugel</li>
+					<li><b>Gegenstand Ausprägung</b>: Gegenstand</li>
+					<li><b>Gegenstand Seltenheit</b>: Episch</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Die Kugel der Schatten verleiht einer Person wahre Unsichtbarkeit, Lautlosigkeit und die Fähigkeit, niemals Spuren zu hinterlassen.</li>
 				</ul>	
 			</section>
 		</div>

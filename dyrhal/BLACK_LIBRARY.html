@@ -56,6 +56,7 @@
 				<ul class="alt" id="location_">
 					<li><b>Ort Name</b>: </li>
 					<li><b>Ort Link</b>: <a href="#location_" aria-label=""></a></li>
+					<li><b>Ort Symbol</b>: </li>
 					<li><b>Ort Lage</b>: </li>
 					<li><b>Ort Herrscher</b>: </li>
 					<li><b>Ort Typ</b>: </li>
@@ -75,7 +76,7 @@
 					<li><b>Ort Organisationen</b>: </li>
 					<li><b>Ort NSCs</b>: </li>
 					<li><b>Ort Kreaturen</b>: </li>
-					<li><b>Ort Besondere Beziehung zu</b>:</li>
+					<li><b>Ort Besondere Beziehung zu</b>: </li>
 					<li><b>Ort Kurzbeschreibung</b>: </li>
 				</ul>
 			-->
@@ -83,9 +84,10 @@
 			<ul class="alt" id="location_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Ort Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM					
 					<li><b>Ort Link</b>: <a href="#location_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Ort Symbol</b>: [Text]</li>
 					<li><b>Ort Lage</b>: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</li>
 					<li><b>Ort Herrscher</b>: </li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Ort Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</li>
+					<li><b>Ort Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Reich]</li>
 					<li><b>Ort Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
 					<li><b>Ort Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
 					<li><b>Ort Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>				
@@ -278,7 +280,7 @@
 					<li><b>Gegenstand Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Gegenstand Link</b>: <a href="#item_[Text]" aria-label="[Text]">[Text]</a></li>
 					<li><b>Gegenstand Gewicht</b>: [0-9]* lb</li>
-					<li><b>Gegenstand Typ</b>: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand]</li>
+					<li><b>Gegenstand Typ</b>: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</li>
 					<li><b>Gegenstand Ausprägung</b>: [Text - Referenz zu Gegenständen]</li>
 					<li><b>Gegenstand Seltenheit</b>: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</li>
 					<li><b>Gegenstand Einstimmung</b>: [Ja | Nein]</li>
@@ -310,7 +312,7 @@
 							<td>Gegenstand Name: </td>													
 						</tr>
 						<tr>
-							<td>Ort Lage: [Name des Reiches], [Text]</td>
+							<td>Ort Symbol: </td>
 							<td>Organisation Leitmotiv: </td>
 							<td>NSC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>	
 							<td>Kreatur Größe: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</td>	
@@ -318,15 +320,15 @@
 							<td>Gegenstand Gewicht: </td>												
 						</tr>
 						<tr>
-							<td>Ort Herrscher: </td>
+							<td>Ort Lage: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</td>
 							<td>Organisation Symbol: </td>
 							<td>NSC Stimme: [Tief | Mittel | Hoch]</td>	
 							<td>Kreatur Gewicht: </td>	
 							<td>Zauber Klassenbeschränkung: [(Klasse)* | Nein]</td>	
-							<td>Gegenstand Typ: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand]</td>												
+							<td>Gegenstand Typ: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</td>												
 						</tr>
 						<tr>
-							<td>Ort Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
+							<td>Ort Herrscher: </td>
 							<td>Organisation Herrscher: </td>
 							<td>NSC Volk: </td>	
 							<td>Kreatur Sprachen: </td>	
@@ -334,7 +336,7 @@
 							<td>Gegenstand Ausprägung: </td>												
 						</tr>
 						<tr>
-							<td>Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
+							<td>Ort Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Reich]</td>
 							<td>Organisation Hauptsitz: </td>
 							<td>NSC Beruf: </td>	
 							<td>Kreatur Ort: </td>	
@@ -342,7 +344,7 @@
 							<td>Gegenstand Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</td>												
 						</tr>
 						<tr>
-							<td>Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
+							<td>Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
 							<td>Organisation Relikte: </td>
 							<td>NSC Charaktertyp: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert| Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]</td>	
 							<td>Kreatur Organisation: </td>	
@@ -350,7 +352,7 @@
 							<td>Gegenstand Einstimmung: [Ja | Nein]</td>												
 						</tr>
 						<tr>
-							<td>Ort Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
+							<td>Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
 							<td>Organisation Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial]</td>
 							<td>NSC Alter: </td>	
 							<td>Kreatur Besondere Beziehung zu: </td>	
@@ -358,7 +360,7 @@
 							<td>Gegenstand Kurzbeschreibung:</td>												
 						</tr>
 						<tr>
-							<td>Ort Einwohneranzahl: </td>
+							<td>Ort Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
 							<td>Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
 							<td>NSC Größe: </td>	
 							<td>Kreatur Bekannte Fähigkeiten: </td>	
@@ -366,7 +368,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Einwohnerarten: [Gemischt | (Volk)*]</td>
+							<td>Ort Einwohneranzahl: </td>
 							<td>Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
 							<td>NSC Gewicht: </td>	
 							<td>Kreatur Kurzbeschreibung: </td>	
@@ -374,7 +376,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Aussehen: </td>
+							<td>Ort Einwohnerarten: [Gemischt | (Volk)*] </td>
 							<td>Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
 							<td>NSC Augenfarbe: </td>	
 							<td></td>	
@@ -382,7 +384,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Klang: </td>
+							<td>Ort Aussehen: </td>
 							<td>Organisation Fähigkeiten: </td>
 							<td>NSC Hautfarbe: </td>	
 							<td></td>	
@@ -390,7 +392,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Geruch: </td>
+							<td>Ort Klang: </td>
 							<td>Organisation Mitgliederanzahl: </td>
 							<td>NSC Haarfarbe: </td>	
 							<td></td>	
@@ -398,7 +400,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Verteidigung: </td>
+							<td>Ort Geruch: </td>
 							<td>Organisation Mitgliederarten: </td>
 							<td>NSC Kleidung: </td>	
 							<td></td>	
@@ -406,7 +408,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Waren & Dienstleistungen: </td>
+							<td>Ort Verteidigung: </td>
 							<td>Organisation Ränge: </td>
 							<td>NSC Ort: </td>	
 							<td></td>	
@@ -414,7 +416,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Tavernen: </td>
+							<td>Ort Waren & Dienstleistungen: </td>
 							<td>Organisation NSCs: </td>
 							<td>NSC Organisation: </td>	
 							<td></td>	
@@ -422,7 +424,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Läden: </td>
+							<td>Ort Tavernen: </td>
 							<td>Organisation Kreaturen: </td>
 							<td>NSC Besondere Beziehung zu: </td>	
 							<td></td>	
@@ -430,7 +432,7 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Fantastische Elemente: </td>
+							<td>Ort Läden: </td>
 							<td>Organisation Besondere Beziehung zu: </td>
 							<td>NSC Besonderheiten: </td>	
 							<td></td>	
@@ -438,9 +440,17 @@
 							<td></td>												
 						</tr>
 						<tr>
-							<td>Ort Organisationen: </td>
+							<td>Ort Fantastische Elemente: </td>
 							<td>Organisation Kurzbeschreibung: </td>
 							<td>NSC Kurzbeschreibung: </td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Organisationen: </td>
+							<td></td>
+							<td></td>	
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -452,7 +462,7 @@
 							<td></td>	
 							<td></td>	
 							<td></td>												
-						</tr>
+						</tr>	
 						<tr>
 							<td>Ort Kreaturen: </td>
 							<td></td>
@@ -460,14 +470,14 @@
 							<td></td>	
 							<td></td>	
 							<td></td>												
-						</tr>	
+						</tr>
 						<tr>
 							<td>Ort Besondere Beziehung zu: </td>
 							<td></td>
 							<td></td>	
 							<td></td>	
 							<td></td>	
-							<td></td>												
+							<td></td>
 						</tr>
 						<tr>
 							<td>Ort Kurzbeschreibung: </td>
@@ -483,31 +493,881 @@
 			<!-- HOMEBREW LOCATIONS -->			
 			<section id="locations">
 				---	
-				<ul class="alt" id="location_">
-					<li><b>Ort Name</b>: </li>
-					<li><b>Ort Link</b>: <a href="#location_" aria-label=""></a></li>
-					<li><b>Ort Lage</b>: </li>
-					<li><b>Ort Herrscher</b>: </li>
-					<li><b>Ort Typ</b>: </li>
-					<li><b>Ort Ruf</b>: </li>
-					<li><b>Ort Wohlstand</b>: </li>
+				<ul class="alt" id="location_sirla">
+					<li><b>Ort Name</b>: Sirla</li>
+					<li><b>Ort Link</b>: <a href="#location_sirla" aria-label="Sirla">Sirla</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Goldene Sonne</li>
+					<li><b>Ort Herrscher</b>: -</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
 					<li><b>Ort Sicherheit</b>: </li>				
-					<li><b>Ort Einwohneranzahl</b>: </li>
-					<li><b>Ort Einwohnerarten</b>: </li>
-					<li><b>Ort Aussehen</b>: </li>
-					<li><b>Ort Klang</b>: </li>
-					<li><b>Ort Geruch</b>: </li>
-					<li><b>Ort Verteidigung</b>: </li>
-					<li><b>Ort Waren & Dienstleistungen</b>: </li>
-					<li><b>Ort Tavernen</b>: </li>
-					<li><b>Ort Läden</b>: </li>
-					<li><b>Ort Fantastische Elemente</b>: </li>
-					<li><b>Ort Organisationen</b>: </li>
-					<li><b>Ort NSCs</b>: </li>
-					<li><b>Ort Kreaturen</b>: </li>
-					<li><b>Ort Besondere Beziehung zu</b>:</li>
-					<li><b>Ort Kurzbeschreibung</b>: </li>
+					<li><b>Ort Einwohneranzahl</b>: 0</li>
+					<li><b>Ort Einwohnerarten</b>: -</li>
+					<li><b>Ort Aussehen</b>: Goldene Sonne</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die goldene Sonne Dyrhals.
+						Ihre Wärme und ihr Licht geben Dyrhal die benötigte Lebenskraft. </li>
 				</ul>
+				---	
+				<ul class="alt" id="location_pathor">
+					<li><b>Ort Name</b>: Pathor</li>
+					<li><b>Ort Link</b>: <a href="#location_pathor" aria-label="Pathor">Pathor</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Blaue Sonne</li>
+					<li><b>Ort Herrscher</b>: -</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: 0</li>
+					<li><b>Ort Einwohnerarten</b>: -</li>
+					<li><b>Ort Aussehen</b>: Blaue Sonne</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_pathor" aria-label="Pathor">Pathor (NSC)</a>, <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die kleine, blaue Sonne Dyrhals.
+						Pathor war ein Mensch, der zu einem Gott aufstieg und seitdem Hand in Hand mit Sirla wandert. Wenn Pathor und Sirla richtig stehen, entsteht im Zwielicht ein wunderbares Farbenspiel aus gemischten Gold- und Blautönen. </li>
+				</ul>
+				---	
+				<ul class="alt" id="location_maegor">
+					<li><b>Ort Name</b>: Maegor</li>
+					<li><b>Ort Link</b>: <a href="#location_maegor" aria-label="Maegor">Maegor</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Grauer Mond</li>
+					<li><b>Ort Herrscher</b>: -</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: 0</li>
+					<li><b>Ort Einwohnerarten</b>: -</li>
+					<li><b>Ort Aussehen</b>: Grauer Mond</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Der graue Mond Dyrhals.
+						Mit seiner Präsenz hat er großen Einfluss auf die Gezeiten und reflektiert das Licht von Sirla und Pathor. Wenn Sirla, Pathor und Maegor in einer Reihe stehen, dann werden unermessliche Kräfte freigesetzt. </li>
+				</ul>
+				---	
+				<ul class="alt" id="location_dyrhal">
+					<li><b>Ort Name</b>: Dyrhal</li>
+					<li><b>Ort Link</b>: <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Heimatplanet</li>
+					<li><b>Ort Herrscher</b>: -</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: Zehntausende</li>
+					<li><b>Ort Einwohnerarten</b>: Gemischt</li>
+					<li><b>Ort Aussehen</b>: Bewohnbarer Planet mit allen Klimazonen</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_sirla" aria-label="Sirla">Sirla</a>, <a href="#location_pathor" aria-label="Pathor">Pathor (Ort)</a>, <a href="#location_maegor" aria-label="Maegor">Maegor</a>, <a href="#location_alyria" aria-label="Alyria">Alyria (Kontinent)</a>, <a href="#location_nebelreich" aria-label="Alyria">Nebelreich</a>, <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Zugang zur <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a>, Zugang zur <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a>, Zugang zur <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a>, Zugang zur <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a>, Zugang zu <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die uns bekannte, materielle Welt.
+						Der Hauptkontinent trägt den Namen der Göttin des Lebens: Alyria.						
+						Der Nordpol ist die Heimat der vier Urelemente: Feuer, Erde und Wasser bilden ein ineinander greifendes Dreieck, welches darüber von Luft umhüllt wird. Das Zentrum bildet ein pures Chaos aller Elemente.
+						Der Südpol ist wie die südlichen Landmassen in einen undurchdringbaren Nebel gehüllt.						
+						Dyrhal ist von einer schützenden Schicht, der Ätherebene, umgeben. </li>
+				</ul>
+				---	
+				<ul class="alt" id="location_alyria">
+					<li><b>Ort Name</b>: Alyria</li>
+					<li><b>Ort Link</b>: <a href="#location_alyria" aria-label="Alyria">Alyria</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Bewohnbarer Kontinent von Dyrhal</li>
+					<li><b>Ort Herrscher</b>: -</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: Zehntausende</li>
+					<li><b>Ort Einwohnerarten</b>: Gemischt</li>
+					<li><b>Ort Aussehen</b>: Bewohnbare Kontinent</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_alyria" aria-label="Alyria">Alyria (NSC)</a>, <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a>, <a href="#location_eriond" aria-label="Eriond">Eriond</a>, <a href="#location_despval" aria-label="Despval">Despval</a>, <a href="#location_tharion" aria-label="Tharion">Tharion</a>, <a href="#location_adrijh_inseln" aria-label="Adrijh-Inseln">Adrijh-Inseln</a>, <a href="#location_kylar" aria-label="Kylar">Kylar</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Der Hauptkontinent von Dyrhal, auf dem sich die Reiche Eriond, Despval, Tharion, Kylar und die Adrijh-Inseln befinden. </li>
+				</ul>
+				---	
+				<ul class="alt" id="location_nebelreich">
+					<li><b>Ort Name</b>: Nebelreich</li>
+					<li><b>Ort Link</b>: <a href="#location_nebelreich" aria-label="Alyria">Nebelreich</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Im Nebel gehüllte Landmasse im Süden Dyrhals</li>
+					<li><b>Ort Herrscher</b>: -</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: In Nebel gehüllt</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Im Jahr 0 NA wurde mit dem Zerbrechen der Welt eine große Landmasse im südlichen Dyrhal abgetrennt.
+						Die Götter hüllten dieses Reich in dichten Nebel und gaben ihn damit seinen Namen. Der magische Nebel verhinderte jede Expedition, die das Nebelreich betreten wollte. </li>
+				</ul>
+				---
+				<ul class="alt" id="location_ätherebene">
+					<li><b>Ort Name</b>: Ätherebene</li>
+					<li><b>Ort Link</b>: <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Umhüllt Dyrhal</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang über <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a>, Zugang zu <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Zugang zu <a href="#location_salrar" aria-label="Salrar">Salrar</a>, Zugang zu <a href="#location_elia" aria-label="Elia">Elia</a>, Zugang zur <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a>, Zugang zur <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a>, Zugang zur <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a>, Zugang zur <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a>, Zugang zu <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Dyrhal ist von einer dünnen Schutzschicht umgeben: eine geisterhafte, unsichtbare Ebene namens Äther. Wer vom Äther aus Dyrhal betrachtet, der kann nicht mit der materiellen Welt interagieren oder gesehen werden.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_astralebene">
+					<li><b>Ort Name</b>: Astralebene</li>
+					<li><b>Ort Link</b>: <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Verbindet Dyrhal mit anderen Splittern</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a>, Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Zugang zu <a href="#location_thimosi" aria-label="Thimosi">Thimosi</a>, Zugang zu <a href="#location_elia" aria-label="Elia">Elia</a>, Zugang zu <a href="#location_isyr" aria-label="Ysir">Ysir</a>, Zugang zu <a href="#location_thania" aria-label="Thania">Thania</a>, Zugang zu <a href="#location_iderna" aria-label="Iderna">Iderna</a>, Zugang zu <a href="#location_athasari" aria-label="Athasari">Athasari</a>, Zugang zu <a href="#location_salrar" aria-label="Salrar">Salrar</a>, Zugang zu <a href="#location_ythus" aria-label="Ythus">Ythus</a>, Zugang zu <a href="#location_ilgareg" aria-label="Ilgareg">Ilgareg</a>, Zugang zu <a href="#location_thelkuun" aria-label="Thelkuun">Thelkuun</a>, Zugang zu <a href="#location_lyvi" aria-label="Lyvi">Lyvi</a>, Zugang zu <a href="#location_rizesch" aria-label="Rizesch">Rizesch</a>, Zugang zu <a href="#location_nirus" aria-label="Nirus">Nirus</a>, Zugang zu <a href="#location_xtuth" aria-label="Xtuth">Xtuth</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Das gesamte Universum ist durch eine unsichtbare Schicht verbunden: die Astralebene. Diese Ebene wird für Seelen, Gedanken und Energien genutzt, um zwischen den Splittern fließen zu können.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_thimosi">
+					<li><b>Ort Name</b>: Thimosi</li>
+					<li><b>Ort Link</b>: <a href="#location_thimosi" aria-label="Thimosi">Thimosi</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, hat <a href="#location_thania" aria-label="Thania">Thania</a> erschaffen, hat <a href="#location_isyr" aria-label="Ysir">Ysir</a> erschaffen, hat <a href="#location_elia" aria-label="Elia">Elia</a> erschaffen, Gegenteil von <a href="#location_athasari" aria-label="Athasari">Athasari</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Positiver Splitter des Universums. Der Ursplitter des Lebens und das Gegenteil von Athasari (Tod)</li>
+				</ul>
+				---
+				<ul class="alt" id="location_elia">
+					<li><b>Ort Name</b>: Elia</li>
+					<li><b>Ort Link</b>: <a href="#location_elia" aria-label="Elia">Elia</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, <a href="#location_thimosi" aria-label="Thimosi">Thimosi</a>, Gegenteil von <a href="#location_salrar" aria-label="Salrar">Salrar</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Positiver Splitter des Universums. Der Hauptsplitter von Thimosi steht für Licht, sein Gegenteil ist Salrar (Finsternis). Ein Teil von Elia eine alternative Realität von Dyrhal, in der die Natur und das Gute allgegenwärtig sind und über die Ätherebene erreichbar ist. </li>
+				</ul>
+				---
+				<ul class="alt" id="location_isyr">
+					<li><b>Ort Name</b>: Ysir</li>
+					<li><b>Ort Link</b>: <a href="#location_isyr" aria-label="Ysir">Ysir</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, <a href="#location_thimosi" aria-label="Thimosi">Thimosi</a>, hat <a href="#location_iderna" aria-label="Iderna">Iderna</a> erschaffen, hat <a href="#location_rizesch" aria-label="Rizesch">Rizesch</a> erschaffen, Gegenteil von <a href="#location_ythus" aria-label="Ythus">Ythus</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Positiver Splitter des Universums. Der Hauptsplitter von Thimosi steht für Ordnung, sein Gegenteil ist Ythus (Chaos).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_thania">
+					<li><b>Ort Name</b>: Thania</li>
+					<li><b>Ort Link</b>: <a href="#location_thania" aria-label="Thania">Thania</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, <a href="#location_thimosi" aria-label="Thimosi">Thimosi</a>, hat <a href="#location_iderna" aria-label="Iderna">Iderna</a> erschaffen, hat <a href="#location_lyvi" aria-label="Lyvi">Lyvi</a> erschaffen, Gegenteil von <a href="#location_ilgareg" aria-label="Ilgareg">Ilgareg</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Positiver Splitter des Universums. Der Hauptsplitter von Thimosi steht für Gemeinwohl, sein Gegenteil ist Ilgareg (Gier).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_iderna">
+					<li><b>Ort Name</b>: Iderna</li>
+					<li><b>Ort Link</b>: <a href="#location_iderna" aria-label="Iderna">Iderna</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Nebensplitter von <a href="#location_isyr" aria-label="Ysir">Ysir</a>, Nebensplitter von <a href="#location_thania" aria-label="Thania">Thania</a>, Gegenteil von <a href="#location_rizesch" aria-label="Rizesch">Rizesch</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Positiver Splitter des Universums. Der Nebensplitter von Isyr (Ordnung) und Thania (Gemeinwohl) steht für Gnade, sein Gegenteil ist Rizesch (Rücksichtslosigkeit).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_athasari">
+					<li><b>Ort Name</b>: Athasari</li>
+					<li><b>Ort Link</b>: <a href="#location_athasari" aria-label="Athasari">Athasari</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Gegenteil von <a href="#location_thimosi" aria-label="Thimosi">Thimosi</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Negativer Splitter des Universums. Der Hauptsplitter des Todes ist das Gegenteil von Thimosi (Leben).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_salrar">
+					<li><b>Ort Name</b>: Salrar</li>
+					<li><b>Ort Link</b>: <a href="#location_salrar" aria-label="Salrar">Salrar</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Gegenteil von <a href="#location_elia" aria-label="Elia">Elia</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Negativer Splitter des Universums. Der Hauptsplitter von Athasari (Tod) steht für Finsternis, sein Gegenteil ist Elia (Licht). Ein Teil von Salrar ist eine alternative Realität von Dyrhal, in der Tod und die Dunkelheit regieren und über die Ätherebene erreichbar ist.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_ythus">
+					<li><b>Ort Name</b>: Ythus</li>
+					<li><b>Ort Link</b>: <a href="#location_ythus" aria-label="Ythus">Ythus</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, hat <a href="#location_thelkuun" aria-label="Thelkuun">Thelkuun</a> erschaffen, hat <a href="#location_lyvi" aria-label="Lyvi">Lyvi</a> erschaffen, Gegenteil von <a href="#location_isyr" aria-label="Ysir">Ysir</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Negativer Splitter des Universums. Der Hauptsplitter von Athasari (Tod) steht für Chaos, sein Gegenteil ist Ysir (Ordnung).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_ilgareg">
+					<li><b>Ort Name</b>: Ilgareg</li>
+					<li><b>Ort Link</b>: <a href="#location_ilgareg" aria-label="Ilgareg">Ilgareg</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, hat <a href="#location_thelkuun" aria-label="Thelkuun">Thelkuun</a> erschaffen, hat <a href="#location_rizesch" aria-label="Rizesch">Rizesch</a> erschaffen, Gegenteil von <a href="#location_thania" aria-label="Thania">Thania</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Negativer Splitter des Universums. Der Hauptsplitter von Athasari (Tod) steht für Gier, sein Gegenteil ist Thania (Gemeinwohl).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_thelkuun">
+					<li><b>Ort Name</b>: Thelkuun</li>
+					<li><b>Ort Link</b>: <a href="#location_thelkuun" aria-label="Thelkuun">Thelkuun</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Nebensplitter von <a href="#location_ythus" aria-label="Ythus">Ythus</a>, Nebensplitter von <a href="#location_ilgareg" aria-label="Ilgareg">Ilgareg</a>, Gegenteil von <a href="#location_lyvi" aria-label="Lyvi">Lyvi</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Negativer Splitter des Universums. Der Nebensplitter von Ythus (Chaos) und Ilgareg (Gier) steht für Egoismus, sein Gegenteil ist Lyvi (Altruismus).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_lyvi">
+					<li><b>Ort Name</b>: Lyvi</li>
+					<li><b>Ort Link</b>: <a href="#location_lyvi" aria-label="Lyvi">Lyvi</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Nebensplitter von <a href="#location_ythus" aria-label="Ythus">Ythus</a>, Nebensplitter von <a href="#location_thania" aria-label="Thania">Thania</a>, Gegenteil von <a href="#location_thelkuun" aria-label="Thelkuun">Thelkuun</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Gemischter Splitter des Universums. Der Nebensplitter von Ythus (Chaos) und Thania (Gemeinwohl) steht für Altruismus, sein Gegenteil ist Thelkuun (Egoismus).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_rizesch">
+					<li><b>Ort Name</b>: Rizesch</li>
+					<li><b>Ort Link</b>: <a href="#location_rizesch" aria-label="Rizesch">Rizesch</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a>, Nebensplitter von <a href="#location_isyr" aria-label="Ysir">Ysir</a>, Nebensplitter von <a href="#location_ilgareg" aria-label="Ilgareg">Ilgareg</a>, Gegenteil von <a href="#location_iderna" aria-label="Iderna">Iderna</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Gemischter Splitter des Universums. Der Nebensplitter von Isyr (Ordnung) und Ilgareg (Gier) steht für Rücksichtslosigkeit, sein Gegenteil ist Iderna (Gnade).</li>
+				</ul>
+				---
+				<ul class="alt" id="location_nirus">
+					<li><b>Ort Name</b>: Nirus</li>
+					<li><b>Ort Link</b>: <a href="#location_nirus" aria-label="Nirus">Nirus</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Extremer Splitter des Universums. Nirus steht für Balance und Seelen und vereint Elemente aller Splitter des Universums in sich. Seelen entstehen im Balance-Splitter Nirus und sind meistens neutral. Von Nirus aus gelangen die Seelen in andere Welten, wo sie in den Körper neuer Wesen eindringen. Am Lebensende reisen die Seelen zurück zu Nirus, wo ihre Erinnerungen und Einflüsse durch das Leben entfernt werden und die Seelen erneut neutral werden. Die einzelnen, entfernten Erinnerungen und Prägungen der Seele reisen zu den Splittern, zu denen sie am besten passen. Wiederbelebungen sind nur möglich, wenn die Seele noch nicht nach Nirus gelangt ist. Das geschieht je nach Willensstärke des Individuums innerhalb der ersten zwei Stunden seit dem Tod.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_xtuth">
+					<li><b>Ort Name</b>: Xtuth</li>
+					<li><b>Ort Link</b>: <a href="#location_xtuth" aria-label="Xtuth">Xtuth</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_astralebene" aria-label="Astralebene">Astralebene</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Extremer Splitter des Universums. Xtuth steht für den großen Filter und Wahnsinn, das allesverschlingende Nichts der Bedeutungslosigkeit. Das Universum wird durch den großen Filter, dem Splitter Xtuth, geschützt. Bis heute vernichtet der Splitter sämtliche Versuche der Einflussnahme von den wahnsinnigen Mächten außerhalb des Universums.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_feuerebene">
+					<li><b>Ort Name</b>: Feuerebene</li>
+					<li><b>Ort Link</b>: <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Zugang zur <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a>, Zugang zur <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a>, Zugang zur <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a>, Zugang zu TODO <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a>, im Norden von <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die Feuerebene befindet sich am Nordpol Dyrhals, direkt neben den anderen Elementarebenen und besteht aus reinem Feuer. Am Rand zu den anderen Ebenen entstehen Zwischenelemente bis hin zum elementaren Chaos.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_erdebene">
+					<li><b>Ort Name</b>: Erdebene</li>
+					<li><b>Ort Link</b>: <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Zugang zur <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a>, Zugang zur <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a>, Zugang zur <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a>, Zugang zu <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a>, im Norden von <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die Erdebene befindet sich am Nordpol Dyrhals, direkt neben den anderen Elementarebenen und besteht aus reiner Erde. Am Rand zu den anderen Ebenen entstehen Zwischenelemente bis hin zum elementaren Chaos.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_luftebene">
+					<li><b>Ort Name</b>: Luftebene</li>
+					<li><b>Ort Link</b>: <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Zugang zur <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a>, Zugang zur <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a>, Zugang zur <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a>, Zugang zu <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a>, im Norden von <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die Luftebene befindet sich am Nordpol Dyrhals, direkt über den anderen Elementarebenen und besteht aus reiner Luft. Am Rand zu den anderen Ebenen entstehen Zwischenelemente bis hin zum elementaren Chaos.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_wasserebene">
+					<li><b>Ort Name</b>: Wasserebene</li>
+					<li><b>Ort Link</b>: <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Zugang zur <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a>, Zugang zur <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a>, Zugang zur <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a>, Zugang zu <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a>, im Norden von <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Die Wasserebene befindet sich am Nordpol Dyrhals, direkt über den anderen Elementarebenen und besteht aus reinem Wasser. Am Rand zu den anderen Ebenen entstehen Zwischenelemente bis hin zum elementaren Chaos.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_elementares_chaos">
+					<li><b>Ort Name</b>: Elementares Chaos</li>
+					<li><b>Ort Link</b>: <a href="#location_elementares_chaos" aria-label="Elementares Chaos">Elementares Chaos</a></li>
+					<li><b>Ort Symbol</b>: -</li>
+					<li><b>Ort Lage</b>: Unbekannt</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Spezial</li>
+					<li><b>Ort Ruf</b>: -</li>
+					<li><b>Ort Wohlstand</b>: -</li>
+					<li><b>Ort Sicherheit</b>: -</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: Unbekannt</li>
+					<li><b>Ort Klang</b>: Unbekannt</li>
+					<li><b>Ort Geruch</b>: Unbekannt</li>
+					<li><b>Ort Verteidigung</b>: Unbekannt</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: Unbekannt</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: Unbekannt</li>
+					<li><b>Ort Organisationen</b>: Unbekannt</li>
+					<li><b>Ort NSCs</b>: Unbekannt</li>
+					<li><b>Ort Kreaturen</b>: Unbekannt</li>
+					<li><b>Ort Besondere Beziehung zu</b>: Zugang zur <a href="#location_ätherebene" aria-label="Ätherebene">Ätherebene</a>, Zugang zur <a href="#location_feuerebene" aria-label="Feuerebene">Feuerebene</a>, Zugang zur <a href="#location_luftebene" aria-label="Luftebene">Luftebene</a>, Zugang zur <a href="#location_erdebene" aria-label="Erdebene">Erdebene</a>, Zugang zur <a href="#location_wasserebene" aria-label="Wasserebene">Wasserebene</a>, im Norden von <a href="#location_dyrhal" aria-label="Dyrhal">Dyrhal</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Das elementare Chaos ist der Schmelztieger der Feuer-, Luft-, Wasser- und Erdebene. Hier entsteht ein sich ständig änderndes Chaos.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_tharion">
+					<li><b>Ort Name</b>: Tharion</li>
+					<li><b>Ort Link</b>: <a href="#location_tharion" aria-label="Tharion">Tharion</a></li>
+					<li><b>Ort Symbol</b>: Rot mit goldenem Rahmen, darauf ein brauner Goldbeutel voll goldener Münzen und eine gekreuzte Stecknadel und Hammer</li>
+					<li><b>Ort Lage</b>: Südlich-Mittig im Kontinent Alyria</li>
+					<li><b>Ort Herrscher</b>: <a href="#nsc_phenrix_discome" aria-label="Phenrix Discome">Phenrix Discome</a></li>
+					<li><b>Ort Typ</b>: Reich</li>
+					<li><b>Ort Ruf</b>: Neutral</li>
+					<li><b>Ort Wohlstand</b>: Reich</li>
+					<li><b>Ort Sicherheit</b>: Unruhen</li>				
+					<li><b>Ort Einwohneranzahl</b>: 16.000</li>
+					<li><b>Ort Einwohnerarten</b>: Gemischt</li>
+					<li><b>Ort Aussehen</b>: -</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: <a href="#nsc_phenrix_discome" aria-label="Phenrix Discome">Phenrix Discome</a></li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: TODO Link Arcamont, TODO Link Kupferwacht, TODO Link Corin, TODO Link Asturcia, TODO Link Ridia, TODO Link Sartos, <a href="#location_alyria" aria-label="Alyria">Alyria (Ort)</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: In Tharion herrscht eine Plutokratie: Wer genügend Geld besitzt, der kann sich alles erlauben. Die zehn reichsten Personen lenken die Geschicke Tharions unter einem repräsentativen Monarchen mit eingeschränktem Einfluss. Tharion ist für Wein, üppige Abendmahle sowie Kunst & Kultur bekannt. Die Einwohner Tharions tragen gerne rote Kleidung mit Kupfer- oder Goldverzierungen. In Tharion werden alle erdenklichen Handwerkswaren, Luxusgüter, Giftpflanzen und Nahrungsmittel gehandelt.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_despval">
+					<li><b>Ort Name</b>: Despval</li>
+					<li><b>Ort Link</b>: <a href="#location_despval" aria-label="Despval">Despval</a></li>
+					<li><b>Ort Symbol</b>: Grün mit einem braunem Pferd</li>
+					<li><b>Ort Lage</b>: Nordwestlich im Kontinent Alyria</li>
+					<li><b>Ort Herrscher</b>: <a href="#nsc_dorius_zeugner" aria-label="Dorius Zeugner">Dorius Zeugner</a></li>
+					<li><b>Ort Typ</b>: Reich</li>
+					<li><b>Ort Ruf</b>: Freundlich</li>
+					<li><b>Ort Wohlstand</b>: Normal</li>
+					<li><b>Ort Sicherheit</b>: Ordnung</li>				
+					<li><b>Ort Einwohneranzahl</b>: 10.000</li>
+					<li><b>Ort Einwohnerarten</b>: Gemischt</li>
+					<li><b>Ort Aussehen</b>: -</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: <a href="#nsc_dorius_zeugner" aria-label="Dorius Zeugner">Dorius Zeugner</a></li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: TODO Link Angor Thom, TODO Link Traafast, TODO Link Obresa, TODO Link Koling, TODO Link Sohwell, TODO Link Ampus, <a href="#location_alyria" aria-label="Alyria">Alyria (Ort)</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Despval ist eine Konförderation: Ein Zusammenschluss unabhängiger Staaten, die zum Gemeinwohl Despvals beitragen. Die Statthalter der Städte & Dörfer werden von den Bürgern gewählt. Despval ist für Schnaps, deftige Frühstücke und Pferderennen bekannt. Die Einwohner Despvals tragen meist leichte, gefütterte Kleidung zum Schutz gegen den Wind. Oftmals werden beige oder grüne Farben getragen, geschmückt mit Silber oder Edelsteinen. Silber, Edelsteine, Heilpflanzen, Pferde und Reitwidder sind die wichtigsten Handelswaren.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_adrijh_inseln">
+					<li><b>Ort Name</b>: Adrijh-Inseln</li>
+					<li><b>Ort Link</b>: <a href="#location_adrijh_inseln" aria-label="Adrijh-Inseln">Adrijh-Inseln</a></li>
+					<li><b>Ort Symbol</b>: Sandgelbes Wappen mit zwei lilanen Motonitbergen</li>
+					<li><b>Ort Lage</b>: Südliche Inselgruppe direkt vor dem Kontinent Alyria</li>
+					<li><b>Ort Herrscher</b>: <a href="#nsc_intaro_pleiox" aria-label="Intaro Pleiox">Intaro Pleiox</a></li>
+					<li><b>Ort Typ</b>: Reich</li>
+					<li><b>Ort Ruf</b>: Neutral</li>
+					<li><b>Ort Wohlstand</b>: Wachstum</li>
+					<li><b>Ort Sicherheit</b>: Stabilisierung</li>				
+					<li><b>Ort Einwohneranzahl</b>: 3.000</li>
+					<li><b>Ort Einwohnerarten</b>: Gemischt</li>
+					<li><b>Ort Aussehen</b>: -</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: <a href="#nsc_intaro_pleiox" aria-label="Intaro Pleiox">Intaro Pleiox</a></li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: TODO Link Salantir, TODO Link Thichium, TODO Link schwarze Bibliothek(ORT), <a href="#location_alyria" aria-label="Alyria">Alyria (Ort)</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Auf den Adrijh-Inseln herrscht eine Meritokratie: Wer bewiesen hat, am besten für eine Aufgabe geeignet zu sein, wird diese als Minister übernehmen. Die Ministerien werden von einer nach Effizienz und Effektivität strebenden Bürokratie begleitet. Die Adrijh-Inseln sind für Drogen, Tee, exotische Gewürze und öffentliche Forumsdiskussionen bekannt. Die Bewohner der Adrijh-Inseln tragen Kleidung, die wenig Sand durchlässt und bis auf die Augen alles verdeckt. Hier werden insbesondere Drogen, magisches Wissen, Gewürze, Perlen und Motonit gehandelt.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_eriond">
+					<li><b>Ort Name</b>: Eriond</li>
+					<li><b>Ort Link</b>: <a href="#location_eriond" aria-label="Eriond">Eriond</a></li>
+					<li><b>Ort Symbol</b>: Dunkelblau mit einem goldenen Kriegshammer und hellblauer Sonne Pathors</li>
+					<li><b>Ort Lage</b>: Im Nordosten des Kontinents Alyria</li>
+					<li><b>Ort Herrscher</b>: <a href="#nsc_thorin_kleios" aria-label="Thorin Kleios">Thorin Kleios</a></li>
+					<li><b>Ort Typ</b>: Reich</li>
+					<li><b>Ort Ruf</b>: Unfreundlich</li>
+					<li><b>Ort Wohlstand</b>: Normal</li>
+					<li><b>Ort Sicherheit</b>: Stabilisierung</li>				
+					<li><b>Ort Einwohneranzahl</b>: 12.000</li>
+					<li><b>Ort Einwohnerarten</b>: Gemischt</li>
+					<li><b>Ort Aussehen</b>: -</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: <a href="#nsc_thorin_kleios" aria-label="Thorin Kleios">Thorin Kleios</a></li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: TODO Link Dunmar, TODO Link Arkanes Kloster, TODO Link Eisenfestung, TODO Link Sturith, TODO Link Drowood, TODO Link Itasa, <a href="#location_alyria" aria-label="Alyria">Alyria</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: In Eriond herrscht eine feudale Monarchie: Ein auf der männlichen Blutlinie basierender König regiert mit eingeschränkter Macht. Unter dem König existieren Vasallen, die Truppen und Geld an den König im Rahmen eines Treueschwures geben. Eriond ist für Bier, fleischhaltige Mittagsmahle, Badehäuser, öffentliche Gerichte und Ehrenduelle bekannt. Die Einwohner Erionds tragen gerne dicke, blaue Kleidung mit Silberverzierungen. In Eriond werden vor allem Felle, Rüstungen, Waffen, Platin und stärkende Kräuter gehandelt.</li>
+				</ul>
+				---
+				<ul class="alt" id="location_kylar">
+					<li><b>Ort Name</b>: Kylar</li>
+					<li><b>Ort Link</b>: <a href="#location_kylar" aria-label="Kylar">Kylar</a></li>
+					<li><b>Ort Symbol</b>: Unbekannt</li>
+					<li><b>Ort Lage</b>: Mittig auf dem Kontinent Alyria</li>
+					<li><b>Ort Herrscher</b>: Unbekannt</li>
+					<li><b>Ort Typ</b>: Reich</li>
+					<li><b>Ort Ruf</b>: Unbekannt</li>
+					<li><b>Ort Wohlstand</b>: Unbekannt</li>
+					<li><b>Ort Sicherheit</b>: Unbekannt</li>				
+					<li><b>Ort Einwohneranzahl</b>: Unbekannt</li>
+					<li><b>Ort Einwohnerarten</b>: Unbekannt</li>
+					<li><b>Ort Aussehen</b>: -</li>
+					<li><b>Ort Klang</b>: -</li>
+					<li><b>Ort Geruch</b>: -</li>
+					<li><b>Ort Verteidigung</b>: -</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: -</li>
+					<li><b>Ort Tavernen</b>: -</li>
+					<li><b>Ort Läden</b>: -</li>
+					<li><b>Ort Fantastische Elemente</b>: -</li>
+					<li><b>Ort Organisationen</b>: -</li>
+					<li><b>Ort NSCs</b>: -</li>
+					<li><b>Ort Kreaturen</b>: -</li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_alyria" aria-label="Alyria">Alyria</a></li>
+					<li><b>Ort Kurzbeschreibung</b>: Das alte, sich im Zentrum Dyrhals befindente Reich Kylar ist älter als die Zeitrechnung.
+						In der Hauptstadt Tharsis schafften es zehn Sterbliche zu Göttern zu werden.						
+						Dieses Ereignis brach die Welt entzwei. In Folge dessen erschufen die Götter gigantische Schutzsäulen um Kylar und schirmten das Reich magisch ab.						
+						Es wurden zahlreiche, erfolglose Versuche unternommen, den magischen Schutz von Kylar zu umgehen und in das Reich einzudringen. Die Magie dieser Säulen konnte seit über 1500 Jahren niemand deuten oder entschlüsseln.</li>
+				</ul>
+				
 		  	</section>
 			<!-- HOMEBREW ORGANIZATIONS -->			
 		  	<section id="organizations">
@@ -791,7 +1651,7 @@
 					<li><b>NSC Hautfarbe</b>: Unbekannt</li>
 					<li><b>NSC Haarfarbe</b>:Unbekannt</li>
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
-					<li><b>NSC Ort</b>: TODO LINK Pathor (blaue Sonne)</li>
+					<li><b>NSC Ort</b>: <a href="#location_pathor" aria-label="Pathor">Pathor (Ort)</a></li>
 					<li><b>NSC Organisation</b>: <a href="#organization_kirche_der_blauen_sonne" aria-label="Kirche der blauen Sonne">Kirche der blauen Sonne</a></li>
 					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a>, hat <a href="#item_brennende_kugel_pathors" aria-label="Brennende Kugel Pathors">Brennende Kugel Pathors</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
@@ -816,7 +1676,7 @@
 					<li><b>NSC Kleidung</b>: Unbekannt</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
 					<li><b>NSC Organisation</b>: <a href="#organization_orden_der_heilenden_hand" aria-label="Orden der heilenden Hand">Orden der heilenden Hand</a>, <a href="#organization_schwertrose" aria-label="Schwertrose">Schwertrose</a></li>
-					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#nsc_shina_voxis" aria-label="Shina Voxis">Shina Voxis</a>, hat <a href="#item_heilende_hand" aria-label="Heilende Hand">Heilende Hand</a> erschaffen</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#location_alyria" aria-label="Alyria">Alyria (Ort)</a>, <a href="#nsc_shina_voxis" aria-label="Shina Voxis">Shina Voxis</a>, hat <a href="#item_heilende_hand" aria-label="Heilende Hand">Heilende Hand</a> erschaffen</li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Alyria war die schönste Elfenfrau, die je auf Dyrhal wanderte. Als sie zu einer Göttin aufstieg, machte sie es sich zur Aufgabe, die Schönheit und das Leben der Welt zu bewahren. Als Dank wurde der Hauptkontinent Dyrhals nach ihr benannt.
 						Heiler, Fluchbrecher und Künstler beten zu Alyria, um Schutz, Kräfte oder Segen zu erhalten.</li>
@@ -1200,7 +2060,7 @@
 					<li><b>NSC Hautfarbe</b>: Weiß</li>
 					<li><b>NSC Haarfarbe</b>: Grau</li>
 					<li><b>NSC Kleidung</b>: Rote Stoffrobe</li>					
-					<li><b>NSC Ort</b>: TODO Link Tharion</li>
+					<li><b>NSC Ort</b>: <a href="#location_tharion" aria-label="Tharion">Tharion</a></li>
 					<li><b>NSC Organisation</b>: Unbekannt </li>
 					<li><b>NSC Besondere Beziehungen zu</b>: Bekannter von Mirael Veritas (Spielercharakter), Bekannter von <a href="#nsc_tahir_besan" aria-label="Tahir Besan">Tahir Besan</a></li>
 					<li><b>NSC Besonderheiten</b>: Im Osten Tharions bekannt als Merlin Feuerhand.</li>
@@ -2148,7 +3008,7 @@
 					<li><b>NSC Kleidung</b>: Rote Robe mit braunen Goldbeutel darauf</li>					
 					<li><b>NSC Ort</b>: TODO Link Arcamont</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: -</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: <a href="#location_tharion" aria-label="Tharion">Tharion</a></li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 				</ul>
@@ -2170,7 +3030,7 @@
 					<li><b>NSC Kleidung</b>: Robe mit sandgelbem Wappen und zwei lilanen Motonitbergen darauf</li>					
 					<li><b>NSC Ort</b>: TODO Link Salantir</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Herrscher von <a href="#nsc_marsa_wibb" aria-label="Marsa Wibb">Marsa Wibb</a>, <a href="#nsc_wymar" aria-label="Wymar">Wymar</a>, <a href="#nsc_ghonkar_thor" aria-label="Ghonkar Thor">Ghonkar Thor</a>, <a href="#nsc_fehlar_avos" aria-label="Fehlar Avos">Fehlar Avos</a>, <a href="#nsc_vicos_floch" aria-label="Vicos Floch">Vicos Floch</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Herrscher von <a href="#nsc_marsa_wibb" aria-label="Marsa Wibb">Marsa Wibb</a>, <a href="#nsc_wymar" aria-label="Wymar">Wymar</a>, <a href="#nsc_ghonkar_thor" aria-label="Ghonkar Thor">Ghonkar Thor</a>, <a href="#nsc_fehlar_avos" aria-label="Fehlar Avos">Fehlar Avos</a>, <a href="#nsc_vicos_floch" aria-label="Vicos Floch">Vicos Floch</a>, <a href="#location_adrijh_inseln" aria-label="Adrijh-Inseln">Adrijh-Inseln</a></li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 				</ul>
@@ -2302,7 +3162,7 @@
 					<li><b>NSC Kleidung</b>: Grüne Stoffrobe mit einem braunen Pferd darauf</li>					
 					<li><b>NSC Ort</b>: TODO Link Angor Thom</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Herrscher von <a href="#nsc_nillbi_ladlip" aria-label="Nillbi Ladlip">Nillbi Ladlip</a>, <a href="#nsc_mana_saineka" aria-label="Mana Saineka">Mana Saineka</a>, <a href="#nsc_grem_tringrosh" aria-label="Grem Tringrosh">Grem Tringrosh</a>, <a href="#nsc_brovuk_stahlhand" aria-label="Brovuk Stahlhand">Brovuk Stahlhand</a>, <a href="#nsc_kondik_wittmane" aria-label="Kondik Wittmane">Kondik Wittmane</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Herrscher von <a href="#nsc_nillbi_ladlip" aria-label="Nillbi Ladlip">Nillbi Ladlip</a>, <a href="#nsc_mana_saineka" aria-label="Mana Saineka">Mana Saineka</a>, <a href="#nsc_grem_tringrosh" aria-label="Grem Tringrosh">Grem Tringrosh</a>, <a href="#nsc_brovuk_stahlhand" aria-label="Brovuk Stahlhand">Brovuk Stahlhand</a>, <a href="#nsc_kondik_wittmane" aria-label="Kondik Wittmane">Kondik Wittmane</a>, <a href="#location_despval" aria-label="Despval">Despval</a></li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 				</ul>
@@ -2434,7 +3294,7 @@
 					<li><b>NSC Kleidung</b>: Dunkelblaue Robe mit goldenen Kriegshammer und hellblauer Sonne Pathors darauf</li>					
 					<li><b>NSC Ort</b>: TODO Link Dunmar</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Herrscher von <a href="#nsc_nashia_arawin" aria-label="Nashia Arawin">Nashia Arawin</a>, <a href="#nsc_rilitar_lei" aria-label="Rilitar Lei">Rilitar Lei</a>, <a href="#nsc_olkrun_der_donnerer" aria-label="Olkrun der Donnerer">Olkrun der Donnerer</a>, <a href="#nsc_cyrus_marsch" aria-label="Cyrus Marsch">Cyrus Marsch</a>, <a href="#nsc_erithic" aria-label="Erithic">Erithic</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Herrscher von <a href="#nsc_nashia_arawin" aria-label="Nashia Arawin">Nashia Arawin</a>, <a href="#nsc_rilitar_lei" aria-label="Rilitar Lei">Rilitar Lei</a>, <a href="#nsc_olkrun_der_donnerer" aria-label="Olkrun der Donnerer">Olkrun der Donnerer</a>, <a href="#nsc_cyrus_marsch" aria-label="Cyrus Marsch">Cyrus Marsch</a>, <a href="#nsc_erithic" aria-label="Erithic">Erithic</a>, <a href="#location_eriond" aria-label="Eriond">Eriond</a></li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 				</ul>
@@ -3770,7 +4630,7 @@
 					<li><b>Gegenstand Name</b>: Frostblume</li>
 					<li><b>Gegenstand Link</b>: <a href="#item_frostblume" aria-label="Frostblume">Frostblume</a></li>
 					<li><b>Gegenstand Gewicht</b>: 0 lb</li>
-					<li><b>Gegenstand Typ</b>: Verbrauchsgegenstand</li>
+					<li><b>Gegenstand Typ</b>: Pflanze</li>
 					<li><b>Gegenstand Ausprägung</b>: Blau</li>
 					<li><b>Gegenstand Seltenheit</b>: Ungewöhnlich</li>
 					<li><b>Gegenstand Einstimmung</b>: Nein</li>
@@ -3887,6 +4747,18 @@
 					<li><b>Gegenstand Seltenheit</b>: Episch</li>
 					<li><b>Gegenstand Einstimmung</b>: Nein</li>
 					<li><b>Gegenstand Kurzbeschreibung</b>: Die Kugel der Schatten verleiht einer Person wahre Unsichtbarkeit, Lautlosigkeit und die Fähigkeit, niemals Spuren zu hinterlassen.</li>
+				</ul>
+				---
+				<ul class="alt" id="item_motonit">
+					<li><b>Gegenstand Name</b>: Motonit</li>
+					<li><b>Gegenstand Link</b>: <a href="#item_motonit" aria-label="Motonit">Motonit</a></li>
+					<li><b>Gegenstand Gewicht</b>: Eine Hand voll wiegt 1 lb</li>
+					<li><b>Gegenstand Typ</b>: Mineral</li>
+					<li><b>Gegenstand Ausprägung</b>: Kristall</li>
+					<li><b>Gegenstand Seltenheit</b>: Selten</li>
+					<li><b>Gegenstand Einstimmung</b>: Nein</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: Ein lilaner Kristall, der Energie speichert und freisetzen kann und es ermöglicht, Maschinen zu bauen und Aufgaben zu automatisieren. Das einzig bekannte Vorkommen sind zwei lilane Motonitberge auf den Adrijh-Inseln. 
+						Durch das Motonit der Adrijh-Inseln gibt es erste Automatone: Maschinen, die vorgefertigte Aufgaben automatisiert erledigen.</li>
 				</ul>	
 			</section>
 		</div>

@@ -318,7 +318,7 @@
 					<li><b>Gegenstand Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Gegenstand Link</b>: <a href="#item_[Text]" aria-label="[Text]">[Text]</a></li>
 					<li><b>Gegenstand Einzigartig</b>: [Ja | Nein]</li>
-					<li><b>Gegenstand Gewicht</b>: [0-9]* lb</li>
+					<li><b>Gegenstand Gewicht</b>: [0.0-9.0]* Kilogramm</li>
 					<li><b>Gegenstand Typ</b>: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</li>
 					<li><b>Gegenstand Ausprägung</b>: [Text - Referenz zu Gegenständen]</li>
 					<li><b>Gegenstand Seltenheit</b>: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</li>
@@ -333,73 +333,6 @@
 				<p>Bedienungsanleitung Desktop: STRG+F drücken. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
 				<p>Bedienungsanleitung Mobile: Desktop-Seitenansicht aktivieren und Suchfunktion für Seite im Browser aufrufen. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
 				<p>Artikel und Titel bzw. Anreden werden nicht berücksichtigt. Suche nach "Schwert der Runen" anstelle von "Das Schwert der Runen"; suche nach "Schwarze Bibliothek" anstelle "Die schwarze Bibliothek"!</p>
-				<p>Definitionen:
-					<table class="alt">
-						<thead>	
-							<tr>
-							<th>Zeichenfolge</th>
-							<th>Erklärung</th>	
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>[...]</td>
-								<td>Erlaube jeden Buchstaben innerhalb der eckigen Klammern</td>
-							</tr>
-							<tr>
-								<td>(...)</td>
-								<td>Gruppierung, für die alle folgenden Regeln gelten</td>
-							</tr>							
-							<tr>
-								<td>*</td>
-								<td>Vorkommnis: Keinmal oder  öfter</td>
-							</tr>
-							<tr>
-								<td>+</td>
-								<td>Vorkommnis: Einmal oder öfter</td>
-							</tr>
-							<tr>
-								<td>?</td>
-								<td>Vorkommnis: Keinmal oder einmal</td>
-							</tr>
-							<tr>
-								<td>\d{m}</td>
-								<td>Eine beliebige Ziffer, die m mal vorkommen darf. Eine Ziffer ist eine Zahl zwischen 0 und 9 (inklusive 0 und 9).</td>
-							</tr>
-							<tr>
-								<td>|</td>
-								<td>Entweder-Oder (exklusives Oder)</td>
-							</tr>
-							<tr>
-								<td>&lt;Tag&gt;</td>
-								<td>\d{2}</td>
-							</tr>
-							<tr>
-								<td>&lt;Monat&gt;</td>
-								<td>\d{2}</td>
-							</tr>
-							<tr>
-								<td>&lt;Jahr&gt;</td>
-								<td>\d{4}</td>
-							</tr>
-							<tr>
-								<td>&lt;Subjekt&gt;</td>
-								<td>Ein verlinktes URI-Fragment dieser Website, dass keine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
-							</tr>
-							<tr>
-								<td>&lt;Prädikat&gt;</td>
-								<td>Ein verlinktes URI-Fragment dieser Website, dass eine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
-							</tr>
-							<tr>
-								<td>&lt;Objekt&gt;</td>
-								<td>Ein verlinktes URI-Fragment dieser Website, dass keine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
-							</tr>
-							<tr>
-								<td>Ereignis</td>
-								<td>&lt;Tag&gt;.&lt;Monat&gt;.&lt;Jahr&gt; NA: &lt;Subjekt&gt; &lt;Prädikat&gt; &lt;Objekt&gt; (&lt;Prädikat> &lt;Objekt&gt;)*</td>
-							</tr>
-						</tbody>		
-					</table>					
 				<table class="alt">
 					<thead>
 						<tr>
@@ -601,6 +534,73 @@
  			</section>
 			<!-- HOMEBREW Special Definitions-->
 			<section id="special_definitions">
+				<p>Definitionen:</p>
+					<table class="alt">
+						<thead>	
+							<tr>
+							<th>Zeichenfolge</th>
+							<th>Erklärung</th>	
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>[...]</td>
+								<td>Erlaube jeden Buchstaben innerhalb der eckigen Klammern</td>
+							</tr>
+							<tr>
+								<td>(...)</td>
+								<td>Gruppierung, für die alle folgenden Regeln gelten</td>
+							</tr>							
+							<tr>
+								<td>*</td>
+								<td>Vorkommnis: Keinmal oder  öfter</td>
+							</tr>
+							<tr>
+								<td>+</td>
+								<td>Vorkommnis: Einmal oder öfter</td>
+							</tr>
+							<tr>
+								<td>?</td>
+								<td>Vorkommnis: Keinmal oder einmal</td>
+							</tr>
+							<tr>
+								<td>\d{m}</td>
+								<td>Eine beliebige Ziffer, die m mal vorkommen darf. Eine Ziffer ist eine Zahl zwischen 0 und 9 (inklusive 0 und 9).</td>
+							</tr>
+							<tr>
+								<td>|</td>
+								<td>Entweder-Oder (exklusives Oder)</td>
+							</tr>
+							<tr>
+								<td>&lt;Tag&gt;</td>
+								<td>\d{2}</td>
+							</tr>
+							<tr>
+								<td>&lt;Monat&gt;</td>
+								<td>\d{2}</td>
+							</tr>
+							<tr>
+								<td>&lt;Jahr&gt;</td>
+								<td>\d{4}</td>
+							</tr>
+							<tr>
+								<td>&lt;Subjekt&gt;</td>
+								<td>Ein verlinktes URI-Fragment dieser Website, dass keine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
+							</tr>
+							<tr>
+								<td>&lt;Prädikat&gt;</td>
+								<td>Ein verlinktes URI-Fragment dieser Website, dass eine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
+							</tr>
+							<tr>
+								<td>&lt;Objekt&gt;</td>
+								<td>Ein verlinktes URI-Fragment dieser Website, dass keine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
+							</tr>
+							<tr>
+								<td>Ereignis</td>
+								<td>&lt;Tag&gt;.&lt;Monat&gt;.&lt;Jahr&gt; NA: &lt;Subjekt&gt; &lt;Prädikat&gt; &lt;Objekt&gt; (&lt;Prädikat> &lt;Objekt&gt;)*</td>
+							</tr>
+						</tbody>		
+					</table>	
 				---	
 				<ul class="alt" id="special_definition_information">
 					<li><b>Spezialdefinition Name</b>: Information</li>

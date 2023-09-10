@@ -91,7 +91,7 @@
 					<li><b>Ort Link</b>: <a href="#location_[Text]" aria-label="[Text]">[Text]</a></li>
 					<li><b>Ort Symbol</b>: [Text]</li>
 					<li><b>Ort Lage</b>: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</li>
-					<li><b>Ort Herrscher</b>: </li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Herrscher</b>: [Link zu NSC]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Ort Typ</b>: [Wirtschaft | Militär | Geistig | Politik | Logistik | Magie | Spezial | Reich]</li>
 					<li><b>Ort Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
 					<li><b>Ort Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
@@ -149,9 +149,9 @@
 					<li><b>Organisation Link</b>: <a href="#organization_[Text]" aria-label="[Text]">[Text]</a></li>
 					<li><b>Organisation Leitmotiv</b>: [Text]</li>
 					<li><b>Organisation Symbol</b>: [Text]</li>
-					<li><b>Organisation Herrscher</b>: [Text]</li>
+					<li><b>Organisation Herrscher</b>: [Link zu NSC]</li>
 					<li><b>Organisation Hauptsitz</b>: [Text | Link zu Ort]</li>
-					<li><b>Organisation Relikte</b>: [Link Gegenstand]</li>
+					<li><b>Organisation Relikte</b>: [Link Gegenstand]*</li>
 					<li><b>Organisation Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Banditen]</li>
 					<li><b>Organisation Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
 					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
@@ -202,7 +202,7 @@
 					<li><b>NSC Link</b>: <a href="#nsc_[Text]" aria-label="[Text]">[Text]</a></li>
 					<li><b>NSC Geschlecht</b>: [Männlich | Weiblich | Undefinierbar]</li>
 					<li><b>NSC Stimme</b>: [Tief | Mittel | Hoch]</li>					
-					<li><b>NSC Volk</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Volk</b>: [Volk | Gemischt aus [Volk]*]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>NSC Beruf</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>NSC Charaktertyp</b>: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert | Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]</li>
 					<li><b>NSC Alter</b>: [0-9]*</li>
@@ -244,8 +244,8 @@
 				<ul class="alt" id="creature_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Kreatur Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
 					<li><b>Kreatur Link</b>: <a href="#creature_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>Kreatur Größe</b>: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</li>
-					<li><b>Kreatur Gewicht</b>: [(Gewicht in Pfund) lb]</li>				
+					<li><b>Kreatur Größe</b>: [0.0-9.0]* Meter</li>
+					<li><b>Kreatur Gewicht</b>: [0.0-9.0]* Kilogramm</li>				
 					<li><b>Kreatur Sprachen</b>: [Sprache]*</li>
 					<li><b>Kreatur Ort</b>: [Text | (Link zu Ort)*]</li>
 					<li><b>Kreatur Organisation</b>: [Text | (Link zu Organisation)*]</li>
@@ -8498,8 +8498,8 @@
 				<ul class="alt" id="creature_seelenverschlinger">
 					<li><b>Kreatur Name</b>: Seelenverschlinger</li>
 					<li><b>Kreatur Link</b>: <a href="#creature_seelenverschlinger" aria-label="Seelenverschlinger">Seelenverschlinger</a></li>
-					<li><b>Kreatur Größe</b>: Groß</li>
-					<li><b>Kreatur Gewicht</b>: 400 lb</li>					
+					<li><b>Kreatur Größe</b>: 2,00 Meter</li>
+					<li><b>Kreatur Gewicht</b>: 200 Kilogramm</li>					
 					<li><b>Kreatur Sprachen</b>: Gemeinsprache, Dämonisch</li>
 					<li><b>Kreatur Ort</b>: Ilgareg (Splitter)</li>
 					<li><b>Kreatur Organisation</b>: -</li>

@@ -33,6 +33,7 @@
 						<li><a href="#locations" aria-label="zu den Orten">Orte</a></li>
 						<li><a href="#organizations" aria-label="zu den Organisationen">Organisationen</a></li>
 						<li><a href="#npcs" aria-label="zu den Nichtspielercharakteren">NSCs</a></li>
+						<li><a href="#scs" aria-label="zu den Spielercharakteren">SCs</a></li>
 						<li><a href="#creatures" aria-label="zu den Kreaturen">Kreaturen</a></li>
 						<li><a href="#spells" aria-label="zu den Zaubern">Zauber</a></li>
 						<li><a href="#items" aria-label="zu den Gegenständen">Gegenstände</a></li>
@@ -222,6 +223,53 @@
 					</li>
 				</ul>
 			-->
+			<!-- HOMEBREW PCS TEMPLATE
+				---
+				<ul class="alt" id="sc_">
+					<li><b>SC Name</b>: </li>
+					<li><b>SC Link</b>: <a href="#sc_" aria-label=""></a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW PCS TEMPLATE RULES
+				<ul class="alt" id="sc_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>SC Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>SC Link</b>: <a href="#sc_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>SC Geschlecht</b>: [Männlich | Weiblich | Undefinierbar]</li>
+					<li><b>SC Volk</b>: [Volk | Gemischt aus [Volk]*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>SC Alter</b>: [0-9]*</li>
+					<li><b>SC Größe</b>: [0.0-9.0]* Meter</li>
+					<li><b>SC Gewicht</b>: [0.0-9.0]* Kilogramm</li>
+					<li><b>SC Augenfarbe</b>: [Text]</li>
+					<li><b>SC Hautfarbe</b>: [Text]</li>
+					<li><b>SC Haarfarbe</b>: [Text]</li>
+					<li><b>SC Kleidung</b>: [Text]</li>					
+					<li><b>SC Ort</b>: [Text | (Link zu Ort)*]</li>
+					<li><b>SC Organisation</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>SC Besondere Beziehungen zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>SC Besonderheiten</b>: [Text]</li>
+					<li><b>SC Kurzbeschreibung</b>: [Text]</li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
 			<!-- HOMEBREW CREATURES TEMPLATE
 				---
 				<ul class="alt" id="creature_">
@@ -339,6 +387,7 @@
 							<th>Orte</th>
 							<th>Organisationen</th>	
 							<th>NSCs</th>
+							<th>SCs</th>
 							<th>Kreaturen</th>
 							<th>Zauber</th>
 							<th>Gegenstände</th>												
@@ -348,7 +397,8 @@
 						<tr>
 							<td>Ort Name: </td>
 							<td>Organisation Name: </td>
-							<td>NSC Name: </td>	
+							<td>NSC Name: </td>
+							<td>SC Name: </td>	
 							<td>Kreatur Name: </td>	
 							<td>Zauber Name: </td>	
 							<td>Gegenstand Name: </td>													
@@ -356,7 +406,8 @@
 						<tr>
 							<td>Ort Symbol: </td>
 							<td>Organisation Leitmotiv: </td>
-							<td>NSC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>	
+							<td>NSC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>
+							<td>SC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>	
 							<td>Kreatur Größe: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</td>	
 							<td>Zauber Stufe: [Cantrip | Stufe [1-9]]</td>	
 							<td>Gegenstand Gewicht: </td>												
@@ -364,7 +415,8 @@
 						<tr>
 							<td>Ort Lage: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</td>
 							<td>Organisation Symbol: </td>
-							<td>NSC Stimme: [Tief | Mittel | Hoch]</td>	
+							<td>NSC Stimme: [Tief | Mittel | Hoch]</td>
+							<td>SC Volk: </td>	
 							<td>Kreatur Gewicht: </td>	
 							<td>Zauber Klassenbeschränkung: [(Klasse)* | Nein]</td>	
 							<td>Gegenstand Typ: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</td>												
@@ -372,7 +424,8 @@
 						<tr>
 							<td>Ort Herrscher: </td>
 							<td>Organisation Herrscher: </td>
-							<td>NSC Volk: </td>	
+							<td>NSC Volk: </td>
+							<td>SC Alter: </td>	
 							<td>Kreatur Sprachen: </td>	
 							<td>Zauber Ritual: [Ja | Nein]</td>	
 							<td>Gegenstand Ausprägung: </td>												
@@ -380,7 +433,8 @@
 						<tr>
 							<td>Ort Typ: [Wirtschaft | Militär | Geistig | Politik | Logistik | Magie | Spezial | Reich]</td>
 							<td>Organisation Hauptsitz: </td>
-							<td>NSC Beruf: </td>	
+							<td>NSC Beruf: </td>
+							<td>SC Größe: </td>		
 							<td>Kreatur Ort: </td>	
 							<td>Zauber Zauberzeit: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</td>	
 							<td>Gegenstand Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</td>												
@@ -389,6 +443,7 @@
 							<td>Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
 							<td>Organisation Relikte: </td>
 							<td>NSC Charaktertyp: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert| Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]</td>	
+							<td>SC Gewicht: </td>	
 							<td>Kreatur Organisation: </td>	
 							<td>Zauber Reichweite: </td>	
 							<td>Gegenstand Einstimmung: [Ja | Nein]</td>												
@@ -396,7 +451,8 @@
 						<tr>
 							<td>Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
 							<td>Organisation Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Banditen]</td>
-							<td>NSC Alter: </td>	
+							<td>NSC Alter: </td>
+							<td>SC Augenfarbe: </td>		
 							<td>Kreatur Besondere Beziehung zu: </td>	
 							<td>Zauber Komponenten: </td>	
 							<td>Gegenstand Kurzbeschreibung:</td>												
@@ -404,7 +460,8 @@
 						<tr>
 							<td>Ort Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
 							<td>Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
-							<td>NSC Größe: </td>	
+							<td>NSC Größe: </td>
+							<td>SC Hautfarbe: </td>		
 							<td>Kreatur Bekannte Fähigkeiten: </td>	
 							<td>Zauber Dauer: </td>	
 							<td></td>												
@@ -412,7 +469,8 @@
 						<tr>
 							<td>Ort Einwohneranzahl: </td>
 							<td>Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
-							<td>NSC Gewicht: </td>	
+							<td>NSC Gewicht: </td>
+							<td>SC Haarfarbe: </td>		
 							<td>Kreatur Kurzbeschreibung: </td>	
 							<td>Zauber Konzentration: [Ja | Nein]</td>	
 							<td></td>												
@@ -420,7 +478,8 @@
 						<tr>
 							<td>Ort Einwohnerarten: [Gemischt | (Volk)*] </td>
 							<td>Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
-							<td>NSC Augenfarbe: </td>	
+							<td>NSC Augenfarbe: </td>
+							<td>SC Kleidung: </td>		
 							<td></td>	
 							<td>Zauber Beschreibung:</td>	
 							<td></td>												
@@ -428,7 +487,8 @@
 						<tr>
 							<td>Ort Aussehen: </td>
 							<td>Organisation Fähigkeiten: </td>
-							<td>NSC Hautfarbe: </td>	
+							<td>NSC Hautfarbe: </td>
+							<td>SC Ort: </td>		
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -436,7 +496,8 @@
 						<tr>
 							<td>Ort Klang: </td>
 							<td>Organisation Mitgliederanzahl: </td>
-							<td>NSC Haarfarbe: </td>	
+							<td>NSC Haarfarbe: </td>
+							<td>SC Organisation: </td>		
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -445,6 +506,7 @@
 							<td>Ort Geruch: </td>
 							<td>Organisation Mitgliederarten: </td>
 							<td>NSC Kleidung: </td>	
+							<td>SC Besondere Beziehung zu: </td>	
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -452,7 +514,8 @@
 						<tr>
 							<td>Ort Verteidigung: </td>
 							<td>Organisation Ränge: </td>
-							<td>NSC Ort: </td>	
+							<td>NSC Ort: </td>
+							<td>SC Besonderheiten: </td>		
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -461,6 +524,7 @@
 							<td>Ort Waren & Dienstleistungen: </td>
 							<td>Organisation NSCs: </td>
 							<td>NSC Organisation: </td>	
+							<td>SC Kurzbeschreibung: </td>	
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -468,7 +532,8 @@
 						<tr>
 							<td>Ort Tavernen: </td>
 							<td>Organisation Kreaturen: </td>
-							<td>NSC Besondere Beziehung zu: </td>	
+							<td>NSC Besondere Beziehung zu: </td>
+							<td></td>	
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -477,6 +542,7 @@
 							<td>Ort Läden: </td>
 							<td>Organisation Besondere Beziehung zu: </td>
 							<td>NSC Besonderheiten: </td>	
+							<td></td>
 							<td></td>	
 							<td></td>	
 							<td></td>												
@@ -485,12 +551,14 @@
 							<td>Ort Fantastische Elemente: </td>
 							<td>Organisation Kurzbeschreibung: </td>
 							<td>NSC Kurzbeschreibung: </td>	
+							<td></td>
 							<td></td>	
 							<td></td>	
 							<td></td>												
 						</tr>
 						<tr>
 							<td>Ort Organisationen: </td>
+							<td></td>
 							<td></td>
 							<td></td>	
 							<td></td>	
@@ -500,6 +568,7 @@
 						<tr>
 							<td>Ort NSCs: </td>
 							<td></td>
+							<td></td>
 							<td></td>	
 							<td></td>	
 							<td></td>	
@@ -507,6 +576,7 @@
 						</tr>	
 						<tr>
 							<td>Ort Kreaturen: </td>
+							<td></td>
 							<td></td>
 							<td></td>	
 							<td></td>	
@@ -516,6 +586,7 @@
 						<tr>
 							<td>Ort Besondere Beziehung zu: </td>
 							<td></td>
+							<td></td>
 							<td></td>	
 							<td></td>	
 							<td></td>	
@@ -523,6 +594,7 @@
 						</tr>
 						<tr>
 							<td>Ort Kurzbeschreibung: </td>
+							<td></td>
 							<td></td>
 							<td></td>	
 							<td></td>	
@@ -1588,7 +1660,7 @@
 						<p>
 						03.02.1481 NA: <a href="#nsc_phenrix_discome" aria-label="Phenrix Discome">Phenrix Discome</a> <a href="#event_befoerdert">befördert</a> <a href="#nsc_hogbart_uyo" aria-label="Hogbart Uyo">Hogbart Uyo</a> zum Marquis von <a href="#location_corin" aria-label="Corin">Corin</a>.</br>
 						12.03.1502 NA: Mutierte Insektoiden <a href="#event_erobert">erobert</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
-						21.03.1502 NA: Eine Abenteurergruppe (Vajra Alealam, Farshux Viono Milaz, Khaldun Donderial und Tarik Sonnenglanz) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
+						21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
 						04.04.1502 NA: <a href="#special_definition_unknown" aria-label="Unbekannt">Unbekannt</a> <a href="#event_toetet">tötet</a> <a href="#nsc_phenrix_discome" aria-label="Phenrix Discome">Phenrix Discome</a> in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> während des Maskenballs mit vergiftetem Essen.</br>
 						03.04.1502 NA: <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a> <a href="#event_taucht">taucht</a> in <a href="#special_definition_unknown" aria-label="Unbekannt">Unbekannt</a> unter.</br>
 						04.04.1502 NA: <a href="#location_tharion" aria-label="Tharion">Tharion</a> <a href="#event_jagt">jagt</a> <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a> wegen Verrats an <a href="#nsc_phenrix_discome" aria-label="Phenrix Discome">Phenrix Discome (†)</a>.</br>
@@ -1691,10 +1763,10 @@
 					<li><b>Details (Ereignisse)</b>: 
 						<p>04.01.1502 NA: <a href="#special_definition_unknown" aria-label="Unbekannt">Unbekannt</a> <a href="#event_toetet">tötet</a> <a href="#nsc_mila_throndir" aria-label="Mila Throndir">Mila Throndir</a> in <a href="#location_dunmar" aria-label="Dunmar">Dunmar</a> mit vergiftetem Essen.</br>
 							03.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_erschafft">erschafft</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Verdacht auf Giftschmuggler.</br>
-							13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (Ilanis Firahil, Aeldon Erland).</br>
+							13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>).</br>
 							14.04.1502 NA: <a href="#location_eriond" aria-label="Eriond">Eriond</a> <a href="#event_loest">löst</a> Krieg mit <a href="#location_tharion" aria-label="Tharion">Tharion</a> aus.</br>
 							15.04.1502 NA: <a href="#organization_armee_tharion" aria-label="Armee (Tharion)">Armee (Tharion)</a> <a href="#event_kaempft">kämpft</a> in <a href="#location_tharion" aria-label="Tharion">Tharion</a> gegen <a href="#organization_armee_eriond" aria-label="Armee (Eriond)">Armee (Eriond)</a>.</br>
-							25.04.1502 NA: Abenteurergruppe (Tarik Sonnenglanz, Farshux Viono Milaz, Khaldun Donderial, Vajra Alealam) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</p>
+							25.04.1502 NA: Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</p>
 						</p>
 					</li>
 				</ul>
@@ -1755,12 +1827,12 @@
 					<li><b>Ort Organisationen</b>: -</li>
 					<li><b>Ort NSCs</b>: -</li>
 					<li><b>Ort Kreaturen</b>: Unbekannt</li>
-					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_eldall" aria-label="Eldall">Eldall</a>, wurde von <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> benutzt, um eine Gruppe Helden (Khaldun Donderial, Vajra Alealam, Tarik Sonnenglanz, Farshux Viono Milaz) zu teleportieren, <a href="#location_tharion" aria-label="Tharion">Tharion</a>, <a href="#location_sartos" aria-label="Sartos">Sartos</a></li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_eldall" aria-label="Eldall">Eldall</a>, wurde von <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> benutzt, um eine Gruppe Helden (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>) zu teleportieren, <a href="#location_tharion" aria-label="Tharion">Tharion</a>, <a href="#location_sartos" aria-label="Sartos">Sartos</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: Mehrere, große Steinsäulen, die am Rand einer Klippe zentral angeordnet sind. In der Mitte ist ein sich warm anfühlender Stein mit einem eingemeißeltem Zyklon darauf.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (Tarik Sonnenglanz, Farshux Viono Milaz, Khaldun Donderial, Vajra Alealam).</br>
-						25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (Tarik Sonnenglanz, Farshux Viono Milaz, Khaldun Donderial, Vajra Alealam) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</br>
-						25.04.1502 NA: Abenteurergruppe (Tarik Sonnenglanz, Farshux Viono Milaz, Khaldun Donderial, Vajra Alealam) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</p>
+						<p>25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>).</br>
+						25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</br>
+						25.04.1502 NA: Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</p>
 					</li>
 				</ul>
 				---
@@ -1790,7 +1862,8 @@
 					<li><b>Ort Besondere Beziehung zu</b>: wurde eine Weile bewohnt von <a href="#nsc_viana" aria-label="Viana">Viana</a>, <a href="#location_eriond" aria-label="Eriond">Eriond</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: Außen ein Haus, dessen erster Stock mit Mörtel zusammengeklebten, passenden Steinen besteht und Holzdach hat. Draußen werden Tiere ausgenommen, gehäutet, geräuchert. Innen viel Holz, Boden Stein. Gibt großen Raum mit vielen Tischen und Stühlen, wo Leute Trinken, Essen, Proviant packen und gepökelt wird in Fässern.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>22.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> zur <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</p>
+						<p>22.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> zur <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</p>
 					</li>
 				</ul>
 				---
@@ -1848,10 +1921,10 @@
 					<li><b>Ort NSCs</b>: -</li>
 					<li><b>Ort Kreaturen</b>: Untote</li>
 					<li><b>Ort Besondere Beziehung zu</b>: Geschlossener Spalt zu <a href="#location_salrar" aria-label="Salrar">Salrar</a></li>
-					<li><b>Ort Kurzbeschreibung</b>: Eine Tragödie hat Hafrafell in ein Dorf voller Untoten verwandelt, seither ist sie auch als "die verlorene Stadt" bekannt. Zwei Helden (Ilanis Firahil, Aeldon Erland) haben einen Spalt nach Salrar durch <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> geschlossen. Solange <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> aktiv ist, bleibt der Spalt geschlossen.</li>
+					<li><b>Ort Kurzbeschreibung</b>: Eine Tragödie hat Hafrafell in ein Dorf voller Untoten verwandelt, seither ist sie auch als "die verlorene Stadt" bekannt. Zwei Abenteurer  (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>) haben einen Spalt nach Salrar durch <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> geschlossen. Solange <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> aktiv ist, bleibt der Spalt geschlossen.</li>
 					<li><b>Details (Ereignisse)</b>: 
 						<p> 23.06.1472 NA: <a href="#special_definition_unknown" aria-label="Unbekannt">Unbekannt</a> <a href="#event_erschafft">erschafft</a> Spalt nach <a href="#location_salrar" aria-label="Salrar">Salrar</a>.</br>
-							18.03.1502 NA: Abenteurergruppe (Ilanis Firahil, Aeldon Erland) <a href="#event_veraendert">verändert</a> Spalt zu <a href="#location_salrar" aria-label="Salrar">Salrar</a> zu verschlossen durch <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a>. Solange <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> aktiv ist, bleibt der Spalt geschlossen.</p>
+							18.03.1502 NA: Abenteurergruppe (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>) <a href="#event_veraendert">verändert</a> Spalt zu <a href="#location_salrar" aria-label="Salrar">Salrar</a> zu verschlossen durch <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a>. Solange <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> aktiv ist, bleibt der Spalt geschlossen.</p>
 					</li>
 				</ul>
 				---
@@ -1881,7 +1954,7 @@
 					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_deral_zhatov" aria-label="Deral Zhatov">Deral Zhatov (†)</a>, <a href="#nsc_alyria" aria-label="Alyria">Alyria (NSC)</a>, <a href="#nsc_thomas_isenbald" aria-label="Thomas Isenbald (†)">Thomas Isenbald (†)</a>, <a href="#nsc_sila_ebonwald" aria-label="Sila Ebonwald (†)">Sila Ebonwald (†)</a>, <a href="#nsc_ronald_zerros" aria-label="Ronald Zerros (†)">Ronald Zerros (†)</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: Eine große Festung im Gebirge, dessen Zugang mit einer Schlucht und Zugbrücke gesichert ist. Teile der Festung wurden bei einem Angriff von Insektoiden schwer beschädigt.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (Farshux Viono Milaz, Tarik Sonnenglanz, Vajra Alealam, Khaldun Donderial) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.</p>
+						<p>26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.</p>
 					</li>
 				</ul>
 				---
@@ -1908,12 +1981,12 @@
 					<li><b>Ort Organisationen</b>: <a href="#organization_zirkel_der_wildnis" aria-label="Zirkel der Wildnis">Zirkel der Wildnis</a></li>
 					<li><b>Ort NSCs</b>: <a href="#nsc_hywel_wellard" aria-label="Hywel Wellard">Hywel Wellard</a></li>
 					<li><b>Ort Kreaturen</b>: Wildtiere</li>
-					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_tamera" aria-label="Tamera">Tamera</a>, verdorben von <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel (†)</a>, gereinigt von Heldengruppe: Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz, Khaldun Donderial; <a href="#location_sartos" aria-label="Sartos">Sartos</a></li>
+					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_tamera" aria-label="Tamera">Tamera</a>, verdorben von <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel (†)</a>, gereinigt von Heldengruppe: <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>; <a href="#location_sartos" aria-label="Sartos">Sartos</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: Ein langsam wieder heilender Schrein eines Hirsches in einem großen Wald.</li>
 					<li><b>Details (Ereignisse)</b>: 
 						<p> 09.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_veraendert">verändert</a> <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a> in einen Dämonenschrein.</br>
-							20.04.1502 NA: Gruppe Abenteurer (Khaldun Donderial, Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</br>
-							20.04.1502 NA: Abenteurer Vajra Alealam <a href="#event_veraendert">verändert</a> <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a> in einen Druidenschrein.</br>
+							20.04.1502 NA: Gruppe Abenteurer (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</br>
+							20.04.1502 NA: Abenteurer <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a> <a href="#event_veraendert">verändert</a> <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a> in einen Druidenschrein.</br>
 							01.05.1502 NA: <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a> <a href="#event_ueberrascht">überrascht</a> <a href="#location_invasionslager_in_tharion_eriond" aria-label="Invasionslager in Tharion (Eriond)">Invasionslager in Tharion (Eriond)</a> und <a href="#event_zerstoert">zerstört</a> den Teleportationszirkel.</p>
 					</li>
 				</ul>
@@ -1975,16 +2048,16 @@
 					<li><b>Ort Besondere Beziehung zu</b>: <a href="#location_tharion" aria-label="Tharion">Tharion</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: Die Hauptstadt Tharions ist ein Schmelztiegel der Zivilisation: Wer genügend Geld hat, kann sich damit fast alles kaufen, während die Armen in den Slums verrotten. Der Fluss Goldstrom von Corin wandert bis in den großen Sonnensee vor Arcamont, der wiederrum nach Süden zum Meer führt.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>01.03.1502 NA: Eine Heldengruppe (Vajra Alealam, Farshux Viono Milaz, Khaldun Donderial) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</br>
-							01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
-							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
-							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
-							23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (Khaldun Donderial, Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz) nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+						<p>01.03.1502 NA: Eine Heldengruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</br>
+							01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
 							04.04.1502 NA: <a href="#special_definition_unknown" aria-label="Unbekannt">Unbekannt</a> <a href="#event_toetet">tötet</a> <a href="#nsc_phenrix_discome" aria-label="Phenrix Discome">Phenrix Discome</a> in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> während des Maskenballs mit vergiftetem Essen.</br>
-							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
-							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
-							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
-							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam).</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
+							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>).</br>
 							15.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
 							25.04.1502 NA: <a href="#location_tharion" aria-label="Tharion">Tharion</a> <a href="#event_befoerdert">befördert</a> <a href="#nsc_hogbart_uyo" aria-label="Hogbart Uyo">Hogbart Uyo</a> zum König von <a href="#location_tharion" aria-label="Tharion">Tharion</a> durch Wahl unter den Marquis.
 						</p>
@@ -2017,11 +2090,11 @@
 					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_joserath_orinelis" aria-label="Joserath Orinelis">Joserath Orinelis</a>, <a href="#location_druidenhain_kupferwacht" aria-label="Druidenhain (Kupferwacht)">Druidenhain (Kupferwacht)</a>, <a href="#location_tharion" aria-label="Tharion">Tharion</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: Die Kupferwacht ist eine Festung, um die in der Nähe befindlichen Kupferminen und die Gebirgsregion zu sichern. Ein Stück davor gibt es ein paar Häuser für die Einwohner.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+						<p>03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
 							12.03.1502 NA: Mutierte Insektoiden <a href="#event_erobert">erobert</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
-						21.03.1502 NA: Eine Abenteurergruppe (Vajra Alealam, Farshux Viono Milaz, Khaldun Donderial und Tarik Sonnenglanz) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
-						22.03.1502 NA: Eine Abenteurergruppe (Vajra Alealam, Farshux Viono Milaz, Khaldun Donderial und Tarik Sonnenglanz) <a href="#event_zerstoert">zerstört</a> ein Banditenlager im Wald nahe der Kupferwacht.</br>
-						23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (Khaldun Donderial, Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz) von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+						21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
+						22.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_zerstoert">zerstört</a> ein Banditenlager im Wald nahe der <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+						23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
 					</p>
 					</li>
 				</ul>
@@ -2654,7 +2727,7 @@
 					<li><b>Ort Kurzbeschreibung</b>: Diese mächtige Hafenstadt ist Erionds Tor zur Außenwelt. Mit mächtigen Befestigungen und Kriegsschiffen beschützt, ist dies ein blühender Umschlagplatz.</li>
 					<li><b>Details (Ereignisse)</b>: 
 						<p>03.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_erschafft">erschafft</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Verdacht auf Giftschmuggler.</br>
-						   13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (Ilanis Firahil, Aeldon Erland).</p>
+						   13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>).</p>
 					</li>
 				</ul>
 				---
@@ -2714,7 +2787,7 @@
 					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_draven_kane" aria-label="Draven Kane">Draven Kane</a>, <a href="#location_tharion" aria-label="Tharion">Tharion</a>, <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: -</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>01.03.1502 NA: Eine Heldengruppe (Vajra Alealam, Farshux Viono Milaz, Khaldun Donderial) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</p>
+						<p>01.03.1502 NA: Eine Heldengruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</p>
 					</li>
 				</ul>
 				---
@@ -2910,7 +2983,7 @@
 					<li><b>Ort Sicherheit</b>: -</li>				
 					<li><b>Ort Einwohneranzahl</b>: -</li>
 					<li><b>Ort Einwohnerarten</b>: -</li>
-					<li><b>Ort Aussehen</b>: Hat 3 Etagen, großes Gasthaus, hat Bier, Suppen, Proviant, Betten. Hinter der Bühne ist ein magisches Bild (Illusionsmagie) mit folgenden Helden darauf zu finden: Farshux Viono Milaz, Khaldun Donderial und Vajra Alealam (übergroß).</li>
+					<li><b>Ort Aussehen</b>: Hat 3 Etagen, großes Gasthaus, hat Bier, Suppen, Proviant, Betten. Hinter der Bühne ist ein magisches Bild (Illusionsmagie) mit folgenden Helden darauf zu finden: <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a> (übergroß).</li>
 					<li><b>Ort Klang</b>: -</li>
 					<li><b>Ort Geruch</b>: -</li>
 					<li><b>Ort Verteidigung</b>: -</li>
@@ -2924,7 +2997,7 @@
 					<li><b>Ort Besondere Beziehung zu</b>: <a href="#nsc_magnish_eisenfaust" aria-label="Magnish Eisenfaust">Magnish Eisenfaust</a>, <a href="#location_tharion" aria-label="Tharion">Tharion</a>, <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a></li>
 					<li><b>Ort Kurzbeschreibung</b>: -</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>21.03.1502 NA: <a href="#nsc_magnish_eisenfaust" aria-label="Magnish Eisenfaust">Magnish Eisenfaust</a> <a href="#event_lagert">lagert</a> hinter der Bühne ein magisches Bild (Illusionsmagie) mit folgenden Helden ein (Bild wurde aufgehangen): Farshux Viono Milaz, Khaldun Donderial und Vajra Alealam (übergroß).</a></p>
+						<p>21.03.1502 NA: <a href="#nsc_magnish_eisenfaust" aria-label="Magnish Eisenfaust">Magnish Eisenfaust</a> <a href="#event_lagert">lagert</a> hinter der Bühne ein magisches Bild (Illusionsmagie) mit folgenden Helden ein (Bild wurde aufgehangen): <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a> (übergroß).</a></p>
 					</li>
 				</ul>
 				---
@@ -4622,7 +4695,7 @@
 							<p>	15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_befoerdert">befördert</a> <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> vom Ohr zur Hand.</br>
 								15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_degradiert">degradiert</a> <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> zu einem Verräter.</br>
 								15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_jagt">jagt</a> <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
-								16.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_befoerdert">befördert</a> Khaldun Donderial (Spielercharakter) von Zunge zu Ohr.
+								16.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_befoerdert">befördert</a> <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>  von Zunge zu Ohr.
 								</p>
 						</li>
 				</ul>
@@ -5366,14 +5439,14 @@
 					<li><b>NSC Hautfarbe</b>: -</li>
 					<li><b>NSC Haarfarbe</b>: -</li>
 					<li><b>NSC Kleidung</b>: -</li>					
-					<li><b>NSC Ort</b>: bei Farshux Viono Milaz (Spielercharakter)</li>
+					<li><b>NSC Ort</b>: bei <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a> </li>
 					<li><b>NSC Organisation</b>: -</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Gehört zu Farshux Viono Milaz (Spielercharakter), hatte einen Aufenthalt in der <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Gehört zu <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a> , hatte einen Aufenthalt in der <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a></li>
 					<li><b>NSC Besonderheiten</b>: Diese Geige wurde durch magische Weise belebt.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Eine schwebende Geige inklusive Bogen, die sprechen, Musik spielen und schwache Zauber wirken kann. Viana trägt ein paar schöne Verzierungen auf ihrem Korpus, auf der unter anderem ihr Name steht. Viana trinkt und isst gerne durch Taschendimensionen in ihrem Korpus, obwohl sie eigentlich keine Nahrung benötigt.</li>
 					<li><b>Details (Ereignisse)</b>: 
 						<p>22.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> zur <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
-						   26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (Farshux Viono Milaz, Tarik Sonnenglanz, Vajra Alealam, Khaldun Donderial) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.</p>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.</p>
 					</li>
 				</ul>
 				---
@@ -5394,7 +5467,7 @@
 					<li><b>NSC Kleidung</b>: -</li>					
 					<li><b>NSC Ort</b>: -</li>
 					<li><b>NSC Organisation</b>: -</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Gehört Ilanis Firahil (Spielercharakter) und Aeldon Erland (Spielercharakter)</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Gehört <a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a> und <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a></li>
 					<li><b>NSC Besonderheiten</b>: -</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 					<li><b>Details (Ereignisse)</b>: 
@@ -5419,7 +5492,7 @@
 					<li><b>NSC Kleidung</b>: Rote Stoffrobe</li>					
 					<li><b>NSC Ort</b>: <a href="#location_tharion" aria-label="Tharion">Tharion</a></li>
 					<li><b>NSC Organisation</b>: Unbekannt </li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Bekannter von Mirael Veritas (Spielercharakter), Bekannter von <a href="#nsc_tahir_besan" aria-label="Tahir Besan">Tahir Besan</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Bekannter von <a href="#sc_mirael_veritas" aria-label="Mirael Veritas">Mirael Veritas</a>, Bekannter von <a href="#nsc_tahir_besan" aria-label="Tahir Besan">Tahir Besan</a></li>
 					<li><b>NSC Besonderheiten</b>: Im Osten Tharions bekannt als Merlin Feuerhand.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Ein Mann mit grauem Haar und Tintenflecken an den Händen. Das Feuer hinter den blauen Augen zeigt entweder eine große Neugier oder Entschlossenheit. Calros studierte lange Zeit Magie in den Adrijh-Inseln und hat eine Vorliebe für Papageien.</li>
 					<li><b>Details (Ereignisse)</b>: 
@@ -5444,7 +5517,7 @@
 					<li><b>NSC Kleidung</b>: Grüne Stoffrüstung</li>					
 					<li><b>NSC Ort</b>: <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a></li>
 					<li><b>NSC Organisation</b>: -</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Freund von Farshux Viono Milaz (Spielercharakter)</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Freund von <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a> </li>
 					<li><b>NSC Besonderheiten</b>: -</li>
 					<li><b>NSC Kurzbeschreibung</b>: Ein kleiner, stämmiger Zwerg, der immer für einen Tanz, ein Lachen oder eine Musikeinlage zu haben ist. Seine akrobatischen Fähigkeiten faszinieren immer wieder das einfache Volk.</li>
 					<li><b>Details (Ereignisse)</b>: 
@@ -5469,16 +5542,16 @@
 					<li><b>NSC Kleidung</b>: Wechselnd</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
 					<li><b>NSC Organisation</b>: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a></li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Ex-Auftraggeber von Khaldun Donderial (Spielercharakter)</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Ex-Auftraggeber von <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> </li>
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Ein Halbelf mittleren Alters, der wie eine unschuldige und unscheinbare Person wirkt. Sein wachsamer Blick behält stets die Umgebung im Auge.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
-						03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
-						03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
-						14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
-						14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
-						14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
+						<p>01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+						03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+						03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+						14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+						14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+						14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
 						15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_degradiert">degradiert</a> <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> zu einem Verräter.</br>
 						15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_jagt">jagt</a> <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
 						15.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
@@ -5503,7 +5576,7 @@
 					<li><b>NSC Kleidung</b>: -</li>					
 					<li><b>NSC Ort</b>: <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> (Slums)</li>
 					<li><b>NSC Organisation</b>: -</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Bekannte von Khaldun Donderial (Spielercharakter)</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Bekannte von <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> </li>
 					<li><b>NSC Besonderheiten</b>: -</li>
 					<li><b>NSC Kurzbeschreibung</b>: Eine alte Zentaurenfrau, die für etwas Gesellschaft gerne plaudiert.</li>
 					<li><b>Details (Ereignisse)</b>: 
@@ -5528,7 +5601,7 @@
 					<li><b>NSC Kleidung</b>: Weiße Rüstung mit blauen Verzierungen</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Vater von Tarik Sonnenglanz (Spielercharakter), Ehemann von <a href="#nsc_gwen_sonnenglanz" aria-label="Gwen Sonnenglanz">Gwen Sonnenglanz</a>, Bekannter von <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Vater von <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a> , Ehemann von <a href="#nsc_gwen_sonnenglanz" aria-label="Gwen Sonnenglanz">Gwen Sonnenglanz</a>, Bekannter von <a href="#nsc_therodus_lichtschild" aria-label="Therodus Lichtschild">Therodus Lichtschild</a></li>
 					<li><b>NSC Besonderheiten</b>: -</li>
 					<li><b>NSC Kurzbeschreibung</b>: Der Herr des Adelshauses Sonnenglanz und Hauptmann in der Armee Erionds, zurzeit als Deserteur gesucht.</li>
 					<li><b>Details (Ereignisse)</b>: 
@@ -5555,7 +5628,7 @@
 					<li><b>NSC Kleidung</b>: Weiße Rüstung mit blauen Verzierungen</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Mutter von Tarik Sonnenglanz (Spielercharakter), Ehefrau von <a href="#nsc_uther_sonnenglanz" aria-label="Uther Sonnenglanz">Uther Sonnenglanz</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Mutter von <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a> , Ehefrau von <a href="#nsc_uther_sonnenglanz" aria-label="Uther Sonnenglanz">Uther Sonnenglanz</a></li>
 					<li><b>NSC Besonderheiten</b>: -</li>
 					<li><b>NSC Kurzbeschreibung</b>: Oberleutnant in der Armee Erionds, zusammen mit ihrem Ehemann Uther als Deserteur gesucht.</li>
 					<li><b>Details (Ereignisse)</b>: 
@@ -5586,7 +5659,7 @@
 					<li><b>NSC Besonderheiten</b>: Hat einen Falken namens Nyx und Baumgeist namens Farendor als Begleiter.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Neia ist eine aufgeweckte und engagierte Druidin. Persönlich vom Erzdruiden Dyrhals ausgebildet hat sie früh ihr Potential entfalten können und setzt ihre Kräfte zum Schutz der Natur in all ihren Facetten ein. Sie hat Bekanntheit in Eriond erlangt, als sie der Armee half, eine Gruppe von Frostriesen zu bezwingen.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>21.03.1502 NA: Eine Abenteurergruppe (Vajra Alealam, Farshux Viono Milaz, Khaldun Donderial und Tarik Sonnenglanz) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</p>
+						<p>21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</p>
 					</li>
 				</ul>
 				---
@@ -5737,7 +5810,7 @@
 					<li><b>NSC Kurzbeschreibung</b>: Lady Isel ist eine aufgeweckte Person, die ihre Verpflichtung, das Volk zu schützen, ernst nimmt. Von der Sturmfeste aus koordiniert sie die Verteidigung von Itasa und dient als Ansprechpartnerin für alle Belange, für die die Herrscher von Itasa keine Zeit haben.</li>
 					<li><b>Details (Ereignisse)</b>: 
 						<p>03.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_erschafft">erschafft</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Verdacht auf Giftschmuggler.</br>
-							13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (Ilanis Firahil, Aeldon Erland).</p>
+							13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>).</p>
 					</li>
 				</ul>
 				---
@@ -5858,15 +5931,15 @@
 					<li><b>NSC Kleidung</b>: Mit der Haut verschmolzene Rüstung</li>					
 					<li><b>NSC Ort</b>: -</li>
 					<li><b>NSC Organisation</b>: -</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Lieferant von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>, Getötet von Heldengruppe: Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz, Khaldun Donderial im <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a></li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Lieferant von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>, Getötet von Heldengruppe: <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> im <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a></li>
 					<li><b>NSC Besonderheiten</b>: Ist durch einen unerfüllten Pakt mit einem Wesen aus Ilgareg zu einem Dämon geworden.</li>
 					<li><b>NSC Kurzbeschreibung</b>: Dieser Aleris ist auf der Suche nach Magie an ein Wesen aus Ilgareg gekommen: Im Austausch für Magie sollte Urstan neue Anhänger für das Wesen finden. Als Urstan das Wesen nicht zufriedenstellte, wurde er Stück für Stück in einen Dämon verwandelt. Seine Ambitionen, einen Zauber zu finden, um sich zurückzuverwandeln, trieb ihn zu verzweifelten Taten, die schlussendlich in seinem Tod endeten.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>	14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
-							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
-							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (Khaldun Donderial, Farshux Viono Milaz, Vajra Alealam).</br>
+						<p>	14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>).</br>
 						16.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_veraendert">verändert</a> <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a> in einen Dämonenschrein.</br>
-						20.04.1502 NA: Gruppe Abenteurer (Khaldun Donderial, Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</p>
+						20.04.1502 NA: Gruppe Abenteurer (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</p>
 					</li>
 				</ul>
 				---
@@ -5941,8 +6014,12 @@
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p> 23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (Khaldun Donderial, Vajra Alealam, Farshux Viono Milaz, Tarik Sonnenglanz) von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
-							15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_befoerdert">befördert</a> <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> vom Ohr zur Hand.</br></p>
+						<p> 23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							15.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_befoerdert">befördert</a> <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> vom Ohr zur Hand.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Informationsbeschaffung über <a href="#organization_armee_eriond" aria-label="Armee (Eriond)">Armee (Eriond)</a>.</br>
+						</p>
 					</li>
 				</ul>
 				---
@@ -6038,12 +6115,12 @@
 					<li><b>NSC Kleidung</b>: Eine blaue Stoffrobe</li>					
 					<li><b>NSC Ort</b>: Unbekannt</li>
 					<li><b>NSC Organisation</b>: Unbekannt</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: Betet <a href="#nsc_eldall" aria-label="Eldall">Eldall</a> an, hat eine Heldengruppe (Khaldun Donderial, Vajra Alealam, Tarik Sonnenglanz, Farshux Viono Milaz) am <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> teleportiert</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: Betet <a href="#nsc_eldall" aria-label="Eldall">Eldall</a> an, hat eine Heldengruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>) am <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> teleportiert</li>
 					<li><b>NSC Besonderheiten</b>: Vividarius, kurz Vivi, trägt einen Anhänger in Form eines Zyklons um den Hals.</li>
 					<li><b>NSC Kurzbeschreibung</b>: -</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p>25.04.1502: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (Tarik Sonnenglanz, Farshux Viono Milaz, Khaldun Donderial, Vajra Alealam).</br>
-							25.04.1502: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (Tarik Sonnenglanz, Farshux Viono Milaz, Khaldun Donderial, Vajra Alealam) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</p>
+						<p>25.04.1502: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>).</br>
+							25.04.1502: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</p>
 					</li>
 				</ul>
 				---
@@ -6068,7 +6145,10 @@
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Sir Isko Huttun ist ein hochrangiges Mitglied des Ordens der Schwertrose. Nach dem Tod von <a href="#nsc_deral_zhatov" aria-label="Deral Zhatov">Deral Zhatov (†)</a> ist er der neue Anführer geworden.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
+						<p> 26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) mit Befreiung von <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a> von Insektoiden.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> mit dem Holen von Hilfe aus <a href="#location_dunmar" aria-label="Dunmar">Dunmar</a>.</br> 
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.</p>
 					</li>
 				</ul>
 				---
@@ -6093,7 +6173,10 @@
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Sir Markus Ikonen ist ein Unteroffizier im Orden der Schwertrose.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
+						<p>26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> mit dem Holen von Hilfe aus <a href="#location_dunmar" aria-label="Dunmar">Dunmar</a>.</br> 
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+						   27.04.1502 NA: <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> <a href="#event_reist">reist</a> nach <a href="#location_dunmar" aria-label="Dunmar">Dunmar</a>.
+						</p>
 					</li>
 				</ul>
 				---
@@ -6118,7 +6201,8 @@
 					<li><b>NSC Besonderheiten</b>: Unbekannt</li>
 					<li><b>NSC Kurzbeschreibung</b>: Arvi Leino ist eine Priesterin Alyrias und setzt ihre Dienste für das Heilen von Verwunden und Brechen von Flüchen im Orden der Schwertrose ein.</li>
 					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
+						<p>26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.</p>
 					</li>
 				</ul>
 				---
@@ -8574,6 +8658,314 @@
 					</li>
 				</ul>
 		  	</section>
+			<!-- HOMEBREW PLAYER CHARACTERS -->	
+			<section id="scs">
+				---
+				<ul class="alt" id="sc_vajra_alealam">
+					<li><b>SC Name</b>: Vajra Alealam</li>
+					<li><b>SC Link</b>: <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p>01.03.1502 NA: Eine Heldengruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</br>
+							01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>							
+							21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
+							22.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_zerstoert">zerstört</a> ein Banditenlager im Wald nahe der <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
+							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>).</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Informationsbeschaffung über <a href="#organization_armee_eriond" aria-label="Armee (Eriond)">Armee (Eriond)</a>.</br>
+							20.04.1502 NA: Gruppe Abenteurer (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>).</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</br>
+							25.04.1502 NA: Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) mit Befreiung von <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a> von Insektoiden.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.
+						</p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_farshux_milaz">
+					<li><b>SC Name</b>: Farshux Viono Milaz</li>
+					<li><b>SC Link</b>: <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p>01.03.1502 NA: Eine Heldengruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</br>
+							01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>							
+							21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
+							22.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_zerstoert">zerstört</a> ein Banditenlager im Wald nahe der <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
+							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>).</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Informationsbeschaffung über <a href="#organization_armee_eriond" aria-label="Armee (Eriond)">Armee (Eriond)</a>.</br>
+							20.04.1502 NA: Gruppe Abenteurer (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>).</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</br>
+							25.04.1502 NA: Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) mit Befreiung von <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a> von Insektoiden.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.
+						</p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_khaldun_donderial">
+					<li><b>SC Name</b>: Khaldun Donderial</li>
+					<li><b>SC Link</b>: <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p>01.03.1502 NA: Eine Heldengruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) <a href="#event_toetet">tötet</a> mutierte Wölfe, die in der Taverne <a href="#location_immervoller_krug" aria-label="Immervoller Krug">Immervoller Krug</a> erschienen sind.</br>
+							01.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) Informationen über mutierte Tiere in <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> und <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							03.03.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) mit Untersuchungen zu mutierten Tieren in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>							
+							21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
+							22.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_zerstoert">zerstört</a> ein Banditenlager im Wald nahe der <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
+							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>).</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Informationsbeschaffung über <a href="#organization_armee_eriond" aria-label="Armee (Eriond)">Armee (Eriond)</a>.</br>	
+							16.04.1502 NA: <a href="#organization_netzwerk" aria-label="Netzwerk">Netzwerk</a> <a href="#event_befoerdert">befördert</a> <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> von Zunge zu Ohr.</br>
+							20.04.1502 NA: Gruppe Abenteurer (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>).</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</br>
+							25.04.1502 NA: Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) mit Befreiung von <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a> von Insektoiden.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.
+						</p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_tarik_sonnenglanz">
+					<li><b>SC Name</b>: Tarik Sonnenglanz</a></li>
+					<li><b>SC Link</b>: <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p> 21.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) und <a href="#nsc_neia_fenlamin" aria-label="Neia Fenlamin">Neia Fenlamin</a> <a href="#event_befreit">befreit</a> die Kupfermine von <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> von mutierten Insektoiden.</br>
+							22.03.1502 NA: Eine Abenteurergruppe (<a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a> und <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_zerstoert">zerstört</a> ein Banditenlager im Wald nahe der <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a>.</br>
+							23.03.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_reist">reist</a> mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) nach <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_erhaelt">erhält</a> durch Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) Informationen über mutierte Tiere in <a href="#location_kupferwacht" aria-label="Kupferwacht">Kupferwacht</a> und Zusammenhang zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a>.</br>
+							14.04.1502 NA: <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Untersuchungen zu einer Möglichkeit, den Krieg zwischen <a href="#location_tharion" aria-label="Tharion">Tharion</a> und <a href="#location_eriond" aria-label="Eriond">Eriond</a> zu verhindern.</br>
+							14.04.1502 NA: <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> <a href="#event_flieht">flieht</a> aus <a href="#location_arcamont" aria-label="Arcamont">Arcamont</a> nach Kontakt mit Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>).</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_arolamir_presna" aria-label="Arolamir Presna">Arolamir Presna</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Verfolgung von <a href="#nsc_snelver_surata" aria-label="Snelver Surata">Snelver Surata</a>.</br>
+							15.04.1502 NA: <a href="#nsc_goras_itham" aria-label="Goras Itham">Goras Itham</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) mit Informationsbeschaffung über <a href="#organization_armee_eriond" aria-label="Armee (Eriond)">Armee (Eriond)</a>.</br>
+							20.04.1502 NA: Gruppe Abenteurer (<a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>) <a href="#event_toetet">tötet</a> <a href="#nsc_urstan_dijel" aria-label="Urstan Dijel">Urstan Dijel</a> in <a href="#location_druidenhain_sartos" aria-label="Druidenhain (Sartos)">Druidenhain (Sartos)</a>.</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_benutzt">benutzt</a> <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> für Teleportationszauber für eine Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>).</br>
+							25.04.1502 NA: <a href="#nsc_vividarius" aria-label="Vividarius">Vividarius</a> <a href="#event_kaempft">kämpft</a> mit Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) gegen Insektoiden, die sich vor Ort teleportieren, und gewinnt.</br>
+							25.04.1502 NA: Abenteurergruppe (<a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>) <a href="#event_reist">reist</a> per Teleportationszauber von <a href="#location_ort_der_macht_eldall" aria-label="Ort der Macht (Eldall)">Ort der Macht (Eldall)</a> nach <a href="#location_eriond" aria-label="Eriond">Eriond</a>.</br>	
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_beauftragt">beauftragt</a> Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) mit Befreiung von <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a> von Insektoiden.</br>
+							26.04.1502 NA: <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a> <a href="#event_reist">reist</a> mit <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a>, <a href="#nsc_markus_ikonen" aria-label="Markus Ikonen">Markus Ikonen</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_feuerloge" aria-label="Feuerloge">Feuerloge</a>.</br>
+							26.04.1502 NA: <a href="#nsc_viana" aria-label="Viana">Viana</a> <a href="#event_reist">reist</a> mit <a href="#nsc_isko_huttun" aria-label="Isko Huttun">Isko Huttun</a>, <a href="#nsc_arvi_leino" aria-label="Arvi Leino">Arvi Leino</a> und Abenteurergruppe (<a href="#sc_farshux_milaz" aria-label="Farshux Viono Milaz">Farshux Viono Milaz</a>, <a href="#sc_tarik_sonnenglanz" aria-label="Tarik Sonnenglanz">Tarik Sonnenglanz</a>, <a href="#sc_vajra_alealam" aria-label="Vajra Alealam">Vajra Alealam</a>, <a href="#sc_khaldun_donderial" aria-label="Khaldun Donderial">Khaldun Donderial</a>) nach <a href="#location_schwerthall" aria-label="Schwerthall">Schwerthall</a>.
+						
+						</p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_ilanis_firahil">
+					<li><b>SC Name</b>: Ilanis Firahil</li>
+					<li><b>SC Link</b>: <a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: Besitzt <a href="#nsc_supasa" aria-label="Supasa">Supasa</a> mit <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>.</li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p>13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>).</br>
+						18.03.1502 NA: Abenteurergruppe (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>) <a href="#event_veraendert">verändert</a> Spalt zu <a href="#location_salrar" aria-label="Salrar">Salrar</a> zu verschlossen durch <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a>. Solange <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> aktiv ist, bleibt der Spalt geschlossen.</p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_aeldon_erland">
+					<li><b>SC Name</b>: Aeldon Erland</li>
+					<li><b>SC Link</b>: <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: Besitzt <a href="#nsc_supasa" aria-label="Supasa">Supasa</a> mit <a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>.</li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p>13.03.1502 NA: <a href="#nsc_rika_isel" aria-label="Rika Isel">Rika Isel</a> <a href="#event_zerstoert">zerstört</a> magische Quarantäne in <a href="#location_itasa" aria-label="Itasa">Itasa</a> aufgrund Aufdeckung der Giftschmuggler durch Abenteurer (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>).</br>
+							18.03.1502 NA: Abenteurergruppe (<a href="#sc_ilanis_firahil" aria-label="Ilanis Firahil">Ilanis Firahil</a>, <a href="#sc_aeldon_erland" aria-label="Aeldon Erland">Aeldon Erland</a>) <a href="#event_veraendert">verändert</a> Spalt zu <a href="#location_salrar" aria-label="Salrar">Salrar</a> zu verschlossen durch <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a>. Solange <a href="#item_pathors_funke" aria-label="Pathors Funke">Pathors Funke</a> aktiv ist, bleibt der Spalt geschlossen.</p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_gaius_angrod">
+					<li><b>SC Name</b>: Gaius Angrod</li>
+					<li><b>SC Link</b>: <a href="#sc_gaius_angrod" aria-label="Gaius Angrod">Gaius Angrod</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_mirael_veritas">
+					<li><b>SC Name</b>: Mirael Veritas</li>
+					<li><b>SC Link</b>: <a href="#sc_mirael_veritas" aria-label="Mirael Veritas">Mirael Veritas</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_tanbeth_garwynn">
+					<li><b>SC Name</b>: Tanbeth Garwynn</li>
+					<li><b>SC Link</b>: <a href="#sc_tanbeth_garwynn" aria-label="Tanbeth Garwynn">Tanbeth Garwynn</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+				---
+				<ul class="alt" id="sc_bilgrim_eichenstock">
+					<li><b>SC Name</b>: Bilgrim Eichenstock</li>
+					<li><b>SC Link</b>: <a href="#sc_bilgrim_eichenstock" aria-label="Bilgrim Eichenstock">Bilgrim Eichenstock</a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>			
+			</section>
+
 		  	<!-- HOMEBREW CREATURES -->			
 		  	<section id="creatures">
 				---	

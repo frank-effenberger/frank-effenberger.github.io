@@ -1,0 +1,18 @@
+#deed-main-heading {
+	width: 100%;
+	text-align: center;
+	
+}
+#imp, #dp {
+	margin-right: 5%;
+	display: inline-block;
+}
+.lower-alpha {
+	list-style-type: lower-alpha;
+}
+.upper-alpha {
+	list-style-type:upper-alpha;
+}
+.lower-roman {
+	list-style-type:lower-roman;
+}

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Tymonia - System Database</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Schwarze Bibliothek">
+		<meta name="keywords" content="Schwarze Bibliothek, Enzyklopädie">
+		<meta name="author" content="Dr. Frank Effenberger">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'; font-src 'self'; manifest-src 'self'">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/PGP_KEY.css"/>
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>        
+    </head>
+    <body>
+        <!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#" aria-label="zum Seitenanfang">Dr. Frank Effenberger</a></h1>
+					<p>Ich bin ein Wirtschaftsinformatiker und Rollenspielbegeisterter aus Dresden. <br />
+						Hier finden Sie alle Informationen zu meiner mit P&P-Spielen kompatiblen Sci-Fi-Welt Tymonia.</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#system_database_intro" class="active" aria-label="zum Seitenanfang">zum Seitenanfang</a></li>
+						<li><a href="#search_help" aria-label="zur Suchhilfe">Suchhilfe</a></li>
+						<li><a href="#special_definitions" aria-label="zu den Spezialdefinitionen">Spezialdefinitionen</a></li>
+						<li><a href="#relations" aria-label="zu den Relationen">Relationen</a></li>
+						<li><a href="#locations" aria-label="zu den Orten">Orte</a></li>
+						<li><a href="#organizations" aria-label="zu den Organisationen">Organisationen</a></li>
+						<li><a href="#npcs" aria-label="zu den Nichtspielercharakteren">NSCs</a></li>
+						<li><a href="#scs" aria-label="zu den Spielercharakteren">SCs</a></li>
+						<li><a href="#creatures" aria-label="zu den Kreaturen">Kreaturen</a></li>
+						<li><a href="#spells" aria-label="zu den Zaubern">Zauber</a></li>
+						<li><a href="#items" aria-label="zu den Gegenständen">Gegenstände</a></li>
+                        <li><a href="https://kosmischer-horror.de/tymonia/#tymonia" aria-label="zurück zu Tymonia">zurück zu Tymonia</a></li>						
+						<li><a href="https://kosmischer-horror.de/tymonia/#imp" aria-label="Deutsch: zum Impressum - English: to the legal notice">Impressum / Legal Notice</a></li>
+						<li><a href="https://kosmischer-horror.de/tymonia/#dp" aria-label="Deutsch: zum Datenschutz - English: to the data privacy">Datenschutz / Data Privacy</a></li>
+						<li><a href="https://kosmischer-horror.de/tymonia/#kontakt" aria-label="zum Kontakt">Kontakt</a></li>
+					</ul>
+				</nav>
+			</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+    <!-- Main -->
+        <div id="main">
+            <!-- System Database INTRO -->
+			<section id="system_database_intro">
+				<p>TBD - Enthält auch Daten von eigentlichen Ursprüngen / Heimatwelten</p>					
+			</section>
+			<!-- SEARCH HELP -->
+			<!-- HOMEBREW LOCATIONS TEMPLATE
+				---
+				<ul class="alt" id="location_">
+					<li><b>Ort Name</b>: </li>
+					<li><b>Ort Link</b>: <a href="#location_" aria-label=""></a></li>
+					<li><b>Ort Symbol</b>: </li>
+					<li><b>Ort Lage</b>: </li>
+					<li><b>Ort Herrscher</b>: </li>
+					<li><b>Ort Typ</b>: </li>
+					<li><b>Ort Ruf</b>: </li>
+					<li><b>Ort Wohlstand</b>: </li>
+					<li><b>Ort Sicherheit</b>: </li>				
+					<li><b>Ort Einwohneranzahl</b>: </li>
+					<li><b>Ort Einwohnerarten</b>: </li>
+					<li><b>Ort Aussehen</b>: </li>
+					<li><b>Ort Klang</b>: </li>
+					<li><b>Ort Geruch</b>: </li>
+					<li><b>Ort Verteidigung</b>: </li>
+					<li><b>Ort Waren & Dienstleistungen</b>: </li>
+					<li><b>Ort Tavernen</b>: </li>
+					<li><b>Ort Läden</b>: </li>
+					<li><b>Ort Fantastische Elemente</b>: </li>
+					<li><b>Ort Organisationen</b>: </li>
+					<li><b>Ort NSCs</b>: </li>
+					<li><b>Ort Kreaturen</b>: </li>
+					<li><b>Ort Besondere Beziehung zu</b>: </li>
+					<li><b>Ort Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW LOCATIONS TEMPLATE RULES
+			<ul class="alt" id="location_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM					
+					<li><b>Ort Link</b>: <a href="#location_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Ort Symbol</b>: [Text]</li>
+					<li><b>Ort Lage</b>: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</li>
+					<li><b>Ort Herrscher</b>: [Link zu NSC]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Typ</b>: [Wirtschaft | Militär | Geistig | Politik | Logistik | Magie | Spezial | Reich]</li>
+					<li><b>Ort Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
+					<li><b>Ort Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
+					<li><b>Ort Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>				
+					<li><b>Ort Einwohneranzahl</b>: [0-9]*</li>
+					<li><b>Ort Einwohnerarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Ort Aussehen</b>: [Text]</li>
+					<li><b>Ort Klang</b>: [Text]</li>
+					<li><b>Ort Geruch</b>: [Text]</li>
+					<li><b>Ort Verteidigung</b>: [0-9]* Verteidiger</li>
+					<li><b>Ort Waren & Dienstleistungen</b>: [Ware | Dienstleistung]*</li>
+					<li><b>Ort Tavernen</b>: [Tavernenname]*</li>
+					<li><b>Ort Läden</b>: [Ladenname]*</li>
+					<li><b>Ort Fantastische Elemente</b>: [Fantastisches Element]*</li>
+					<li><b>Ort Organisationen</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>Ort NSCs</b>: [(Link zu NSC)*]</li>
+					<li><b>Ort Kreaturen</b>: [(Link zu Kreatur)*]</li>
+					<li><b>Ort Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>Ort Kurzbeschreibung</b>: [Text]</li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW ORGANIZATIONS TEMPLATE
+				---
+				<ul class="alt" id="organization_">
+					<li><b>Organisation Name</b>: </li>
+					<li><b>Organisation Link</b>: <a href="#organization_" aria-label=""></a></li>
+					<li><b>Organisation Leitmotiv</b>: </li>
+					<li><b>Organisation Symbol</b>: </li>
+					<li><b>Organisation Herrscher</b>: </li>
+					<li><b>Organisation Hauptsitz</b>: </li>
+					<li><b>Organisation Relikte</b>: </li>
+					<li><b>Organisation Typ</b>: </li>
+					<li><b>Organisation Ruf</b>: </li>
+					<li><b>Organisation Wohlstand</b>: </li>
+					<li><b>Organisation Sicherheit</b>: </li>
+					<li><b>Organisation Fähigkeiten</b>: </li>
+					<li><b>Organisation Mitgliederanzahl</b>: </li>
+					<li><b>Organisation Mitgliederarten</b>: </li>
+					<li><b>Organisation Ränge</b>: </li>
+					<li><b>Organisation NSCs</b>: </li>
+					<li><b>Organisation Kreaturen</b>: </li>
+					<li><b>Organisation Besondere Beziehung zu</b>: </li>
+					<li><b>Organisation Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW ORGANIZATIONS TEMPLATE RULES
+				<ul class="alt" id="organization_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Link</b>: <a href="#organization_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Organisation Leitmotiv</b>: [Text]</li>
+					<li><b>Organisation Symbol</b>: [Text]</li>
+					<li><b>Organisation Herrscher</b>: [Link zu NSC]</li>
+					<li><b>Organisation Hauptsitz</b>: [Text | Link zu Ort]</li>
+					<li><b>Organisation Relikte</b>: [Link Gegenstand]*</li>
+					<li><b>Organisation Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Banditen]</li>
+					<li><b>Organisation Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
+					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
+					<li><b>Organisation Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>
+					<li><b>Organisation Fähigkeiten</b>: [Text]</li> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Mitgliederanzahl</b>: [0-9]*</li>
+					<li><b>Organisation Mitgliederarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Organisation Ränge</b>: [Text Ränge aufsteigend]</li>
+					<li><b>Organisation NSCs</b>: [(Link zu NSC)*]</li>
+					<li><b>Organisation Kreaturen</b>: [(Link zu Kreatur)*]</li>
+					<li><b>Organisation Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>Organisation Kurzbeschreibung</b>: [Text]</li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW NPCS TEMPLATE
+				---
+				<ul class="alt" id="nsc_">
+					<li><b>NSC Name</b>: </li>
+					<li><b>NSC Link</b>: <a href="#nsc_" aria-label=""></a></li>
+					<li><b>NSC Geschlecht</b>: </li>
+					<li><b>NSC Stimme</b>: </li>					
+					<li><b>NSC Volk</b>: </li>
+					<li><b>NSC Beruf</b>: </li>
+					<li><b>NSC Charaktertyp</b>: </li>
+					<li><b>NSC Alter</b>: </li>
+					<li><b>NSC Größe</b>: </li>
+					<li><b>NSC Gewicht</b>: </li>
+					<li><b>NSC Augenfarbe</b>: </li>
+					<li><b>NSC Hautfarbe</b>: </li>
+					<li><b>NSC Haarfarbe</b>: </li>
+					<li><b>NSC Kleidung</b>: </li>					
+					<li><b>NSC Ort</b>: </li>
+					<li><b>NSC Organisation</b>: </li>
+					<li><b>NSC Besondere Beziehungen zu</b>: </li>
+					<li><b>NSC Besonderheiten</b>: </li>
+					<li><b>NSC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW NPCS TEMPLATE RULES
+				<ul class="alt" id="nsc_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Link</b>: <a href="#nsc_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>NSC Geschlecht</b>: [Männlich | Weiblich | Undefinierbar]</li>
+					<li><b>NSC Stimme</b>: [Tief | Mittel | Hoch]</li>					
+					<li><b>NSC Volk</b>: [Volk | Gemischt aus [Volk]*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Beruf</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>NSC Charaktertyp</b>: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert | Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]</li>
+					<li><b>NSC Alter</b>: [0-9]*</li>
+					<li><b>NSC Größe</b>: [0.0-9.0]* Meter</li>
+					<li><b>NSC Gewicht</b>: [0.0-9.0]* Kilogramm</li>
+					<li><b>NSC Augenfarbe</b>: [Text]</li>
+					<li><b>NSC Hautfarbe</b>: [Text]</li>
+					<li><b>NSC Haarfarbe</b>: [Text]</li>
+					<li><b>NSC Kleidung</b>: [Text]</li>					
+					<li><b>NSC Ort</b>: [Text | (Link zu Ort)*]</li>
+					<li><b>NSC Organisation</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>NSC Besondere Beziehungen zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>NSC Besonderheiten</b>: [Text]</li>
+					<li><b>NSC Kurzbeschreibung</b>: [Text]</li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW PCS TEMPLATE
+				---
+				<ul class="alt" id="sc_">
+					<li><b>SC Name</b>: </li>
+					<li><b>SC Link</b>: <a href="#sc_" aria-label=""></a></li>
+					<li><b>SC Geschlecht</b>: </li>									
+					<li><b>SC Volk</b>: </li>
+					<li><b>SC Alter</b>: </li>
+					<li><b>SC Größe</b>: </li>
+					<li><b>SC Gewicht</b>: </li>
+					<li><b>SC Augenfarbe</b>: </li>
+					<li><b>SC Hautfarbe</b>: </li>
+					<li><b>SC Haarfarbe</b>: </li>
+					<li><b>SC Kleidung</b>: </li>					
+					<li><b>SC Ort</b>: </li>
+					<li><b>SC Organisation</b>: </li>
+					<li><b>SC Besondere Beziehungen zu</b>: </li>
+					<li><b>SC Besonderheiten</b>: </li>
+					<li><b>SC Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW PCS TEMPLATE RULES
+				<ul class="alt" id="sc_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>SC Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>SC Link</b>: <a href="#sc_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>SC Geschlecht</b>: [Männlich | Weiblich | Undefinierbar]</li>
+					<li><b>SC Volk</b>: [Volk | Gemischt aus [Volk]*]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>SC Alter</b>: [0-9]*</li>
+					<li><b>SC Größe</b>: [0.0-9.0]* Meter</li>
+					<li><b>SC Gewicht</b>: [0.0-9.0]* Kilogramm</li>
+					<li><b>SC Augenfarbe</b>: [Text]</li>
+					<li><b>SC Hautfarbe</b>: [Text]</li>
+					<li><b>SC Haarfarbe</b>: [Text]</li>
+					<li><b>SC Kleidung</b>: [Text]</li>					
+					<li><b>SC Ort</b>: [Text | (Link zu Ort)*]</li>
+					<li><b>SC Organisation</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>SC Besondere Beziehungen zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>SC Besonderheiten</b>: [Text]</li>
+					<li><b>SC Kurzbeschreibung</b>: [Text]</li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW CREATURES TEMPLATE
+				---
+				<ul class="alt" id="creature_">
+					<li><b>Kreatur Name</b>: </li>
+					<li><b>Kreatur Link</b>: <a href="#creature_" aria-label=""></a></li>
+					<li><b>Kreatur Größe</b>: </li>
+					<li><b>Kreatur Gewicht</b>: </li>					
+					<li><b>Kreatur Sprachen</b>: </li>
+					<li><b>Kreatur Ort</b>: </li>
+					<li><b>Kreatur Organisation</b>: </li>
+					<li><b>Kreatur Besondere Beziehung zu</b>: </li>
+					<li><b>Kreatur Bekannte Fähigkeiten</b>: </li>
+					<li><b>Kreatur Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW CREATURES TEMPLATE RULES
+				<ul class="alt" id="creature_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Kreatur Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Kreatur Link</b>: <a href="#creature_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Kreatur Größe</b>: [0.0-9.0]* Meter</li>
+					<li><b>Kreatur Gewicht</b>: [0.0-9.0]* Kilogramm</li>				
+					<li><b>Kreatur Sprachen</b>: [Sprache]*</li>
+					<li><b>Kreatur Ort</b>: [Text | (Link zu Ort)*]</li>
+					<li><b>Kreatur Organisation</b>: [Text | (Link zu Organisation)*]</li>
+					<li><b>Kreatur Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
+					<li><b>Kreatur Bekannte Fähigkeiten</b>: [Auflistung bekannter Fähigkeiten als Text]</li> -> ACHTUNG BEKANNTE FÄHIGKEITEN RECHTSKONFORM
+					<li><b>Kreatur Kurzbeschreibung</b>: [Text]</li> -> ACHTUNG KURZBESCHREIBUNG RECHTSKONFORM
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW SPELLS TEMPLATE
+				--- 
+				<ul class="alt" id="spell_">
+					<li><b>Zauber Name</b>: </li>
+					<li><b>Zauber Link</b>: <a href="#spell_" aria-label=""></a></li>
+					<li><b>Zauber Einzigartig</b>: </li>
+					<li><b>Zauber Stufe</b>: </li>
+					<li><b>Zauber Klassenbeschränkung</b>: </li>
+					<li><b>Zauber Ritual</b>: </li>
+					<li><b>Zauber Zauberzeit</b>: </li>
+					<li><b>Zauber Reichweite</b>: </li>
+					<li><b>Zauber Komponenten</b>: </li>
+					<li><b>Zauber Dauer</b>: </li>
+					<li><b>Zauber Konzentration</b>: </li>
+					<li><b>Zauber Beschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW SPELLS TEMPLATE RULES
+				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Zauber Name</b>: [Text]></li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Zauber Link</b>: <a href="#spell_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Zauber Einzigartig</b>: [Ja | Nein]</li>
+					<li><b>Zauber Stufe</b>: [Cantrip | Stufe [1-9]]</li>
+					<li><b>Zauber Klassenbeschränkung</b>: [(Klasse)* | Nein ]</li> -> ACHTUNG KLASSENNAMEN RECHTSKONFORM
+					<li><b>Zauber Ritual</b>: [Ja | Nein]</li>
+					<li><b>Zauber Zauberzeit</b>: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</li>
+					<li><b>Zauber Reichweite</b>: [([0-9]* Feet) | Selbst]</li>
+					<li><b>Zauber Komponenten</b>: [ V? S? M(Text)?]</li>
+					<li><b>Zauber Dauer</b>: [Text]</li>
+					<li><b>Zauber Konzentration</b>: [Ja | Nein]</li>
+					<li><b>Zauber Beschreibung</b>: [Text]</li>  -> ACHTUNG BESCHREIBUNG RECHTSKONFORM
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>
+			-->
+			<!-- HOMEBREW ITEMS TEMPLATE:
+				---
+				<ul class="alt" id="item_">
+					<li><b>Gegenstand Name</b>: </li>
+					<li><b>Gegenstand Link</b>: <a href="#item_" aria-label=""></a></li>
+					<li><b>Gegenstand Einzigartig</b>: </li>
+					<li><b>Gegenstand Gewicht</b>: </li>
+					<li><b>Gegenstand Typ</b>: </li>
+					<li><b>Gegenstand Ausprägung</b>: </li>
+					<li><b>Gegenstand Seltenheit</b>: </li>
+					<li><b>Gegenstand Einstimmung</b>: </li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: </li>
+					<li><b>Details (Ereignisse)</b>: 
+						<p></p>
+					</li>
+				</ul>				
+			-->
+			<!-- HOMEBREW ITEMS TEMPLATE RULES:
+				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Gegenstand Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
+					<li><b>Gegenstand Link</b>: <a href="#item_[Text]" aria-label="[Text]">[Text]</a></li>
+					<li><b>Gegenstand Einzigartig</b>: [Ja | Nein]</li>
+					<li><b>Gegenstand Gewicht</b>: [0.0-9.0]* Kilogramm</li>
+					<li><b>Gegenstand Typ</b>: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</li>
+					<li><b>Gegenstand Ausprägung</b>: [Text - Referenz zu Gegenständen]</li>
+					<li><b>Gegenstand Seltenheit</b>: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</li>
+					<li><b>Gegenstand Einstimmung</b>: [Ja | Nein]</li>
+					<li><b>Gegenstand Kurzbeschreibung</b>: [Text]</li>  -> ACHTUNG BESCHREIBUNG RECHTSKONFORM
+					<li><b>Details (Ereignisse)</b>: 
+						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
+					</li>
+				</ul>				
+			-->
+            <section id="search_help">
+				<p>Bedienungsanleitung Desktop: STRG+F drücken. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
+				<p>Bedienungsanleitung Mobile: Desktop-Seitenansicht aktivieren und Suchfunktion für Seite im Browser aufrufen. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
+				<p>Artikel und Titel bzw. Anreden werden nicht berücksichtigt. Suche nach "Schwert der Runen" anstelle von "Das Schwert der Runen"; suche nach "Schwarze Bibliothek" anstelle "Die schwarze Bibliothek"!</p>
+				<table class="alt">
+					<thead>
+						<tr>
+							<th>Orte</th>
+							<th>Organisationen</th>	
+							<th>NSCs</th>
+							<th>SCs</th>
+							<th>Kreaturen</th>
+							<th>Zauber</th>
+							<th>Gegenstände</th>												
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Ort Name: </td>
+							<td>Organisation Name: </td>
+							<td>NSC Name: </td>
+							<td>SC Name: </td>	
+							<td>Kreatur Name: </td>	
+							<td>Zauber Name: </td>	
+							<td>Gegenstand Name: </td>													
+						</tr>
+						<tr>
+							<td>Ort Symbol: </td>
+							<td>Organisation Leitmotiv: </td>
+							<td>NSC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>
+							<td>SC Geschlecht: [Männlich | Weiblich | Undefinierbar]</td>	
+							<td>Kreatur Größe: [Winzig | Klein | Mittel | Groß | Riesig | Gigantisch]</td>	
+							<td>Zauber Stufe: [Cantrip | Stufe [1-9]]</td>	
+							<td>Gegenstand Gewicht: </td>												
+						</tr>
+						<tr>
+							<td>Ort Lage: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</td>
+							<td>Organisation Symbol: </td>
+							<td>NSC Stimme: [Tief | Mittel | Hoch]</td>
+							<td>SC Volk: </td>	
+							<td>Kreatur Gewicht: </td>	
+							<td>Zauber Klassenbeschränkung: [(Klasse)* | Nein]</td>	
+							<td>Gegenstand Typ: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</td>												
+						</tr>
+						<tr>
+							<td>Ort Herrscher: </td>
+							<td>Organisation Herrscher: </td>
+							<td>NSC Volk: </td>
+							<td>SC Alter: </td>	
+							<td>Kreatur Sprachen: </td>	
+							<td>Zauber Ritual: [Ja | Nein]</td>	
+							<td>Gegenstand Ausprägung: </td>												
+						</tr>
+						<tr>
+							<td>Ort Typ: [Wirtschaft | Militär | Geistig | Politik | Logistik | Magie | Spezial | Reich]</td>
+							<td>Organisation Hauptsitz: </td>
+							<td>NSC Beruf: </td>
+							<td>SC Größe: </td>		
+							<td>Kreatur Ort: </td>	
+							<td>Zauber Zauberzeit: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</td>	
+							<td>Gegenstand Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</td>												
+						</tr>
+						<tr>
+							<td>Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
+							<td>Organisation Relikte: </td>
+							<td>NSC Charaktertyp: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert| Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]</td>	
+							<td>SC Gewicht: </td>	
+							<td>Kreatur Organisation: </td>	
+							<td>Zauber Reichweite: </td>	
+							<td>Gegenstand Einstimmung: [Ja | Nein]</td>												
+						</tr>
+						<tr>
+							<td>Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
+							<td>Organisation Typ: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Banditen]</td>
+							<td>NSC Alter: </td>
+							<td>SC Augenfarbe: </td>		
+							<td>Kreatur Besondere Beziehung zu: </td>	
+							<td>Zauber Komponenten: </td>	
+							<td>Gegenstand Kurzbeschreibung:</td>												
+						</tr>
+						<tr>
+							<td>Ort Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
+							<td>Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</td>
+							<td>NSC Größe: </td>
+							<td>SC Hautfarbe: </td>		
+							<td>Kreatur Bekannte Fähigkeiten: </td>	
+							<td>Zauber Dauer: </td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Einwohneranzahl: </td>
+							<td>Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]</td>
+							<td>NSC Gewicht: </td>
+							<td>SC Haarfarbe: </td>		
+							<td>Kreatur Kurzbeschreibung: </td>	
+							<td>Zauber Konzentration: [Ja | Nein]</td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Einwohnerarten: [Gemischt | (Volk)*] </td>
+							<td>Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]</td>
+							<td>NSC Augenfarbe: </td>
+							<td>SC Kleidung: </td>		
+							<td></td>	
+							<td>Zauber Beschreibung:</td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Aussehen: </td>
+							<td>Organisation Fähigkeiten: </td>
+							<td>NSC Hautfarbe: </td>
+							<td>SC Ort: </td>		
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Klang: </td>
+							<td>Organisation Mitgliederanzahl: </td>
+							<td>NSC Haarfarbe: </td>
+							<td>SC Organisation: </td>		
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Geruch: </td>
+							<td>Organisation Mitgliederarten: </td>
+							<td>NSC Kleidung: </td>	
+							<td>SC Besondere Beziehung zu: </td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Verteidigung: </td>
+							<td>Organisation Ränge: </td>
+							<td>NSC Ort: </td>
+							<td>SC Besonderheiten: </td>		
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Waren & Dienstleistungen: </td>
+							<td>Organisation NSCs: </td>
+							<td>NSC Organisation: </td>	
+							<td>SC Kurzbeschreibung: </td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Tavernen: </td>
+							<td>Organisation Kreaturen: </td>
+							<td>NSC Besondere Beziehung zu: </td>
+							<td></td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Läden: </td>
+							<td>Organisation Besondere Beziehung zu: </td>
+							<td>NSC Besonderheiten: </td>	
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Fantastische Elemente: </td>
+							<td>Organisation Kurzbeschreibung: </td>
+							<td>NSC Kurzbeschreibung: </td>	
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Organisationen: </td>
+							<td></td>
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort NSCs: </td>
+							<td></td>
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>	
+						<tr>
+							<td>Ort Kreaturen: </td>
+							<td></td>
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>	
+							<td></td>												
+						</tr>
+						<tr>
+							<td>Ort Besondere Beziehung zu: </td>
+							<td></td>
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>	
+							<td></td>
+						</tr>
+						<tr>
+							<td>Ort Kurzbeschreibung: </td>
+							<td></td>
+							<td></td>
+							<td></td>	
+							<td></td>	
+							<td></td>	
+							<td></td>
+						</tr>														
+					</tbody>										
+				</table>
+ 			</section>
+			<!-- HOMEBREW Special Definitions-->
+			<section id="special_definitions">
+				<p>Definitionen:</p>
+					<table class="alt">
+						<thead>	
+							<tr>
+							<th>Zeichenfolge</th>
+							<th>Erklärung</th>	
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>[...]</td>
+								<td>Erlaube jeden Buchstaben innerhalb der eckigen Klammern</td>
+							</tr>
+							<tr>
+								<td>(...)</td>
+								<td>Gruppierung, für die alle folgenden Regeln gelten</td>
+							</tr>							
+							<tr>
+								<td>*</td>
+								<td>Vorkommnis: Keinmal oder  öfter</td>
+							</tr>
+							<tr>
+								<td>+</td>
+								<td>Vorkommnis: Einmal oder öfter</td>
+							</tr>
+							<tr>
+								<td>?</td>
+								<td>Vorkommnis: Keinmal oder einmal</td>
+							</tr>
+							<tr>
+								<td>\d{m}</td>
+								<td>Eine beliebige Ziffer, die m mal vorkommen darf. Eine Ziffer ist eine Zahl zwischen 0 und 9 (inklusive 0 und 9).</td>
+							</tr>
+							<tr>
+								<td>|</td>
+								<td>Entweder-Oder (exklusives Oder)</td>
+							</tr>
+							<tr>
+								<td>&lt;Tag&gt;</td>
+								<td>\d{2}</td>
+							</tr>
+							<tr>
+								<td>&lt;Monat&gt;</td>
+								<td>\d{2}</td>
+							</tr>
+							<tr>
+								<td>&lt;Jahr&gt;</td>
+								<td>\d{4}</td>
+							</tr>
+							<tr>
+								<td>&lt;Subjekt&gt;</td>
+								<td>Ein verlinktes URI-Fragment dieser Website, dass keine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
+							</tr>
+							<tr>
+								<td>&lt;Prädikat&gt;</td>
+								<td>Ein verlinktes URI-Fragment dieser Website, dass eine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
+							</tr>
+							<tr>
+								<td>&lt;Objekt&gt;</td>
+								<td>Ein verlinktes URI-Fragment dieser Website, dass keine <a href="#relations" aria-label="zu den Relationen">Relation</a> ist.</td>
+							</tr>
+							<tr>
+								<td>Ereignis</td>
+								<td>&lt;Tag&gt;.&lt;Monat&gt;.&lt;Jahr&gt; NA: &lt;Subjekt&gt; &lt;Prädikat&gt; &lt;Objekt&gt; (&lt;Prädikat> &lt;Objekt&gt;)*</td>
+							</tr>
+						</tbody>		
+					</table>	
+				---	
+				<ul class="alt" id="special_definition_information">
+					<li><b>Spezialdefinition Name</b>: Information</li>
+					<li><b>Spezialdefinition Link</b>: <a href="#special_definition_information" aria-label="Information">Information</a></li>
+					<li><b>Spezialdefinition Kurzbeschreibung</b>: Eine Information ist ein Freitextfeld und kann für eine beliebige, detaillierte Information stehen.</li>
+				</ul>
+				---	
+				<ul class="alt" id="special_definition_null">
+					<li><b>Spezialdefinition Name</b>: Nichts</li>
+					<li><b>Spezialdefinition Link</b>: <a href="#special_definition_null" aria-label="Nichts">Nichts</a></li>
+					<li><b>Spezialdefinition Kurzbeschreibung</b>: Platzhalter für das Nichts.</li>
+				</ul>
+				---	
+				<ul class="alt" id="special_definition_vocation">
+					<li><b>Spezialdefinition Name</b>: Berufung</li>
+					<li><b>Spezialdefinition Link</b>: <a href="#special_definition_vocation" aria-label="Berufung">Berufung</a></li>
+					<li><b>Spezialdefinition Kurzbeschreibung</b>: Eine Berufung ist ein Freitextfeld und kann für einen Beruf, einen Rang in einer Organisation oder für ein Ziel eines Charakters stehen.</li>
+				</ul>
+				---	
+				<ul class="alt" id="special_definition_unknown">
+					<li><b>Spezialdefinition Name</b>: Unbekannt</li>
+					<li><b>Spezialdefinition Link</b>: <a href="#special_definition_unknown" aria-label="Unbekannt">Unbekannt</a></li>
+					<li><b>Spezialdefinition Kurzbeschreibung</b>: Platzhalter für etwas Unbekanntes.</li>
+				</ul>
+				---	
+				<ul class="alt" id="special_definition_wertevorstellung">
+					<li><b>Spezialdefinition Name</b>: Wertevorstellung</li>
+					<li><b>Spezialdefinition Link</b>: <a href="#special_definition_wertevorstellung" aria-label="Wertevorstellung">Wertevorstellung</a></li>
+					<li><b>Spezialdefinition Kurzbeschreibung</b>: Eine Wertevorstellung ist ein Freitextfeld und kann eine beliebige Wertevorstellung beinhalten.</li>
+				</ul>
+			</section>
+			<!-- HOMEBREW Relations -->
+			<section id="relations">
+				<p>Im Folgenden eine Liste aller möglichen Relationen inklusive Bedeutung und möglicher Ersetzungen für Subjekt und Objekt.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Relation Link</th>
+							<th>Relation Name</th>
+							<th>Relation Bedeutung</th>
+							<th>Subjektklasse</th>
+							<th>Objektklasse 1</th>
+							<th>Objektklasse 2</th>
+							<th>Objektklasse 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="event_abgelehnt"><td><a href="#event_abgelehnt">wird abgelehnt</a></td><td>&lt;Subjekt&gt; wird abgelehnt von &lt;Objekt&gt;</td><td>Subjekt erhaelt Ablehnung von Objekt (Wunsch wird nicht nachgekommen)</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_arbeitet"><td><a href="#event_arbeitet">arbeitet</a></td><td>&lt;Subjekt&gt; arbeitet als &lt;Objekt 1&gt; in &lt;Objekt 2&gt;</td><td>Subjekt arbeitet als Berufung an einem Ort</td><td>NSC, Kreatur, Gegenstand</td><td>Berufung</td><td>Ort</td></tr>
+						<tr id="event_beauftragt"><td><a href="#event_beauftragt">beauftragt</a></td><td>&lt;Subjekt&gt; beauftragt &lt;Objekt 1&gt;, um &lt;Objekt 2&gt; [auszuloesen | zu verhindern]</td><td>Subjekt gibt Auftrag an Objekt 1, um Ereignis [auszuloesen | zu verhindern]</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ereignis</td></tr>
+						<tr id="event_beeinflusst"><td><a href="#event_beeinflusst">beeinflusst</a></td><td>&lt;Subjekt&gt; beeinflusst &lt;Objekt 1&gt;, um &lt;Objekt 2&gt; [auszuloesen | zu verhindern]</td><td>Subjekt beeinflusst Objekt 1, um Ereignis [auszuloesen | zu verhindern]</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ereignis</td></tr>
+						<tr id="event_befoerdert"><td><a href="#event_befoerdert">befördert</a></td><td>&lt;Subjekt&gt; befoerdert &lt;Objekt 1&gt;, weil &lt;Objekt 2&gt; [ausgeloest | verhindert] wurde.</td><td>Subjekt erhoeht Rang von Objekt 1 aufgrund von [Ausloesung | Verhinderung] Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td></tr>
+						<tr id="event_befreit"><td><a href="#event_befreit">befreit</a></td><td>&lt;Subjekt&gt; befreit &lt;Objekt&gt;</td><td>Subjekt befreit Objekt aus Gefangenschaft</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_behindert"><td><a href="#event_behindert">behindert</a></td><td>&lt;Subjekt&gt; behindert &lt;Objekt 1&gt; bei &lt;Objekt 2&gt;</td><td>Subjekt behindert Objekt 1 bei Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ereignis</td></tr>
+						<tr id="event_bekehrt"><td><a href="#event_bekehrt">bekehrt</a></td><td>&lt;Subjekt&gt; bekehrt &lt;Objekt 1&gt; zu &lt;Objekt 2&gt;</td><td>Subjekt bekehrt Objekt 1 zu einem anderen Glauben oder Wertevorstellungen.</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Wertevorstellung (Freitext)</td></tr>
+						<tr id="event_belebt"><td><a href="#event_belebt">belebt</a></td><td>&lt;Subjekt&gt; belebt &lt;Objekt&gt; wieder</td><td>Subjekt belebt Objekt wieder</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>NSC, Kreatur</td><td>-</td></tr>
+						<tr id="event_benutzt"><td><a href="#event_benutzt">benutzt</a></td><td>&lt;Subjekt&gt; benutzt &lt;Objekt 1&gt;, um &lt;Objekt 2&gt; [auszuloesen | zu verhindern]</td><td>Subjekt benutzt Objekt 1, um Ereignis [auszuloesen | zu verhindern]</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ereignis</td></tr>
+						<tr id="event_beschuetzt"><td><a href="#event_beschuetzt">beschützt</a></td><td>&lt;Subjekt&gt; beschuetzt &lt;Objekt&gt;</td><td>Subjekt beschuetzt Objekt</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_bespitzelt"><td><a href="#event_bespitzelt">bespitzelt</a></td><td>&lt;Subjekt&gt; bespitzelt &lt;Objekt&gt;</td><td>Subjekt sammelt Informationen ueber Objekt</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_bestraft"><td><a href="#event_bestraft">bestraft</a></td><td>&lt;Subjekt&gt; bestraft &lt;Objekt&gt;</td><td>Subjekt fuehrt Strafe an Objekt aus</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_betruegt"><td><a href="#event_betruegt">betrügt</a></td><td>&lt;Subjekt&gt; betruegt &lt;Objekt&gt;</td><td>Subjekt haelt sich nicht an Vereinbarung mit Objekt</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_bezahlt"><td><a href="#event_bezahlt">bezahlt</a></td><td>&lt;Subjekt&gt; bezahlt &lt;Objekt 1&gt; mit &lt;Objekt 2&gt;</td><td>Subjekt bezahlt Objekt 1 mit Objekt 2</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td></tr>
+						<tr id="event_bricht"><td><a href="#event_bricht">bricht</a></td><td>&lt;Subjekt&gt; bricht Versprechen &lt;Objekt 1&gt; mit &lt;Objekt 2&gt;</td><td>Subjekt bricht urspruengliches Versprechen zur Unterstuetzung bei Ereignis, was er Objekt 2 gegeben hatte.</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td></tr>
+						<tr id="event_deckt"><td><a href="#event_deckt">deckt</a></td><td>&lt;Subjekt&gt; deckt &lt;Objekt 1&gt; fuer &lt;Objekt 2&gt; auf</td><td>Subjekt verraet Versteck von Objekt 1 an Objekt 2</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td></tr>
+						<tr id="event_degradiert"><td><a href="#event_degradiert">degradiert</a></td><td>&lt;Subjekt&gt; degradiert &lt;Objekt 1&gt;, weil &lt;Objekt 2&gt; [ausgeloest | verhindert] wurde</td><td>Subjekt verringert Rang von Objekt 1 aufgrund [Ausloesung | Verhinderung] Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td></tr>
+						<tr id="event_dient"><td><a href="#event_dient">dient</a></td><td>&lt;Subjekt&gt; dient &lt;Objekt&gt;</td><td>Subjekt fuehrt Befehle von Objekt aus</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_erhaelt"><td><a href="#event_erhaelt">erhält</a></td><td>&lt;Subjekt&gt; erhaelt &lt;Objekt 1&gt; von &lt;Objekt 2&gt;</td><td>Subjekt erhaelt Objekt 1 mit Einverstaendnis von Objekt 2</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td></tr>
+						<tr id="event_erkundet"><td><a href="#event_erkundet">erkundet</a></td><td>&lt;Subjekt&gt; erkundet &lt;Objekt&gt;</td><td>Subjekt bereist und deckt Objekt auf</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>-</td></tr>
+						<tr id="event_erobert"><td><a href="#event_erobert">erobert</a></td><td>&lt;Subjekt&gt; erobert &lt;Objekt&gt;</td><td>Subjekt nimmt Objekt in Besitz</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td><td>-</td></tr>
+						<tr id="event_erpresst"><td><a href="#event_erpresst">erpresst</a></td><td>&lt;Subjekt&gt; erpresst &lt;Objekt 1&gt; mit &lt;Objekt 2&gt;, um &lt;Objekt 3&gt; [auszuloesen | zu verhindern]</td><td>Subjekt erpresst Objekt 1 mit Objekt 2, um Ereignis [auszuloesen | zu verhindern].</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td><td>Ereignis</td></tr>
+						<tr id="event_erschafft"><td><a href="#event_erschafft">erschafft</a></td><td>&lt;Subjekt&gt; erschafft &lt;Objekt 1&gt; in &lt;Objekt 2&gt; durch &lt;Objekt 3&gt;</td><td>Subjekt erschafft Objekt 1 in Ort durch Objekt 2</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>NSC, Kreatur, Gegenstand, Information</td></tr>
+						<tr id="event_erscheint"></tr><td><a href="#event_erscheint">erscheint</a></td><td>&lt;Subjekt&gt; erscheint in &lt;Objekt&gt; (Ankunft)</td><td>&lt;Subjekt&gt; erscheint in Ort (Ankunft).</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td></td><td></td>
+						<tr id="event_erwirbt"><td><a href="#event_erwirbt">erwirbt</a></td><td>&lt;Subjekt&gt; erwirbt &lt;Objekt 1&gt; mit &lt;Objekt 2&gt;</td><td>Subjekt kauft Objekt 1 durch Bezahlung (Objekt 2).</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td></tr>
+						<tr id="event_eskortiert"><td><a href="#event_eskortiert">eskortiert</a></td><td>&lt;Subjekt&gt; eskortiert &lt;Objekt&gt;</td><td>Subjekt begleitet und beschuetzt Objekt. Objekt kann Freund, Neutral oder Feind sein.</td><td>NSC, Kreatur, Gegenstand</td><td>NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_existiert"><td><a href="#event_existiert">existiert</a></td><td>&lt;Subjekt&gt; existiert in &lt;Objekt&gt;</td><td>Subjekt befindet sich in Objekt</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Information</td><td>Ort, Organisation, Gegenstand</td><td>-</td></tr>
+						<tr id="event_findet"><td><a href="#event_findet">findet</a></td><td>&lt;Subjekt&gt; findet &lt;Objekt&gt;</td><td>Subjekt findet Objekt</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td><td>-</td></tr>
+						<tr id="event_flieht"><td><a href="#event_flieht">flieht</a></td><td>&lt;Subjekt&gt; flieht zu &lt;Objekt 1&gt; wegen &lt;Objekt 2&gt;</td><td>Subjekt flieht zu Ort wegen Ereignis</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>Ereignis</td></tr>
+						<tr id="event_fuehrt"><td><a href="#event_fuehrt">führt</a></td><td>&lt;Subjekt&gt; fuehrt &lt;Objekt&gt; an</td><td>Subjekt ist Anfuehrer von Objekt</td><td>NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC</td><td>-</td></tr>
+						<tr id="event_gehoert"><td><a href="#event_gehoert">gehört</a></td><td>&lt;Subjekt&gt; gehoert zu &lt;Objekt&gt;</td><td>Subjekt ist in einer (Abenteurer-)Gruppe oder Organisation mit Objekt</td><td>NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC</td><td>-</td></tr>
+						<tr id="event_geht"><td><a href="#event_geht">geht</a></td><td>&lt;Subjekt&gt; geht formale Verbindung mit &lt;Objekt&gt;ein.</td><td>Subjekt geht offizielle Verbindung ein, z. B. Heirat</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_gewinnt"><td><a href="#event_gewinnt">gewinnt</a></td><td>&lt;Subjekt&gt; gewinnt bei &lt;Objekt 1&gt; &lt;Objekt 2&gt;</td><td>Subjekt gewinnt bei Ereignis (z. B. Wettbewerb) Objekt 2.</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td></tr>
+						<tr id="event_gruendet"><td><a href="#event_gruendet">gründet</a></td><td>&lt;Subjekt&gt; gruendet &lt;Objekt&gt;</td><td>Subjekt gruendet [Ort | Organisation]</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation</td><td>-</td></tr>
+						<tr id="event_handelt"><td><a href="#event_handelt">handelt</a></td><td>&lt;Subjekt&gt; handelt &lt;Objekt 1&gt; mit &lt;Objekt 2&gt; aus</td><td>Subjekt erhaelt Objekt 1 im Austausch fuer Objekt 2</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td></tr>
+						<tr id="event_hasst"><td><a href="#event_hasst">hasst</a></td><td>&lt;Subjekt&gt; hasst &lt;Objekt&gt;</td><td>Subjekt hasst Objekt</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td><td>-</td></tr>
+						<tr id="event_hat"><td><a href="#event_hat">hat</a></td><td>&lt;Subjekt&gt; hat &lt;Objekt 1&gt; durch &lt;Objekt 2&gt; veraendert</td><td>Subjekt hat eine Veraenderung an Objekt 1 durch Objekt 2 verursacht.</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information, Ereignis</td></tr>
+						<tr id="event_ist"><td><a href="#event_ist">ist</a></td><td>&lt;Subjekt&gt; ist &lt;Objekt 1&gt; weil &lt;Objekt 2&gt;</td><td>Subjekt hat eine Berufung, weil Objekt 1 das verursacht hat.</td><td>Berufung</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information, Ereignis</td><td>-</td></tr>
+						<tr id="event_elterngeschwister"><td><a href="#event_elterngeschwister">elterngeschwister</a></td><td>&lt;Subjekt&gt; ist Elterngeschwister von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist Elterngeschwister von &lt;Objekt&gt;</td><td>NSC,Kreatur</td><td>NSC,Kreatur</td><td>-</td></tr>
+						<tr id="event_elterngeschwisterkind"><td><a href="#event_elterngeschwisterkind">elterngeschwisterkind</a></td><td>&lt;Subjekt&gt; ist Elterngeschwisterkind von <Objekt</td><td>&lt;Subjekt&gt; ist Elterngeschwisterkind von <Objekt</td><td>NSC,Kreatur</td><td>NSC,Kreatur</td><td>-</td></tr>
+						<tr id="event_elternteil"><td><a href="#event_elternteil">elternteil</a></td><td>&lt;Subjekt&gt; ist Elternteil von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist Elternteil von &lt;Objekt&gt;</td><td>NSC,Kreatur</td><td>NSC,Kreatur</td><td>-</td></tr>
+						<tr id="event_feind"><td><a href="#event_feind">feind</a></td><td>&lt;Subjekt&gt; ist Feind von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist Feind von &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Ereignis</td><td>-</td></tr>
+						<tr id="event_freund"><td><a href="#event_freund">freund</a></td><td>&lt;Subjekt&gt; ist Freund von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist Freund von &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Ereignis</td><td>-</td></tr>
+						<tr id="event_geschwister"><td><a href="#event_geschwister">geschwister</a></td><td>&lt;Subjekt&gt; ist Geschwister von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist Geschwister von &lt;Objekt&gt;</td><td>NSC,Kreatur</td><td>NSC,Kreatur</td><td>-</td></tr>
+						<tr id="event_grosselternteil"><td><a href="#event_grosselternteil">grosselternteil</a></td><td>&lt;Subjekt&gt; ist Grosselternteil von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist Grosselternteil von &lt;Objekt&gt;</td><td>NSC,Kreatur</td><td>NSC,Kreatur</td><td>-</td></tr>
+						<tr id="event_verwitwet"><td><a href="#event_verwitwet">verwitwet</a></td><td>&lt;Subjekt&gt; ist verwitwet, weil &lt;Objekt&gt; gestorben ist.</td><td>&lt;Subjekt&gt; ist verwitwet, weil &lt;Objekt&gt; gestorben ist.</td><td>NSC,Kreatur</td><td>NSC,Kreatur</td><td>-</td></tr>
+						<tr id="event_jagt"><td><a href="#event_jagt">jagt</a></td><td>&lt;Subjekt&gt; jagt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; jagt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Information, Ereignis</td><td>-</td></tr>
+						<tr id="event_kaempft"><td><a href="#event_kaempft">kämpft</a></td><td>&lt;Subjekt&gt; kaempft in &lt;Objekt 1&gt; gegen &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; kaempft in Ort gegen &lt;Objekt 2&gt;</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td></tr>
+						<tr id="event_kartographiert"><td><a href="#event_kartographiert">kartographiert</a></td><td>&lt;Subjekt&gt; kartographiert &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; kartographiert Ort</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>-</td></tr>
+						<tr id="event_kehrt"><td><a href="#event_kehrt">kehrt</a></td><td>&lt;Subjekt&gt; kehrt von &lt;Objekt 1&gt; ab</td><td>&lt;Subjekt&gt; kehrt von Glauben oder Wertevorstellung ab.</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Information</td><td></td></tr>
+						<tr id="event_lagert"><td><a href="#event_lagert">lagert</a></td><td>&lt;Subjekt&gt; lagert &lt;Objekt 1&gt; in &lt;Objekt 2&gt; ein</td><td>&lt;Subjekt&gt; lagert &lt;Objekt 1&gt; in &lt;Objekt 2&gt; ein. &lt;Objekt 1&gt; wird Teil vom Inventar von &lt;Objekt 2&gt;.</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>NSC, Kreatur, Gegenstand, Zauber, Information</td><td>Ort, Gegenstand</td></tr>
+						<tr id="event_lebt"><td><a href="#event_lebt">lebt</a></td><td>&lt;Subjekt&gt; lebt in &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; lebt in Ort</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>-</td></tr>
+						<tr id="event_lehrt"><td><a href="#event_lehrt">lehrt</a></td><td>&lt;Subjekt&gt; lehrt &lt;Objekt 1&gt; in &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; lehrt Berufung in Ort</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Berufung</td><td>Ort</td></tr>
+						<tr id="event_lernt"><td><a href="#event_lernt">lernt</a></td><td>&lt;Subjekt&gt; lernt &lt;Objekt 1&gt; in &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; lernt Berufung in Ort</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Berufung</td><td>Ort</td></tr>
+						<tr id="event_liebt"><td><a href="#event_liebt">liebt</a></td><td>&lt;Subjekt&gt; liebt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; liebt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td><td>-</td></tr>
+						<tr id="event_loest"><td><a href="#event_loest">löst</a></td><td>&lt;Subjekt&gt; loest &lt;Objekt 1&gt; aus</td><td>Subjekt loest Ereignis aus</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td><td>Ereignis</td><td>-</td></tr>
+						<tr id="event_nimmt_gefangen"><td><a href="#event_nimmt_gefangen">nimmt gefangen</a></td><td>&lt;Subjekt&gt; nimmt &lt;Objekt&gt; gefangen</td><td>&lt;Subjekt&gt; nimmt &lt;Objekt&gt; gefangen</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Organisation, NSC, Kreatur, Gegenstand, Zauber, Information</td><td>-</td></tr>
+						<tr id="event_nimmt_Teil"><td><a href="#event_nimmt_Teil">nimmt Teil</a></td><td>&lt;Subjekt&gt; nimmt Teil an &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; nimmt Teil an Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td><td>-</td></tr>
+						<tr id="event_plant"><td><a href="#event_plant">plant</a></td><td>&lt;Subjekt&gt; plant &lt;Objekt 1&gt; und benoetigt dafuer &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; plant Ereignis und benoetigt dafuer &lt;Objekt 2&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td></tr>
+						<tr id="event_pluendert"><td><a href="#event_pluendert">plündert</a></td><td>&lt;Subjekt&gt; pluendert &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; pluendert Ort</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>-</td></tr>
+						<tr id="event_reist"><td><a href="#event_reist">reist</a></td><td>&lt;Subjekt&gt; reist von &lt;Objekt 1&gt; nach &lt;Objekt 2&gt; (Abreise)</td><td>&lt;Subjekt&gt; reist von Ort nach Ort (Abreise).</td><td>Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td><td>Ort</td></tr>
+						<tr id="event_rekrutiert"><td><a href="#event_rekrutiert">rekrutiert</a></td><td>&lt;Subjekt&gt; rekrutiert &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; rekrutiert &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_repariert"><td><a href="#event_repariert">repariert</a></td><td>&lt;Subjekt&gt; repariert &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; repariert &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_schwoert"><td><a href="#event_schwoert">schwört</a></td><td>&lt;Subjekt&gt; schwoert gegenueber &lt;Objekt 1&gt;, &lt;Objekt 2&gt; [auszuloesen | zu verhindern].</td><td>&lt;Subjekt&gt; schwoert gegenueber &lt;Objekt 1&gt;, Ereignis [auszuloesen | zu verhindern].</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ereignis</td></tr>
+						<tr id="event_spricht_frei"><td><a href="#event_spricht_frei">spricht frei</a></td><td>&lt;Subjekt&gt; spricht &lt;Objekt&gt; frei</td><td>&lt;Subjekt&gt; spricht &lt;Objekt&gt; frei</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_spricht_schuldig"><td><a href="#event_spricht_schuldig">spricht schuldig</a></td><td>&lt;Subjekt&gt; spricht &lt;Objekt&gt; schuldig</td><td>&lt;Subjekt&gt; spricht &lt;Objekt&gt; schuldig</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_stiehlt"><td><a href="#event_stiehlt">stiehlt</a></td><td>&lt;Subjekt&gt; stiehlt &lt;Objekt 1&gt; von &lt;Objekt 2&gt;</td><td>Subjekt erhaelt Objekt 1 ohne Einverstaendnis von Objekt 2</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_stirbt"><td><a href="#event_stirbt">stirbt</a></td><td>&lt;Subjekt&gt; stirbt in &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; stirbt in Ort ohne Fremdeinwirkung</td><td>NSC, Kreatur, Gegenstand</td><td>-</td><td>-</td></tr>
+						<tr id="event_stuerzt"><td><a href="#event_stuerzt">stürzt</a></td><td>&lt;Subjekt&gt; stuerzt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; entfernt &lt;Objekt&gt;aus Machtposition</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_sucht"><td><a href="#event_sucht">sucht</a></td><td>&lt;Subjekt&gt; sucht &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; sucht &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber,Berufung</td><td>-</td></tr>
+						<tr id="event_taucht"><td><a href="#event_taucht">taucht</a></td><td>&lt;Subjekt&gt; taucht in &lt;Objekt&gt; unter</td><td>&lt;Subjekt&gt; taucht in Ort unter</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung</td><td>Ort</td><td>-</td></tr>
+						<tr id="event_toetet"><td><a href="#event_toetet">tötet</a></td><td>&lt;Subjekt&gt; toetet &lt;Objekt 1&gt; in &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; toetet &lt;Objekt 1&gt; in &lt;Objekt 2&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort</td></tr>
+						<tr id="event_trennt"><td><a href="#event_trennt">trennt</a></td><td>&lt;Subjekt&gt; trennt sich von &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; trennt sich von &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis, Berufung, Information</td><td>-</td></tr>
+						<tr id="event_trickst"><td><a href="#event_trickst">trickst</a></td><td>&lt;Subjekt&gt; trickst &lt;Objekt&gt; aus</td><td>&lt;Subjekt&gt; trickst &lt;Objekt&gt; aus</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber</td><td>-</td></tr>
+						<tr id="event_ueberrascht"><td><a href="#event_ueberrascht">überrascht</a></td><td>&lt;Subjekt&gt; ueberrascht &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ueberrascht &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_unterstuetzt"><td><a href="#event_unterstuetzt">unterstützt</a></td><td>&lt;Subjekt&gt; unterstuetzt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; unterstuetzt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Ereignis</td><td>-</td></tr>
+						<tr id="event_veraendert"><td><a href="#event_veraendert">verändert</a></td><td>&lt;Subjekt&gt; veraendert &lt;Objekt 1&gt; zu &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; veraendert &lt;Objekt 1&gt; zu &lt;Objekt 2&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung, Information, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung, Information, Ereignis</td><td>-</td></tr>
+						<tr id="event_verehrt"><td><a href="#event_verehrt">verehrt</a></td><td>&lt;Subjekt&gt; verehrt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; verehrt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung, Information, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung, Information, Ereignis</td><td>-</td></tr>
+						<tr id="event_verletzt"><td><a href="#event_verletzt">verletzt</a></td><td>&lt;Subjekt&gt; verletzt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; verletzt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Zauber, Berufung, Information, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_verraet"><td><a href="#event_verraet">verrät</a></td><td>&lt;Subjekt&gt; verraet &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; verraet &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Information, Ereignis</td><td>-</td></tr>
+						<tr id="event_versorgt"><td><a href="#event_versorgt">versorgt</a></td><td>&lt;Subjekt&gt; versorgt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; versorgt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber, Ereignis</td><td></td></tr>
+						<tr id="event_versteckt"><td><a href="#event_versteckt">versteckt</a></td><td>&lt;Subjekt&gt; versteckt &lt;Objekt 1&gt; in &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; versteckt &lt;Objekt 1&gt; in Ort, ohne, dass es bemerkt wird</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber, Information</td><td>Ort</td></tr>
+						<tr id="event_verstuemmelt"><td><a href="#event_verstuemmelt">verstümmelt</a></td><td>&lt;Subjekt&gt; verstuemmelt &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; verstuemmelt &lt;Objekt&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand</td><td>-</td></tr>
+						<tr id="event_wichtig"><td><a href="#event_wichtig">wird wichtig</a></td><td>&lt;Subjekt&gt; wird wichtig fuer &lt;Objekt 1&gt;, weil &lt;Objekt 2&gt;</td><td>&lt;Subjekt&gt; wird wichtig fuer &lt;Objekt 1&gt;, weil &lt;Objekt 2&gt;</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber, Ereignis, Information</td><td>-</td></tr>
+						<tr id="event_zerstoert"><td><a href="#event_zerstoert">zerstört</a></td><td>&lt;Subjekt&gt; zerstoert &lt;Objekt 1&gt; durch &lt;Objekt 2&gt; in &lt;Objekt 3&gt;</td><td>&lt;Subjekt&gt; zerstoert &lt;Objekt 1&gt; durch &lt;Objekt 2&gt; in Ort</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber, Ereignis</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber, Ereignis, Information</td><td>Ort, Organisation, NSC, Kreatur, Gegenstand, Berufung, Zauber, Ereignis, Information</td><td>Ort</td></tr>
+						<tr id="event_zusammen"><td><a href="#event_zusammen">zusammen</a></td><td>&lt;Subjekt&gt; ist zusammen mit &lt;Objekt&gt;</td><td>&lt;Subjekt&gt; ist zusammen mit &lt;Objekt&gt;</td><td>NSC,Kreatur, Gegenstand</td><td>NSC,Kreatur, Gegenstand</td><td>-</td></tr>
+					</tbody>
+				</table>
+
+			</section>
+			<!-- HOMEBREW LOCATIONS -->			
+			<section id="locations">
+				---	
+										
+		  	</section>
+			<!-- HOMEBREW ORGANIZATIONS -->			
+		  	<section id="organizations">
+				---	
+				
+	  		</section>
+			<!-- HOMEBREW NPCS -->			
+			<section id="npcs">
+				---	
+				
+
+		  	</section>
+			<!-- HOMEBREW PLAYER CHARACTERS -->	
+			<section id="scs">
+				---
+						
+			</section>
+
+		  	<!-- HOMEBREW CREATURES -->			
+		  	<section id="creatures">
+				---	
+				
+	  		</section>
+	  		<!-- HOMEBREW SPELLS -->			
+	  		<section id="spells">
+				---	
+				
+  			</section>
+  			<!-- HOMEBREW ITEMS -->			
+  			<section id="items">
+				
+			</section>
+		</div>
+       <!-- Footer -->
+	   <section id="footer">
+		<div class="container">
+			<ul class="copyright">
+				<li>Tymonia and all Tymonia-related content &copy; 2023 Dr. Frank Effenberger is licensed under <a href="CC_BY_NC_SA_LICENSE.html" target="_blank" rel="noopener" aria-label="zur CC BY-NC-SA-Lizenz">CC BY-NC-SA-License</a>.</li><li>Design: <a href="https://html5up.net" target="_blank" rel="noopener" aria-label="Deutsch: Link zur Seite von HTML5 UP - English: Link to the website of HTML5 UP">HTML5 UP</a> - <a href="https://html5up.net/license" target="_blank" rel="noopener" aria-label="Deutsch: Link zur CCA-3.0 Lizenz - English: Link to the CCA-3.0 License">CCA-3.0</a></li>
+			</ul>
+		</div>
+	</section>                   
+    
+</div>
+    <!-- Scripts -->			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    </body>
+</html>
+
+

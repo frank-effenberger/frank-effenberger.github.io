@@ -3,8 +3,8 @@
     <head>
         <title>Tymonia - Systemdatenbank Black Fist</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="Systemdatenbank">
-		<meta name="keywords" content="Systemdatenbank, Enzyklopädie">
+		<meta name="description" content="Systemdatenbank Black Fist">
+		<meta name="keywords" content="Systemdatenbank, Black Fist, Enzyklopädie">
 		<meta name="author" content="Dr. Frank Effenberger">
 		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'; font-src 'self'; manifest-src 'self'">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,12 +30,21 @@
 						<li><a href="#search_help" aria-label="zur Suchhilfe">Suchhilfe</a></li>
 						<li><a href="#special_definitions" aria-label="zu den Spezialdefinitionen">Spezialdefinitionen</a></li>
 						<li><a href="#relations" aria-label="zu den Relationen">Relationen</a></li>
+						<li><a href="#sectors" aria-label="zu den Sektoren">Sektoren</a></li>
+						<li><a href="#astronomical_objects" aria-label="zu den astronomischen Objekten">Astronomische Objekte</a></li>
+						<li><a href="#space_stations" aria-label="zu den Weltraumstationen">Weltraumstationen</a></li>
+						<li><a href="#space_station_modules" aria-label="zu den Weltraumstationsmodulen">Weltraumstationsmodule</a></li>
+						<li><a href="#habitable_planets" aria-label="zu den bewohnbaren Planeten">Bewohnbare Planeten</a></li>
 						<li><a href="#locations" aria-label="zu den Orten">Orte</a></li>
 						<li><a href="#organizations" aria-label="zu den Organisationen">Organisationen</a></li>
-						<li><a href="#npcs" aria-label="zu den Nichtspielercharakteren">NSCs</a></li>
-						<li><a href="#scs" aria-label="zu den Spielercharakteren">SCs</a></li>
+						<li><a href="#nscs" aria-label="zu den NSCs">NSCs</a></li>
+						<li><a href="#scs" aria-label="zu den SCs">SCs</a></li>
 						<li><a href="#creatures" aria-label="zu den Kreaturen">Kreaturen</a></li>
-						<li><a href="#spells" aria-label="zu den Zaubern">Zauber</a></li>
+						<li><a href="#ship_chassis" aria-label="zu den Schiffsrümpfen">Schiffsrümpfe</a></li>
+						<li><a href="#ship_modules" aria-label="zu den Schiffsmodulen">Schiffsmodule</a></li>
+						<li><a href="#vehicle_chassis" aria-label="zu den Bodenfahrzeugrümpfen">Bodenfahrzeugrümpfe</a></li>
+						<li><a href="#vehicle_modules" aria-label="zu den Fahrzeugmodulen">Fahrzeugmodule</a></li>
+						<li><a href="#equipment" aria-label="zur Ausrüstung">Ausrüstung</a></li>
 						<li><a href="#items" aria-label="zu den Gegenständen">Gegenstände</a></li>
                         <li><a href="https://kosmischer-horror.de/tymonia/#tymonia" aria-label="zurück zu Tymonia">zurück zu Tymonia</a></li>						
 						<li><a href="https://kosmischer-horror.de/tymonia/#imp" aria-label="Deutsch: zum Impressum - English: to the legal notice">Impressum / Legal Notice</a></li>
@@ -51,333 +60,420 @@
         <div id="main">
             <!-- System Database INTRO -->
 			<section id="system_database_black_fist_intro">
-				<p>TBD - Enthält auch Daten von eigentlichen Ursprüngen / Heimatwelten</p>	
-				<p>Anfangs noch sehr leer, weil keiner reingesprungen ist.</p>				
+				<p>Diese Datenbank enthält alle Entdeckungen der Operation Black Fist.</p>									
 			</section>
 			<!-- SEARCH HELP -->
-			<!-- HOMEBREW LOCATIONS TEMPLATE
+
+			<!-- HOMEBREW SECTOR TEMPLATE:
 				---
-				<ul class="alt" id="location_">
-					<li><b>Ort Name</b>: </li>
-					<li><b>Ort Link</b>: <a href="#location_" aria-label=""></a></li>
-					<li><b>Ort Symbol</b>: </li>
-					<li><b>Ort Lage</b>: </li>
-					<li><b>Ort Herrscher</b>: </li>
-					<li><b>Ort Typ</b>: </li>
-					<li><b>Ort Ruf</b>: </li>
-					<li><b>Ort Wohlstand</b>: </li>
-					<li><b>Ort Sicherheit</b>: </li>				
-					<li><b>Ort Einwohneranzahl</b>: </li>
-					<li><b>Ort Einwohnerarten</b>: </li>
-					<li><b>Ort Aussehen</b>: </li>
-					<li><b>Ort Klang</b>: </li>
-					<li><b>Ort Geruch</b>: </li>
-					<li><b>Ort Verteidigung</b>: </li>
-					<li><b>Ort Waren & Dienstleistungen</b>: </li>
-					<li><b>Ort Tavernen</b>: </li>
-					<li><b>Ort Läden</b>: </li>
-					<li><b>Ort Fantastische Elemente</b>: </li>
-					<li><b>Ort Organisationen</b>: </li>
-					<li><b>Ort NSCs</b>: </li>
-					<li><b>Ort Kreaturen</b>: </li>
-					<li><b>Ort Besondere Beziehung zu</b>: </li>
-					<li><b>Ort Kurzbeschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>
+								
 			-->
-			<!-- HOMEBREW LOCATIONS TEMPLATE RULES
-			<ul class="alt" id="location_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Ort Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM					
-					<li><b>Ort Link</b>: <a href="#location_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>Ort Symbol</b>: [Text]</li>
-					<li><b>Ort Lage</b>: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]</li>
-					<li><b>Ort Herrscher</b>: [Link zu NSC]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Ort Typ</b>: [Wirtschaft | Militär | Geistig | Politik | Logistik | Magie | Spezial | Reich]</li>
-					<li><b>Ort Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
-					<li><b>Ort Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
-					<li><b>Ort Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>				
-					<li><b>Ort Einwohneranzahl</b>: [0-9]*</li>
-					<li><b>Ort Einwohnerarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Ort Aussehen</b>: [Text]</li>
-					<li><b>Ort Klang</b>: [Text]</li>
-					<li><b>Ort Geruch</b>: [Text]</li>
-					<li><b>Ort Verteidigung</b>: [0-9]* Verteidiger</li>
-					<li><b>Ort Waren & Dienstleistungen</b>: [Ware | Dienstleistung]*</li>
-					<li><b>Ort Tavernen</b>: [Tavernenname]*</li>
-					<li><b>Ort Läden</b>: [Ladenname]*</li>
-					<li><b>Ort Fantastische Elemente</b>: [Fantastisches Element]*</li>
-					<li><b>Ort Organisationen</b>: [Text | (Link zu Organisation)*]</li>
-					<li><b>Ort NSCs</b>: [(Link zu NSC)*]</li>
-					<li><b>Ort Kreaturen</b>: [(Link zu Kreatur)*]</li>
-					<li><b>Ort Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
-					<li><b>Ort Kurzbeschreibung</b>: [Text]</li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>
+			<!-- HOMEBREW SECTOR TEMPLATE RULES:
+				Sektor Name: [Text]
+				Sektor Link: <a href="#sector_[Text]" aria-label="[Text]">[Text]</a>
+				Sektor Kurzname: [Text]
+				Sektor Astronomische Objekte: [Text |Link Astronomisches Objekt]*
+				Sektor Weltraumstationen: [Text |Link Weltraumstation]*
+				Sektor Bewohnte Planeten: [Text |Bewohnter Planet]*
+				Sektor Orte: [Text |Link Ort]*
+				Sektor Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Sektor Kurzbeschreibung: [Text]
+				Sektor Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*	
 			-->
+
+
+			<!-- HOMEBREW ASTRONOMICAL OBJECT TEMPLATE
+				---
+				
+			-->
+			<!-- HOMEBREW ASTRONOMICAL OBJECT TEMPLATE RULES
+				Astronomisches Objekt Name: [Text]
+				Astronomisches Objekt Link: <a href="#astronomical_object_[Text]" aria-label="[Text]">[Text]</a>
+				Astronomisches Objekt Sektor: [Text | Link zu Sektor]
+				Astronomisches Objekt Typ: [Stern (Hauptreihe | Riese |Zwerg | Kompakt) | Planet (Gestein | Gas | Zwerg) | Asteroidengürtel | Gasregion | Eisregion | Warptor | Mond | Schwarzes Loch | Wurmloch | Quasar | Pulsar | Gigantisches Bauprojekt | Nebel |Dunkelwolken]
+				Astronomisches Objekt Subtyp: [Gefroren | Unfruchtbar (kalt) | Unfruchtbar (trocken) | Gasriese | Giftig | Geschmolzen | Asteroid | Verseucht | Naniten | Zerstört |Abgeschirmt ]  
+				Astronomisches Objekt Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Astronomisches Objekt Kurzbeschreibung: [Text]
+				Astronomisches Objekt Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*
+			-->
+
+			
+
+			<!-- HOMEBREW SPACE STATION TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW SPACE STATION TEMPLATE RULES:
+				Weltraumstation Name: [Text]
+				Weltraumstation Link: <a href="#space_station_[Text]" aria-label="[Text]">[Text]</a>
+				Weltraumstation Sektor: [Text | Link zu Sektor]
+				Weltraumstation Herrscher: [Text | Link zu NSC]
+				Weltraumstation Tech-Level: [T[0-6]{1}]
+				Weltraumstation Verteidigung: [Anzahl Verteidiger]
+				Weltraumstation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]
+				Weltraumstation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]
+				Weltraumstation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]
+				Weltraumstation Spezialisierung: [Handel | Erkundung | Bergbau | Industrie | Bergung | Kampf | Hacking | Politik | Forschung |Piraten]
+				Weltraumstation Größe: [Klein | Mittel | Groß | Gigantisch]
+				Weltraumstation Modulplätze: [Anzahl Modulplätze]
+				Weltraumstation Einwohneranzahl: [Anzahl Einwohner]
+				Weltraumstation Einwohnerarten: [(Volk)* | Gemischt]
+				Weltraumstation NSCs: [Text  | Link zu NSC]*
+				Weltraumstation Kreaturen: [Text  | Link zu Kreatur]*
+				Weltraumstation Organisationen: [Text  | Link zu Organisation]*
+				Weltraumstation Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Weltraumstation Kurzbeschreibung: [Text]
+				Weltraumstation Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*
+			-->
+
+			<!-- HOMEBREW SPACE STATION MODULE TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW SPACE STATION MODULE TEMPLATE RULES:
+				---
+				Weltraumstationsmodul Name: [Text]
+				Weltraumstationsmodul Link: <a href="#space_station_module_[Text]" aria-label="[Text]">[Text]</a>
+				Weltraumstationsmodul Tech-Level: [T[0-6]{1}]
+				Weltraumstationsmodul Typ: [Labor | Navigation | Militär | Frachtraum | Antrieb | Kolonie | Unterkünfte | EWAR | Lebenserhaltung | Medizin | Bergbau | Industrie | Psionik | Schiffsbucht | Warpantrieb | Teleportation | Werkzeug | Hacking | Bergung | Verteidigung | Waffen]
+				Weltraumstationsmodul Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Weltraumstationsmodul Legalität: [Ja | Nein]
+				Weltraumstationsmodul Modifikator auf: [Eigenschaft]
+				Weltraumstationsmodul Modifikator Wert: [Wert]
+				Weltraumstationsmodul Fähigkeiten: [Text]
+				Weltraumstationsmodul Kosten: [Kosten in interstellarer Währung]
+				Weltraumstationsmodul Hersteller:  [Text |Link zu Organisation]
+				Weltraumstationsmodul CPU-Verbrauch: [Anzahl in TFLOPS]
+				Weltraumstationsmodul Energieverbrauch / Erzeugung: [Anzahl in 0-125]
+				Weltraumstationsmodul Gewicht:  [Gewicht in 0-75]
+				Weltraumstationsmodul Restriktion Weltraumstationsgröße:  [Keine | Klein | Mittel | Groß | Gigantisch]
+				Weltraumstationsmodul Modulplatzverbrauch: [Anzahl Modulplätze]
+				Weltraumstationsmodul Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Weltraumstationsmodul Kurzbeschreibung: [Text]
+			-->
+
+			<!-- HOMEBREW HABITABLE PLANETS TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW HABITABLE PLANETS TEMPLATE RULES:
+				Bewohnbarer Planet Name: [Text]
+				Bewohnbarer Planet Link: <a href="#habitable_planet_[Text]" aria-label="[Text]">[Text]</a>
+				Bewohnbarer Planet Sektor: [Text | Link zu Sektor]
+				Bewohnbarer Planet Herrscher: [Text | Link zu NSC]
+				Bewohnbarer Planet Tech-Level: [T[0-6]{1}]
+				Bewohnbarer Planet Verteidigung: [Anzahl Verteidiger]
+				Bewohnbarer Planet Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]
+				Bewohnbarer Planet Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]
+				Bewohnbarer Planet Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]
+				Bewohnbarer Planet Spezialisierung: [Grabwelt, Reliktwelt, Hive(Insektoiden), Maschinenwelt, Paradiswelt, Schmiedewelt, Heilige Welt, Strafkolonie, Sklavenwelt, Handelswelt], [Handel | Erkundung | Bergbau | Industrie | Bergung | Kampf | Hacking | Politik | Forschung | Piraten]
+				Bewohnbarer Planet Größe: [Klein | Mittel | Groß | Gigantisch]
+				Bewohnbarer Planet Atmosphäre: [[Ja|Nein], Sauerstoff [vorhanden | nicht vorhanden]]
+				Bewohnbarer Planet Temperatur: [Temperatur in °C]
+				Bewohnbarer Planet Biosphäre: [Klein | Mittel |Groß | Alles]
+				Bewohnbarer Planet Einwohneranzahl: [Anzahl Einwohner]
+				Bewohnbarer Planet Einwohnerarten: [(Volk)* | Gemischt]
+				Bewohnbarer Planet Orte: [Text  | Link zu Ort]*
+				Bewohnbarer Planet NSCs: [Text  | Link zu NSC]*
+				Bewohnbarer Planet Kreaturen: [Text  | Link zu Kreatur]*
+				Bewohnbarer Planet Organisationen: [Text  | Link zu Organisation]*
+				Bewohnbarer Planet Fantastische Elemente: [ Tropisch | Kontinental | Arktisch | Alpine | Savanne | Ozean | Tundra | Trocken | Wüste ]
+				Bewohnbarer Planet Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Bewohnbarer Planet Kurzbeschreibung: [Text]
+				Bewohnbarer Planet  Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*	
+			-->
+
+			<!-- HOMEBREW LOCATIONS TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW LOCATIONS TEMPLATE RULES:
+				Ort Name:  [Text]
+				Ort Link: <a href="#location_[Text]" aria-label="[Text]">[Text]</a>
+				Ort Sektor: [Sektorbezeichnung]
+				Ort Symbol: [Text]
+				Ort Lage: [Name des Reiches], [Text | ([Nördlich | Östlich | Westlich | Südlich] von Link anderer Ort)*]
+				Ort Herrscher: [Link zu NSC]
+				Ort Typ: [Forschung | Bergbau | Industrie | Handel | Bergung | Militär | Geistig | Politik | Logistik | Psionik | Hacking | Spezial]
+				Ort Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]
+				Ort Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]
+				Ort Sicherheit:	[Auflösung | Unruhen | Stabilisierung | Ordnung]			
+				Ort Einwohneranzahl: [0-9]*
+				Ort Einwohnerarten: [Gemischt | (Volk)*]
+				Ort Aussehen: [Text]
+				Ort Klang: [Text]
+				Ort Geruch: [Text]
+				Ort Verteidigung: [0-9]* Verteidiger
+				Ort Waren & Dienstleistungen: [Ware | Dienstleistung]*
+				Ort Tavernen: [Tavernenname]*
+				Ort Läden: [Ladenname]*
+				Ort Fantastische Elemente: [Fantastisches Element]*
+				Ort Organisationen: [Text | (Link zu Organisation)*]
+				Ort NSCs: [(Link zu NSC)*]
+				Ort Kreaturen: [(Link zu Kreatur)*]
+				Ort Besondere Beziehung zu: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]
+				Ort Kurzbeschreibung: [Text]
+				Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*				
+			-->
+
 			<!-- HOMEBREW ORGANIZATIONS TEMPLATE
 				---
-				<ul class="alt" id="organization_">
-					<li><b>Organisation Name</b>: </li>
-					<li><b>Organisation Link</b>: <a href="#organization_" aria-label=""></a></li>
-					<li><b>Organisation Leitmotiv</b>: </li>
-					<li><b>Organisation Symbol</b>: </li>
-					<li><b>Organisation Herrscher</b>: </li>
-					<li><b>Organisation Hauptsitz</b>: </li>
-					<li><b>Organisation Relikte</b>: </li>
-					<li><b>Organisation Typ</b>: </li>
-					<li><b>Organisation Ruf</b>: </li>
-					<li><b>Organisation Wohlstand</b>: </li>
-					<li><b>Organisation Sicherheit</b>: </li>
-					<li><b>Organisation Fähigkeiten</b>: </li>
-					<li><b>Organisation Mitgliederanzahl</b>: </li>
-					<li><b>Organisation Mitgliederarten</b>: </li>
-					<li><b>Organisation Ränge</b>: </li>
-					<li><b>Organisation NSCs</b>: </li>
-					<li><b>Organisation Kreaturen</b>: </li>
-					<li><b>Organisation Besondere Beziehung zu</b>: </li>
-					<li><b>Organisation Kurzbeschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>
+				
 			-->
 			<!-- HOMEBREW ORGANIZATIONS TEMPLATE RULES
-				<ul class="alt" id="organization_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Organisation Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Organisation Link</b>: <a href="#organization_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>Organisation Leitmotiv</b>: [Text]</li>
-					<li><b>Organisation Symbol</b>: [Text]</li>
-					<li><b>Organisation Herrscher</b>: [Link zu NSC]</li>
-					<li><b>Organisation Hauptsitz</b>: [Text | Link zu Ort]</li>
-					<li><b>Organisation Relikte</b>: [Link Gegenstand]*</li>
-					<li><b>Organisation Typ</b>: [Wirtschaft | Militär | Geistig | Politk | Logistik | Magie | Spezial | Banditen]</li>
-					<li><b>Organisation Ruf</b>: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]</li>
-					<li><b>Organisation Wohlstand</b>: [Not | Pleite | Normal | Wachstum | Reich]</li>
-					<li><b>Organisation Sicherheit</b>: [Auflösung | Unruhen | Stabilisierung | Ordnung]</li>
-					<li><b>Organisation Fähigkeiten</b>: [Text]</li> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Organisation Mitgliederanzahl</b>: [0-9]*</li>
-					<li><b>Organisation Mitgliederarten</b>: [Gemischt | (Volk)*]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Organisation Ränge</b>: [Text Ränge aufsteigend]</li>
-					<li><b>Organisation NSCs</b>: [(Link zu NSC)*]</li>
-					<li><b>Organisation Kreaturen</b>: [(Link zu Kreatur)*]</li>
-					<li><b>Organisation Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
-					<li><b>Organisation Kurzbeschreibung</b>: [Text]</li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>
+				Organisation Name: [Text]
+				Organisation Link: <a href="#organization_[Text]" aria-label="[Text]">[Text]</a>
+				Organisation Leitmotiv: [Text]
+				Organisation Symbol: [Text]
+				Organisation Herrscher: [Link zu NSC]
+				Organisation Hauptsitz: [Text | Link zu Ort]
+				Organisation Relikte: [Link Gegenstand]*
+				Organisation Typ: [Forschung | Bergbau | Industrie | Handel | Bergung | Militär | Geistig | Politik | Logistik | Psionik | Hacking | Spezial | Piraten | Sicherheit]
+				Organisation Ruf: [Verhasst | Feindlich | Unfreundlich | Neutral | Freundlich | Geliebt | Verehrt]
+				Organisation Wohlstand: [Not | Pleite | Normal | Wachstum | Reich]
+				Organisation Sicherheit: [Auflösung | Unruhen | Stabilisierung | Ordnung]
+				Organisation Fähigkeiten: [Text]
+				Organisation Mitgliederanzahl: [0-9]*
+				Organisation Mitgliederarten: [Gemischt | (Volk)*]
+				Organisation Ränge: [Text Ränge aufsteigend]
+				Organisation NSCs: [(Link zu NSC)*]
+				Organisation Kreaturen: [(Link zu Kreatur)*]
+				Organisation Besondere Beziehung zu: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]
+				Organisation Kurzbeschreibung: [Text]
+				Details (Ereignisse):  <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*				
 			-->
 			<!-- HOMEBREW NPCS TEMPLATE
 				---
-				<ul class="alt" id="nsc_">
-					<li><b>NSC Name</b>: </li>
-					<li><b>NSC Link</b>: <a href="#nsc_" aria-label=""></a></li>
-					<li><b>NSC Geschlecht</b>: </li>
-					<li><b>NSC Stimme</b>: </li>					
-					<li><b>NSC Volk</b>: </li>
-					<li><b>NSC Beruf</b>: </li>
-					<li><b>NSC Charaktertyp</b>: </li>
-					<li><b>NSC Alter</b>: </li>
-					<li><b>NSC Größe</b>: </li>
-					<li><b>NSC Gewicht</b>: </li>
-					<li><b>NSC Augenfarbe</b>: </li>
-					<li><b>NSC Hautfarbe</b>: </li>
-					<li><b>NSC Haarfarbe</b>: </li>
-					<li><b>NSC Kleidung</b>: </li>					
-					<li><b>NSC Ort</b>: </li>
-					<li><b>NSC Organisation</b>: </li>
-					<li><b>NSC Besondere Beziehungen zu</b>: </li>
-					<li><b>NSC Besonderheiten</b>: </li>
-					<li><b>NSC Kurzbeschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>
+				
 			-->
 			<!-- HOMEBREW NPCS TEMPLATE RULES
-				<ul class="alt" id="nsc_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>NSC Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>NSC Link</b>: <a href="#nsc_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>NSC Geschlecht</b>: [Männlich | Weiblich | Undefinierbar]</li>
-					<li><b>NSC Stimme</b>: [Tief | Mittel | Hoch]</li>					
-					<li><b>NSC Volk</b>: [Volk | Gemischt aus [Volk]*]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>NSC Beruf</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>NSC Charaktertyp</b>: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert | Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]</li>
-					<li><b>NSC Alter</b>: [0-9]*</li>
-					<li><b>NSC Größe</b>: [0.0-9.0]* Meter</li>
-					<li><b>NSC Gewicht</b>: [0.0-9.0]* Kilogramm</li>
-					<li><b>NSC Augenfarbe</b>: [Text]</li>
-					<li><b>NSC Hautfarbe</b>: [Text]</li>
-					<li><b>NSC Haarfarbe</b>: [Text]</li>
-					<li><b>NSC Kleidung</b>: [Text]</li>					
-					<li><b>NSC Ort</b>: [Text | (Link zu Ort)*]</li>
-					<li><b>NSC Organisation</b>: [Text | (Link zu Organisation)*]</li>
-					<li><b>NSC Besondere Beziehungen zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
-					<li><b>NSC Besonderheiten</b>: [Text]</li>
-					<li><b>NSC Kurzbeschreibung</b>: [Text]</li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>
+				NSC Name: [Text]
+				NSC Link: <a href="#nsc_[Text]" aria-label="[Text]">[Text]</a>
+				NSC Geschlecht: [Männlich | Weiblich | Undefinierbar]
+				NSC Stimme: [Tief | Mittel | Hoch]				
+				NSC Volk: [Link Volk anlegen]
+				NSC Beruf: [Text]
+				NSC Charaktertyp: [Anführer | Lustlos | Skrupellos | Großes Maul | Feige | Dominant | Verschwenderisch | Geizig | Neugierig | Denker | Macher | Einsamer | Jung & Wohlhabend | Alter Mann | Held | Clown | Kümmerer | Weiser Mann | Diener | Fröhlich | Schüchtern | Krank | Hochnäsig | Abenteuerlustig | Wachsam | Diszipliniert | Naturverbunden | Aufbrausend | Logisch | Rebell | Geheimnisvoll | Bürokrat]
+				NSC Alter: [0-9]*
+				NSC Größe: [0.0-9.0]* Meter
+				NSC Gewicht: [0.0-9.0]* Kilogramm
+				NSC Augenfarbe: [Text]
+				NSC Hautfarbe: [Text]
+				NSC Haarfarbe: [Text]
+				NSC Kleidung: [Text]				
+				NSC Ort:  [Text | (Link zu Ort)*]
+				NSC Organisation: [Text | (Link zu Organisation)*]
+				NSC Besondere Beziehungen zu: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]
+				NSC Besonderheiten: [Text]
+				NSC Kurzbeschreibung: [Text]
+				Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*
 			-->
+
 			<!-- HOMEBREW PCS TEMPLATE
 				---
-				<ul class="alt" id="sc_">
-					<li><b>SC Name</b>: </li>
-					<li><b>SC Link</b>: <a href="#sc_" aria-label=""></a></li>
-					<li><b>SC Geschlecht</b>: </li>									
-					<li><b>SC Volk</b>: </li>
-					<li><b>SC Alter</b>: </li>
-					<li><b>SC Größe</b>: </li>
-					<li><b>SC Gewicht</b>: </li>
-					<li><b>SC Augenfarbe</b>: </li>
-					<li><b>SC Hautfarbe</b>: </li>
-					<li><b>SC Haarfarbe</b>: </li>
-					<li><b>SC Kleidung</b>: </li>					
-					<li><b>SC Ort</b>: </li>
-					<li><b>SC Organisation</b>: </li>
-					<li><b>SC Besondere Beziehungen zu</b>: </li>
-					<li><b>SC Besonderheiten</b>: </li>
-					<li><b>SC Kurzbeschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>
+				
 			-->
 			<!-- HOMEBREW PCS TEMPLATE RULES
-				<ul class="alt" id="sc_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>SC Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>SC Link</b>: <a href="#sc_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>SC Geschlecht</b>: [Männlich | Weiblich | Undefinierbar]</li>
-					<li><b>SC Volk</b>: [Volk | Gemischt aus [Volk]*]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>SC Alter</b>: [0-9]*</li>
-					<li><b>SC Größe</b>: [0.0-9.0]* Meter</li>
-					<li><b>SC Gewicht</b>: [0.0-9.0]* Kilogramm</li>
-					<li><b>SC Augenfarbe</b>: [Text]</li>
-					<li><b>SC Hautfarbe</b>: [Text]</li>
-					<li><b>SC Haarfarbe</b>: [Text]</li>
-					<li><b>SC Kleidung</b>: [Text]</li>					
-					<li><b>SC Ort</b>: [Text | (Link zu Ort)*]</li>
-					<li><b>SC Organisation</b>: [Text | (Link zu Organisation)*]</li>
-					<li><b>SC Besondere Beziehungen zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
-					<li><b>SC Besonderheiten</b>: [Text]</li>
-					<li><b>SC Kurzbeschreibung</b>: [Text]</li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>
+				SC Name: [Text]
+				SC Link: <a href="#sc_[Text]" aria-label="[Text]">[Text]</a>
+				SC Geschlecht: 	[Männlich | Weiblich | Undefinierbar]								
+				SC Volk: [Volk | Gemischt aus [Volk]*]
+				SC Alter: [0-9]*
+				SC Größe: [0.0-9.0]* Meter
+				SC Gewicht: [0.0-9.0]* Kilogramm
+				SC Augenfarbe: [Text]
+				SC Hautfarbe: [Text]
+				SC Haarfarbe: [Text]
+				SC Kleidung: [Text]					
+				SC Ort: [Text | (Link zu Ort)*]
+				SC Organisation: [Text | (Link zu Organisation)*]
+				SC Besondere Beziehungen zu: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]
+				SC Besonderheiten: [Text]
+				SC Kurzbeschreibung: [Text]
+				Details (Ereignisse):  <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*
 			-->
-			<!-- HOMEBREW CREATURES TEMPLATE
+				
+			<!-- HOMEBREW CREATURES TEMPLATE:
 				---
-				<ul class="alt" id="creature_">
-					<li><b>Kreatur Name</b>: </li>
-					<li><b>Kreatur Link</b>: <a href="#creature_" aria-label=""></a></li>
-					<li><b>Kreatur Größe</b>: </li>
-					<li><b>Kreatur Gewicht</b>: </li>					
-					<li><b>Kreatur Sprachen</b>: </li>
-					<li><b>Kreatur Ort</b>: </li>
-					<li><b>Kreatur Organisation</b>: </li>
-					<li><b>Kreatur Besondere Beziehung zu</b>: </li>
-					<li><b>Kreatur Bekannte Fähigkeiten</b>: </li>
-					<li><b>Kreatur Kurzbeschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>
+								
 			-->
-			<!-- HOMEBREW CREATURES TEMPLATE RULES
-				<ul class="alt" id="creature_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Kreatur Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Kreatur Link</b>: <a href="#creature_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>Kreatur Größe</b>: [0.0-9.0]* Meter</li>
-					<li><b>Kreatur Gewicht</b>: [0.0-9.0]* Kilogramm</li>				
-					<li><b>Kreatur Sprachen</b>: [Sprache]*</li>
-					<li><b>Kreatur Ort</b>: [Text | (Link zu Ort)*]</li>
-					<li><b>Kreatur Organisation</b>: [Text | (Link zu Organisation)*]</li>
-					<li><b>Kreatur Besondere Beziehung zu</b>: [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]</li>
-					<li><b>Kreatur Bekannte Fähigkeiten</b>: [Auflistung bekannter Fähigkeiten als Text]</li> -> ACHTUNG BEKANNTE FÄHIGKEITEN RECHTSKONFORM
-					<li><b>Kreatur Kurzbeschreibung</b>: [Text]</li> -> ACHTUNG KURZBESCHREIBUNG RECHTSKONFORM
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>
+			<!-- HOMEBREW CREATURES TEMPLATE RULES:
+				Kreatur Name: [Text]
+				Kreatur Link: <a href="#creature_[Text]" aria-label="[Text]">[Text]</a> 
+				Kreatur Größe: [0.0-9.0]* Meter
+				Kreatur Gewicht: [0.0-9.0]* Kilogramm			
+				Kreatur Sprachen: [Sprache]*
+				Kreatur Ort: [Text | (Link zu Ort)*]
+				Kreatur Organisation: [Text | (Link zu Organisation)*]
+				Kreatur Besondere Beziehung zu:  [(Text & Link zu NSC)* | (Text & Link zu Kreatur)* | (Text & Link zu Organisation)* | (Text & Link zu Ort)*]
+				Kreatur Bekannte Fähigkeiten: [Auflistung bekannter Fähigkeiten als Text]
+				Kreatur Kurzbeschreibung: [Text]
+				Details (Ereignisse):  <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*				
 			-->
-			<!-- HOMEBREW SPELLS TEMPLATE
-				--- 
-				<ul class="alt" id="spell_">
-					<li><b>Zauber Name</b>: </li>
-					<li><b>Zauber Link</b>: <a href="#spell_" aria-label=""></a></li>
-					<li><b>Zauber Einzigartig</b>: </li>
-					<li><b>Zauber Stufe</b>: </li>
-					<li><b>Zauber Klassenbeschränkung</b>: </li>
-					<li><b>Zauber Ritual</b>: </li>
-					<li><b>Zauber Zauberzeit</b>: </li>
-					<li><b>Zauber Reichweite</b>: </li>
-					<li><b>Zauber Komponenten</b>: </li>
-					<li><b>Zauber Dauer</b>: </li>
-					<li><b>Zauber Konzentration</b>: </li>
-					<li><b>Zauber Beschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>
+		
+
+			<!-- HOMEBREW SHIP CHASSIS TEMPLATE:
+				---
+								
 			-->
-			<!-- HOMEBREW SPELLS TEMPLATE RULES
-				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Zauber Name</b>: [Text]></li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Zauber Link</b>: <a href="#spell_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>Zauber Einzigartig</b>: [Ja | Nein]</li>
-					<li><b>Zauber Stufe</b>: [Cantrip | Stufe [1-9]]</li>
-					<li><b>Zauber Klassenbeschränkung</b>: [(Klasse)* | Nein ]</li> -> ACHTUNG KLASSENNAMEN RECHTSKONFORM
-					<li><b>Zauber Ritual</b>: [Ja | Nein]</li>
-					<li><b>Zauber Zauberzeit</b>: [1 Aktion | 1 Bonusaktion | 1 Reaktion | 10 Minuten | Spezial]</li>
-					<li><b>Zauber Reichweite</b>: [([0-9]* Feet) | Selbst]</li>
-					<li><b>Zauber Komponenten</b>: [ V? S? M(Text)?]</li>
-					<li><b>Zauber Dauer</b>: [Text]</li>
-					<li><b>Zauber Konzentration</b>: [Ja | Nein]</li>
-					<li><b>Zauber Beschreibung</b>: [Text]</li>  -> ACHTUNG BESCHREIBUNG RECHTSKONFORM
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>
+			<!-- HOMEBREW SHIP CHASSIS TEMPLATE RULES:
+				Schiffrumpf Name: [Text]
+				Schiffrumpf Link: <a href="#ship_chassis_[Text]" aria-label="[Text]">[Text]</a>
+				Schiffrumpf Tech-Level: [T[0-6]{1}]
+				Schiffrumpf Typ: [Shuttle | Kleiner Kämpfer | Handelsschiff | Patrouillenschiff | Korvette | Schwere Fregatte | Hauler | Flottenkreuzer | Kriegsschiff | Trägerschiff]
+				Schiffrumpf Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Schiffrumpf Kosten: [Kosten in interstellarer Währung]
+				Schiffrumpf Hersteller (Organisation): [Text |Link zu Organisation]
+				Schiffrumpf Lagerraum: [Lagerraum 0-50]
+				Schiffrumpf Reisegeschwindigkeit: [Reisegeschwindigkeit 0-5]
+				Schiffrumpf Grundwarpzeit: [Warpzeit in Sekunden]
+				Schiffrumpf Grundwarpgeschwindigkeit: [Warpgeschwindigkeit in Astronomischen Einheiten pro Sekunde]
+				Schiffrumpf Grundgewicht: [Gewicht in 0-75]
+				Schiffrumpf Grundsensorreichweite: [Reichweite in km]
+				Schiffrumpf Grundbandbreite: [Bandbreite in MB/s]
+				Schiffrumpf Maximalgewicht: [Gewicht in 0-75]
+				Schiffrumpf Maximalreisegeschwindigkeit: [Reisegeschwindigkeit 0-5]
+				Schiffrumpf Minimalwarpzeit: [Warpzeit in Sekunden]
+				Schiffrumpf Maximalwarpgeschwindigkeit: [Warpgeschwindigkeit in Astronomischen Einheiten pro Sekunde]
+				Schiffrumpf Crew (Benötigt/Maximal):  [Anzahl Crew benötigt]/[Anzahl Crew Maximal]
+				Schiffrumpf Größe: [Klein | Mittel | Groß | Gigantisch | Titan]
+				Schiffrumpf Modulplätze (Hochenergie / Mittelenergie / Niedrigenergie / Rigging):
+				Schiffrumpf CPU-Bereitstellung: [Anzahl in TFLOPS]
+				Schiffrumpf Energiebereitstellung: [Anzahl in 0-125]
+				Schiffrumpf Rüstung: [Wert für Armor]
+				Schiffrumpf Rüstungsklasse: [Wert für AC]
+				Schiffrumpf Lebenspunkte: [Anzahl HP]
+				Schiffrumpf Modulplätze: [Anzahl Modulplätze]
+				Schiffrumpf Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Schiffrumpf Kurzbeschreibung: [Text]				
 			-->
+				
+			<!-- HOMEBREW SHIP MODULE TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW SHIP MODULE TEMPLATE RULES:
+				Schiffmodul Name: [Text]
+				Schiffmodul Link: <a href="#ship_module_[Text]" aria-label="[Text]">[Text]</a>
+				Schiffmodul Tech-Level: [T[0-6]{1}]
+				Schiffmodul Typ: [Labor | Navigation | Militär | Frachtraum | Antrieb | Kolonie | Unterkünfte | EWAR | Lebenserhaltung | Medizin | Bergbau | Industrie | Psionik | Schiffsbucht | Warpantrieb | Teleportation | Werkzeug | Hacking | Bergung | Verteidigung | Waffen]
+				Schiffmodul Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Schiffmodul Legalität: [Ja | Nein]
+				Schiffmodul Modifikator auf: [Eigenschaft]
+				Schiffmodul Modifikator Wert: [Wert]
+				Schiffmodul Fähigkeiten: [Text]
+				Schiffmodul Kosten: [Kosten in interstellarer Währung]
+				Schiffmodul Hersteller:  [Text |Link zu Organisation]
+				Schiffmodul CPU-Verbrauch: [Anzahl in TFLOPS]
+				Schiffmodul Energieverbrauch / Erzeugung: [Anzahl in 0-125]
+				Schiffmodul Gewicht:  [Gewicht in 0-75]
+				Schiffmodul Restriktion Schiffsrumpftyp:  [Keine | Shuttle | Kleiner Kämpfer | Handelsschiff | Patrouillenschiff | Korvette | Schwere Fregatte | Hauler | Flottenkreuzer | Kriegsschiff | Trägerschiff]
+				Schiffmodul Modulplatzverbrauch: [Anzahl Modulplätze]
+				Schiffmodul Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Schiffmodul Kurzbeschreibung: [Text]				
+			-->
+
+
+			<!-- HOMEBREW VEHICLE CHASSIS TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW VEHICLE CHASSIS TEMPLATE RULES:
+				Bodenfahrzeugrumpf Name: [Text]
+				Bodenfahrzeugrumpf Link: <a href="#vehicle_chassis_[Text]" aria-label="[Text]">[Text]</a>
+				Bodenfahrzeugrumpf Tech-Level: [T[0-6]{1}]
+				Bodenfahrzeugrumpf Typ: [Motorrad | KFZ | Grav-KFZ | Geländefahrzeug | Helicopter | Flugzeug (Atmosphäre) | Grav-Flugzeug (Atmosphäre) | Panzer |Grav-Panzer] 
+				Bodenfahrzeugrumpf Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Bodenfahrzeugrumpf Kosten: [Kosten in interstellarer Währung]
+				Bodenfahrzeugrumpf Hersteller (Organisation):  [Text |Link zu Organisation]
+				Bodenfahrzeugrumpf Lagerraum: [Lagerraum 0-50]]
+				Bodenfahrzeugrumpf Grundgewicht: [Gewicht in 0-75]
+				Bodenfahrzeugrumpf Reisegeschwindigkeit: [Reisegeschwindigkeit 0-5]
+				Bodenfahrzeugrumpf Grundsensorreichweite: [Reichweite in km]
+				Bodenfahrzeugrumpf Grundbandbreite: [Bandbreite in MB/s]
+				Bodenfahrzeugrumpf Maximalgewicht: [Gewicht in 0-75]
+				Bodenfahrzeugrumpf Maximalreisegeschwindigkeit: [Reisegeschwindigkeit 0-5]
+				Bodenfahrzeugrumpf Crew (Benötigt/Maximal): [Anzahl Crew benötigt]/[Anzahl Crew Maximal]
+				Bodenfahrzeugrumpf Größe: [Klein | Mittel | Groß | Gigantisch | Titan]
+				Bodenfahrzeugrumpf Modulplätze (Hochenergie / Mittelenergie / Niedrigenergie / Rigging):
+				Bodenfahrzeugrumpf CPU-Bereitstellung: [Anzahl in TFLOPS]
+				Bodenfahrzeugrumpf Energiebereitstellung: [Anzahl in 0-125]
+				Schiffrumpf Rüstung: [Wert für Armor]
+				Schiffrumpf Rüstungsklasse: [Wert für AC]
+				Schiffrumpf Lebenspunkte: [Anzahl HP]
+				Bodenfahrzeugrumpf Modulplätze: [Anzahl Modulplätze]
+				Bodenfahrzeugrumpf Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Bodenfahrzeugrumpf Kurzbeschreibung: [Text]					
+			-->
+
+			<!-- HOMEBREW VEHICLE MODULE TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW VEHICLE MODULE TEMPLATE RULES:
+				Bodenfahrzeugmodul Name: [Text]
+				Bodenfahrzeugmodul Link: <a href="#vehicle_module_[Text]" aria-label="[Text]">[Text]</a>
+				Bodenfahrzeugmodul Tech-Level: [T[0-6]{1}]
+				Bodenfahrzeugmodul Typ: [Labor | Navigation | Militär | Frachtraum | Antrieb | Kolonie | Unterkünfte | EWAR | Lebenserhaltung | Medizin | Bergbau | Industrie | Psionik | Schiffsbucht | Warpantrieb | Teleportation | Werkzeug | Hacking | Bergung | Verteidigung | Waffen]
+				Bodenfahrzeugmodul Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Bodenfahrzeugmodul Legalität: [Ja | Nein]
+				Bodenfahrzeugmodul Modifikator auf: [Eigenschaft]
+				Bodenfahrzeugmodul Modifikator Wert: [Wert]
+				Bodenfahrzeugmodul Fähigkeiten: [Text]
+				Bodenfahrzeugmodul Kosten: [Kosten in interstellarer Währung]
+				Bodenfahrzeugmodul Hersteller:  [Text |Link zu Organisation]
+				Bodenfahrzeugmodul CPU-Verbrauch: [Anzahl in TFLOPS]
+				Bodenfahrzeugmodul Energieverbrauch / Erzeugung: [Anzahl in 0-125]
+				Bodenfahrzeugmodul Gewicht: [Gewicht in 0-75]
+				Bodenfahrzeugmodul Restriktion Bodenfahrzeugrumpftyp: [Keine | (Motorrad | KFZ | Grav-KFZ | Geländefahrzeug | Helicopter | Flugzeug (Atmosphäre) | Grav-Flugzeug (Atmosphäre) | Panzer |Grav-Panzer)] 
+				Bodenfahrzeugmodul Modulplatzverbrauch: [Anzahl Module]
+				Bodenfahrzeugmodul Besondere Beziehung zu: [Text | Link zu anderer Entität]*
+				Bodenfahrzeugmodul Kurzbeschreibung: [Text]				
+			-->
+
+			<!-- HOMEBREW EQUIPMENT TEMPLATE:
+				---
+								
+			-->
+			<!-- HOMEBREW EQUIPMENT TEMPLATE RULES:
+				Ausrüstung Name: [Text]
+				Ausrüstung Link: <a href="#equipment_[Text]" aria-label="[Text]">[Text]</a>
+				Ausrüstung Tech-Level: [T[0-6]{1}]
+				Ausrüstung Typ: [Rüstung | Fernkampfwaffe | Nahkampfwaffe | Schwere Waffe | Allgemein | Psionik]
+				Ausrüstung Subtyp:
+				->Rüstung: [Primitiv | Straßenkleidung | Kampf | Power Armor | Schild | Artefakt ]
+				->Fernkampfwaffe:  [Projektil | Energie | Artefakt]
+				-> Nahkampfwaffe [Klein, Mittel, Groß], [Primitiv | Fortgeschritten | Artefakt]
+				-> Schwere Waffe: [Raketenwerfer | Sprengsatz | Railgun | Anti-Fahrzeug-Waffe | Vortexkanone | Artefakt]
+				-> Allgemein: [Munition | Batterie | Kommunikation | Datenverarbeitung | Feldausrüstung | Drogen | Werkzeuge | Erste Hilfe | Hacking | Drohnen | EWAR | Cyberware |  Artefakt]
+				Ausrüstung Legalität: [Ja | Nein]
+				Ausrüstung Kosten: [Kosten in interstellarer Währung]
+				Ausrüstung Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Ausrüstung Operation benötigt: [Ja | Nein]
+				Ausrüstung Gewicht: [Gewicht in Kilogramm]
+				Ausrüstung Kurzbeschreibung: [Text]
+				Ausrüstung Details (Ereignisse):   <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*	
+			-->
+
 			<!-- HOMEBREW ITEMS TEMPLATE:
 				---
-				<ul class="alt" id="item_">
-					<li><b>Gegenstand Name</b>: </li>
-					<li><b>Gegenstand Link</b>: <a href="#item_" aria-label=""></a></li>
-					<li><b>Gegenstand Einzigartig</b>: </li>
-					<li><b>Gegenstand Gewicht</b>: </li>
-					<li><b>Gegenstand Typ</b>: </li>
-					<li><b>Gegenstand Ausprägung</b>: </li>
-					<li><b>Gegenstand Seltenheit</b>: </li>
-					<li><b>Gegenstand Einstimmung</b>: </li>
-					<li><b>Gegenstand Kurzbeschreibung</b>: </li>
-					<li><b>Details (Ereignisse)</b>: 
-						<p></p>
-					</li>
-				</ul>				
+								
 			-->
 			<!-- HOMEBREW ITEMS TEMPLATE RULES:
-				<ul class="alt" id="item_[Text]"> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Gegenstand Name</b>: [Text]</li> -> ACHTUNG NAME RECHTSKONFORM
-					<li><b>Gegenstand Link</b>: <a href="#item_[Text]" aria-label="[Text]">[Text]</a></li>
-					<li><b>Gegenstand Einzigartig</b>: [Ja | Nein]</li>
-					<li><b>Gegenstand Gewicht</b>: [0.0-9.0]* Kilogramm</li>
-					<li><b>Gegenstand Typ</b>: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]</li>
-					<li><b>Gegenstand Ausprägung</b>: [Text - Referenz zu Gegenständen]</li>
-					<li><b>Gegenstand Seltenheit</b>: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]</li>
-					<li><b>Gegenstand Einstimmung</b>: [Ja | Nein]</li>
-					<li><b>Gegenstand Kurzbeschreibung</b>: [Text]</li>  -> ACHTUNG BESCHREIBUNG RECHTSKONFORM
-					<li><b>Details (Ereignisse)</b>: 
-						<p><Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*</p>
-					</li>
-				</ul>				
+				Gegenstand Name: [Text]
+				Gegenstand Link: <a href="#item_[Text]" aria-label="[Text]">[Text]</a>
+				Gegenstand Einzigartig: [Ja | Nein]
+				Gegenstand Gewicht: [0.0-9.0]* Kilogramm
+				Gegenstand Typ: [Ausrüstungsgegenstand | Waffe ([Einfach|Krieg]) | Verbrauchsgegenstand | Gegenstand | Mineral | Pflanze | Körperteil | Material]
+				Gegenstand Ausprägung: [Text - Referenz zu Gegenständen]
+				Gegenstand Seltenheit: [Gewöhnlich | Ungewöhnlich | Selten | Episch | Legendär]
+				Gegenstand Einstimmung: [Ja | Nein]
+				Gegenstand Kurzbeschreibung: [Text]
+				Details (Ereignisse): <Tag>\.<Monat>\.<Jahr> NA: <Subjekt> <Prädikat> <Objekt> (<Prädikat> <Objekt>)*			
 			-->
+				
+
+
             <section id="search_help">
 				<p>Bedienungsanleitung Desktop: STRG+F drücken. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
 				<p>Bedienungsanleitung Mobile: Desktop-Seitenansicht aktivieren und Suchfunktion für Seite im Browser aufrufen. Einen der Suchbegriffe aus der Tabelle bis zum (inklusive) Doppelpunkt kopieren, Leerzeichen am Ende einfügen und Suchbegriff eingeben. Angaben in eckigen Klammern sind Optionen, die vorkommen können.</p>
@@ -812,40 +908,79 @@
 				</table>
 
 			</section>
-			<!-- HOMEBREW LOCATIONS -->			
-			<section id="locations">
+			<!-- HOMEBREW SECTORS -->			
+			<section id="sectors">
 				---	
 										
 		  	</section>
-			<!-- HOMEBREW ORGANIZATIONS -->			
-		  	<section id="organizations">
+			<!-- HOMEBREW ASTRONOMICAL OBJECTS -->			
+		  	<section id="astronomical_objects">
 				---	
 				
 	  		</section>
-			<!-- HOMEBREW NPCS -->			
-			<section id="npcs">
+			<!-- HOMEBREW SPACE STATIONS -->			
+			<section id="space_stations">
 				---	
 				
 
 		  	</section>
-			<!-- HOMEBREW PLAYER CHARACTERS -->	
-			<section id="scs">
+			<!-- HOMEBREW SPACE STATIONS -->			
+			<section id="space_station_modules">
+				---	
+				
+
+		  	</section>
+
+			<!-- HOMEBREW HABITABLE PLANETS -->	
+			<section id="habitable_planets">
 				---
 						
 			</section>
 
-		  	<!-- HOMEBREW CREATURES -->			
-		  	<section id="creatures">
+		  	<!-- HOMEBREW LOCATIONS -->			
+		  	<section id="locations">
 				---	
 				
 	  		</section>
-	  		<!-- HOMEBREW SPELLS -->			
-	  		<section id="spells">
+	  		<!-- HOMEBREW ORGANIZATIONS -->			
+	  		<section id="organizations">
 				---	
 				
   			</section>
-  			<!-- HOMEBREW ITEMS -->			
-  			<section id="items">
+  			<!-- HOMEBREW NSCs -->			
+  			<section id="nscs">
+				
+			</section>
+			<!-- HOMEBREW SCs -->			
+			<section id="scs">
+				
+			</section>
+			<!-- HOMEBREW CREATURES -->			
+			<section id="creatures">
+				
+			</section>
+			<!-- HOMEBREW SHIP CHASSIS -->			
+			<section id="ship_chassis">
+				
+			</section>
+			<!-- HOMEBREW SHIP MODULES -->			
+			<section id="ship_modules">
+				
+			</section>
+			<!-- HOMEBREW VEHICLE CHASSIS -->			
+			<section id="vehicle_chassis">
+				
+			</section>
+			<!-- HOMEBREW VEHICLE MODULES -->			
+			<section id="vehicle_modules">
+				
+			</section>
+			<!-- HOMEBREW EQUIPMENT -->			
+			<section id="equipment">
+				
+			</section>
+			<!-- HOMEBREW ITEMS -->			
+			<section id="items">
 				
 			</section>
 		</div>

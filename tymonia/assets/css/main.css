@@ -82,7 +82,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: #000000;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -97,7 +97,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #888;
+		color: #fff;
 		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -109,7 +109,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 1px #000000;
+		border-bottom: solid 1px #6366ff;
 		color: inherit;
 		text-decoration: none;
 	}
@@ -120,7 +120,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #777;
+		color: #fff;
 		font-weight: 700;
 	}
 
@@ -133,7 +133,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #777;
+		color: #fff;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -1784,12 +1784,12 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #000000;
+		color: #fff;
 		font-size: 3.5em;
 	}
 
 		header.major h2 + p {
-			color: #777;
+			color: #fff;
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
@@ -1802,7 +1802,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #777;
+		color: #fff;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 700;
@@ -1861,7 +1861,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #777;
+			color: #fff;
 			background: #fff;
 		}
 
@@ -1901,7 +1901,7 @@ input, select, textarea {
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #888;
+			color: #fff;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2454,7 +2454,7 @@ input, select, textarea {
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: #fafafa;
+				background-color: #000000;
 			}
 
 		table td {
@@ -2462,7 +2462,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #777;
+			color: #fff;
 			font-size: 0.9em;
 			font-weight: 700;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2588,7 +2588,7 @@ input, select, textarea {
 		.button.alt {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #e4e4e4;
-			color: #777 !important;
+			color: #fff !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -2596,7 +2596,7 @@ input, select, textarea {
 			input[type="button"].alt:hover,
 			.button.alt:hover {
 				background-color: #f4f4f4;
-				color: #777 !important;
+				color: #fff !important;
 			}
 
 			input[type="submit"].alt:active,
@@ -2642,7 +2642,7 @@ input, select, textarea {
 		input[type="button"]:disabled,
 		.button.disabled,
 		.button:disabled {
-			background-color: #888 !important;
+			background-color: #fff !important;
 			box-shadow: inset 0 -0.15em 0 0 rgba(0, 0, 0, 0.15);
 			color: #fff !important;
 			cursor: default;
@@ -2817,14 +2817,14 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		background: #fff;
+		background: #000000;
 		padding-right: 23em;
 	}
 
 /* Main */
 
 	#main > section {
-		border-top: solid 6px #f4f4f4;
+		border-top: solid 6px #000000;
 	}
 
 		#main > section > .container {
@@ -2838,9 +2838,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #fafafa;
+		background: #000000;
 		border-top: 0;
-		color: #c0c0c0;
+		color: #fff;
 		overflow: hidden;
 		padding: 4em 0 2em 0;
 	}

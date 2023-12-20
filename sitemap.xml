@@ -9,37 +9,67 @@
 
 <url>
   <loc>https://kosmischer-horror.de/</loc>
-  <lastmod>2021-07-15T14:51:38+00:00</lastmod>
+  <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://kosmischer-horror.de/dyrhal</loc>
-  <lastmod>2023-01-12T18:00:00+00:00</lastmod>
+  <lastmod>2023-12-20T16:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/tymonia</loc>
+  <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://kosmischer-horror.de/PGP_KEY.html</loc>
-  <lastmod>2022-09-30T09:00:00+00:00</lastmod>
+  <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://kosmischer-horror.de/CC_BY_NC_SA_LICENSE.html</loc>
-   <lastmod>2022-09-30T09:00:00+00:00</lastmod>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://kosmischer-horror.de/dyrhal/PGP_KEY.html</loc>
-  <lastmod>2022-10-05T17:00:00+00:00</lastmod>
+  <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://kosmischer-horror.de/dyrhal/CC_BY_NC_SA_LICENSE.html</loc>
-   <lastmod>2022-10-05T17:00:00+00:00</lastmod>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://kosmischer-horror.de/dyrhal/Artists.html</loc>
-   <lastmod>2022-10-05T17:00:00+00:00</lastmod>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/tymonia/PGP_KEY.html</loc>
+  <lastmod>2023-12-20T16:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/tymonia/CC_BY_NC_SA_LICENSE.html</loc>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/tymonia/Artists.html</loc>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/tymonia/OPERATION_BLACK_FIST.html</loc>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://kosmischer-horror.de/tymonia/SYSTEM_DATABASE_BLACK_FIST.html</loc>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
@@ -49,7 +79,7 @@
 </url>
 <url>
   <loc>https://kosmischer-horror.de/dyrhal/BLACK_LIBRARY.html</loc>
-   <lastmod>2023-07-02T11:00:00+00:00</lastmod>
+   <lastmod>2023-12-20T16:00:00+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
